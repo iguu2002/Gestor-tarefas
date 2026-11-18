@@ -1,0 +1,13 @@
+{
+  "name": "gol-informado-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gerador de vídeos verticais com a identidade visual Gol Informado",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@vladmandic/face-api": "^1.7.15",
+    "flag-icons": "^7.6.0"
+  }
+}

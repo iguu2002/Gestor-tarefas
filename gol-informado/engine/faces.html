@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><script src="node_modules/@vladmandic/face-api/dist/face-api.js"></script></head><body><script>
+window.ready=(async()=>{await faceapi.nets.ssdMobilenetv1.loadFromUri('node_modules/@vladmandic/face-api/model');return true;})();
+window.detect=async(url)=>{const im=await new Promise((r,j)=>{const i=new Image();i.onload=()=>r(i);i.onerror=j;i.src=url;});
+ const d=await faceapi.detectAllFaces(im,new faceapi.SsdMobilenetv1Options({minConfidence:0.45}));
+ return d.map(x=>({x:x.box.x,y:x.box.y,w:x.box.width,h:x.box.height,s:x.score}));};
+</script></body></html>
