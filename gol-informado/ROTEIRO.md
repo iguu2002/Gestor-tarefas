@@ -86,3 +86,15 @@ Onde não houver marcação, o editor escolhe seguindo a identidade (ver README)
 - [ ] Tem uma escalada ("e tem mais") antes do fim?
 - [ ] O fecho faz loop ou faz uma pergunta?
 - [ ] Os nomes estão escritos corretamente?
+
+## Fluxo de trabalho: transcrição → roteiro autoral
+
+1. O canal envia a transcrição de um vídeo (nosso ou de outro canal) sobre o assunto.
+2. O editor extrai **só os fatos** (quem, o quê, números, fontes) e confere os que puder em fontes públicas.
+   Erros de transcrição são corrigidos; rumores ficam marcados como rumor.
+3. Escreve um roteiro **novo**, com ângulo, gancho, ordem e frases próprias. Nunca é paráfrase frase a frase:
+   - gancho diferente do original;
+   - escalada e fecho próprios (loop ou pergunta);
+   - personalidade do Gol Informado (apelidos, humor leve, opinião com prova).
+4. Devolve o roteiro já com as **marcações de cena** e a lista de mídias necessárias (fotos, lances, escudos).
+5. O canal grava a narração e envia com as mídias, e o vídeo é montado.
