@@ -87,9 +87,11 @@ Onde não houver marcação, o editor escolhe seguindo a identidade (ver README)
 - [ ] O fecho faz loop ou faz uma pergunta?
 - [ ] Os nomes estão escritos corretamente?
 
-## Fluxo de trabalho: transcrição → roteiro autoral
+## Fluxo de trabalho: transcrição ou matéria → roteiro autoral
 
-1. O canal envia a transcrição de um vídeo (nosso ou de outro canal) sobre o assunto.
+1. O canal envia **uma de duas fontes** sobre o assunto:
+   - **Transcrição** de um vídeo (nosso ou de outro canal); ou
+   - **Matéria** (texto ou link de notícia: ge, ESPN, UOL, Marca etc.).
 2. O editor extrai **só os fatos** (quem, o quê, números, fontes) e confere os que puder em fontes públicas.
    Erros de transcrição são corrigidos; rumores ficam marcados como rumor.
 3. Escreve um roteiro **novo**, com ângulo, gancho, ordem e frases próprias. Nunca é paráfrase frase a frase:
