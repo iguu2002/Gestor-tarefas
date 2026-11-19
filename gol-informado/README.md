@@ -20,6 +20,8 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 **Regra de ouro:** nenhum elemento cobre o rosto do jogador. O gerador detecta rostos (face-api)
 em cada foto e vídeo e posiciona título, figurinha, legenda e círculo nos espaços livres.
 
+Guia de roteiro (estrutura, ganchos, marcações de cena): veja [`ROTEIRO.md`](ROTEIRO.md).
+
 ## Como produzir um vídeo
 
 1. Criar `projetos/<nome-do-video>/` com `media/` (fotos e vídeos) e um `spec.json`.
