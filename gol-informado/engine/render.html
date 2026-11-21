@@ -248,8 +248,10 @@ function circle(f,ft,regions){
   const sw=Math.round(clamp(r*0.11,16,30)),m=10+sw/2;
   r=Math.min(r,cxp-m,W-m-cxp,cyp-m,H-m-cyp);
   const C=2*Math.PI*r,pad=sw+14,S=2*(r+pad);
-  return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 7px color-mix(in srgb,var(--pri) 40%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
-   <circle cx="${S/2}" cy="${S/2}" r="${r}" fill="none" stroke="var(--pri)" stroke-width="${sw}"
+  const RING={dourado:'#FFC845',roxo:'#A855F7',azul:'#2F8CFF',verde:'#7CFF2B',vermelho:'#FF3B4E',laranja:'#FF7A1A',ciano:'#22D3EE',rosa:'#FF4FA3'};
+  const col=RING[f.color]||f.color||RING[SPEC.ringColor]||SPEC.ringColor||'var(--pri)';
+  return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 7px color-mix(in srgb,${col} 40%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
+   <circle cx="${S/2}" cy="${S/2}" r="${r}" fill="none" stroke="${col}" stroke-width="${sw}"
     stroke-dasharray="${(C*draw).toFixed(2)} ${(C*(1-draw)+0.01).toFixed(2)}" transform="rotate(-90 ${S/2} ${S/2})"/></svg>`;
 }
 function board(s,lt){
