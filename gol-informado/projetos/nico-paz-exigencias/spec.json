@@ -184,7 +184,15 @@
     "type": "card",
     "src": "media/nico_paz_real.jpg",
     "kb": "out"
-   }
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.54,
+     "src": "media/escudo_real.png",
+     "hold": 3.0
+    }
+   ]
   },
   {
    "dur": 4.35,
@@ -575,5 +583,15 @@
    "text": "ele seria *titular?*"
   }
  ],
- "duration": 58.46
+ "duration": 58.46,
+ "faces": {
+  "media/nico_paz_como_maos.jpg": [
+   [
+    300,
+    260,
+    420,
+    600
+   ]
+  ]
+ }
 }

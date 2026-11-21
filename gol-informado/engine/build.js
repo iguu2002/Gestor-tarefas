@@ -69,7 +69,7 @@ const port=srv.address().port,U=p=>`http://127.0.0.1:${port}${p}`;
   if(spec.audio){args.push('-i',path.join(proj,spec.audio));fc+=`[2]aformat=sample_rates=48000:channel_layouts=stereo[nar];`;mixIn+='[nar]';n0=3;}
   ev.forEach((e,k)=>{args.push('-f','lavfi','-i',sfx[e.k]);const ms=Math.max(0,Math.round(e.t*1000));fc+=`[${k+n0}]aformat=sample_rates=48000:channel_layouts=stereo,volume=${sv},adelay=${ms}|${ms}[a${k}];`;mixIn+=`[a${k}]`;});
   const nin=1+(spec.audio?1:0)+ev.length;
-  fc+=`${mixIn}amix=inputs=${nin}:normalize=0,atrim=0:${total},alimiter=limit=0.95[mix]`;
+  fc+=`${mixIn}amix=inputs=${nin}:normalize=0,atrim=0:${total},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[mix]`;
   ff(['-i',vtmp,...args,'-filter_complex',fc,'-map','0:v','-map','[mix]','-c:v','copy','-c:a','aac','-b:a','192k','-shortest',out]);
   console.log('pronto:',out);
 })().catch(e=>{console.error(e);process.exit(1);});
