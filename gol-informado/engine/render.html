@@ -9,24 +9,31 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 #bg{position:absolute;left:0;top:0;width:1080px;height:1920px}
 #ov{position:absolute;inset:0;overflow:hidden}
 .abs{position:absolute}
-/* caption */
+/* legenda */
 .cap{position:absolute;left:40px;right:40px;text-align:center;font-family:Baloo;font-size:100px;line-height:1.02;
   color:#fff;-webkit-text-stroke:11px #000;paint-order:stroke fill;text-shadow:0 8px 0 rgba(0,0,0,.5);transform-origin:50% 60%}
 .cap .hl{color:var(--pri);-webkit-text-stroke:11px var(--pri-dark);
   text-shadow:0 0 26px color-mix(in srgb,var(--pri) 45%,transparent),0 8px 0 rgba(0,0,0,.5)}
 .wm{position:absolute;left:0;right:0;text-align:center;font-family:Archivo;font-size:30px;letter-spacing:6px;color:rgba(255,255,255,.26)}
-/* sticker */
+/* figurinha */
 .sticker{position:absolute;width:300px;transform-origin:50% 50%}
-.sticker .card{background:#fff;border-radius:26px;padding:12px;box-shadow:0 0 0 6px var(--pri),0 0 34px color-mix(in srgb,var(--pri) 60%,transparent),0 18px 30px rgba(0,0,0,.5)}
-.sticker img{display:block;width:100%;border-radius:14px}
+.sticker .card{background:#fff;border-radius:26px;padding:14px;display:flex;align-items:center;justify-content:center;height:240px;
+  box-shadow:0 0 0 6px var(--pri),0 0 34px color-mix(in srgb,var(--pri) 60%,transparent),0 18px 30px rgba(0,0,0,.5)}
+.sticker img{display:block;max-width:100%;max-height:100%;border-radius:10px}
 .label{font-family:Anton;font-size:92px;letter-spacing:2px;text-align:center;margin-top:18px;
   color:var(--pri);-webkit-text-stroke:5px #000;paint-order:stroke fill;
   text-shadow:0 0 20px color-mix(in srgb,var(--pri) 50%,transparent),0 8px 18px rgba(0,0,0,.6)}
-/* title: solid + soft glow */
-.title{position:absolute;left:0;right:0;text-align:center;font-family:Anton;font-size:240px;letter-spacing:3px;line-height:1;
+/* título: cor sólida + glow suave */
+.title{position:absolute;left:40px;right:40px;text-align:center;font-family:Anton;font-size:220px;letter-spacing:3px;line-height:1;
   color:var(--pri);-webkit-text-stroke:6px color-mix(in srgb,var(--pri-dark) 80%,#000);paint-order:stroke fill;
   text-shadow:0 0 22px color-mix(in srgb,var(--pri) 50%,transparent),0 0 60px color-mix(in srgb,var(--pri) 25%,transparent),0 12px 26px rgba(0,0,0,.6)}
-/* board */
+/* card de número */
+.num{position:absolute;left:0;right:0;display:flex;justify-content:center;transform-origin:50% 50%}
+.num .box{background:rgba(7,11,24,.88);border:5px solid var(--pri);border-radius:34px;padding:26px 54px 30px;text-align:center;
+  box-shadow:0 0 40px color-mix(in srgb,var(--pri) 35%,transparent),0 20px 40px rgba(0,0,0,.6)}
+.num .v{font-family:Anton;font-size:170px;line-height:1;color:var(--pri);text-shadow:0 0 22px color-mix(in srgb,var(--pri) 45%,transparent)}
+.num .s{font-family:Archivo;font-size:40px;letter-spacing:6px;color:#fff;margin-top:12px}
+/* placar */
 .board{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,var(--bg2),var(--bg1) 72%)}
 .board:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px)}
 .shield{position:absolute;width:330px;height:390px;transform-origin:50% 50%}
@@ -39,6 +46,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 .score.w{color:var(--win);text-shadow:0 0 30px color-mix(in srgb,var(--win) 55%,transparent)}
 .lbl{position:absolute;width:330px;text-align:center;font-family:Archivo;font-size:44px;color:#fff;letter-spacing:4px}
 .chip{position:absolute;left:60px;top:90px;font-family:Archivo;font-size:30px;color:#000;background:var(--pri);padding:10px 22px;border-radius:12px;letter-spacing:2px}
+.qmark{position:absolute;text-align:center;font-family:Anton;font-size:420px;line-height:1;color:var(--pri);
+  text-shadow:0 0 30px color-mix(in srgb,var(--pri) 45%,transparent)}
 </style></head>
 <body>
 <canvas id="bg" width="1080" height="1920"></canvas>
@@ -46,152 +55,200 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 <script>
 const W=1080,H=1920;
 const PALETTES={
+ dourado:{pri:'#FFC845',priDark:'#4A3200',bg1:'#070B18',bg2:'#18234A',win:'#3DFF8B',loss:'#FF3D57'},
  laranja:{pri:'#FF7A1A',priDark:'#4A1C00',bg1:'#120A06',bg2:'#3A1A0A',win:'#3DFF8B',loss:'#FF3D57'},
  verde:{pri:'#B8FF2E',priDark:'#1F3A00',bg1:'#05110A',bg2:'#123A1F',win:'#B8FF2E',loss:'#FF3D57'},
- dourado:{pri:'#FFC845',priDark:'#4A3200',bg1:'#070B18',bg2:'#18234A',win:'#3DFF8B',loss:'#FF3D57'},
 };
-// layout constants
-const CAP_Y=1400, CAP_H=230, WM_GAP=125;
+const CAP_Y=1400,CAP_H=230,WM_GAP=125;
 // ---------- easing ----------
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const eOut=x=>1-Math.pow(1-clamp(x),3);
 const eInOut=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
 const eBack=x=>{x=clamp(x);const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
-const pop=(t,d=.28)=>t<0?0:eBack(t/d);       // 0 -> overshoot -> 1
+const pop=(t,d=.28)=>t<0?0:eBack(t/d);
 const fadeOut=(t,end,d=.2)=>clamp((end-t)/d);
-// ---------- state ----------
-let SPEC,BASE,FACES={},scenes=[],imgCache=new Map();
+// ---------- estado ----------
+let SPEC,BASE,FACES={},scenes=[],PAL,imgCache=new Map();
 function img(url){
   if(imgCache.has(url))return imgCache.get(url);
-  const p=new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;});
-  imgCache.set(url,p);if(imgCache.size>400){imgCache.delete(imgCache.keys().next().value);}return p;
+  const p=new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>rej(new Error('img '+url));i.src=url;});
+  imgCache.set(url,p);if(imgCache.size>300)imgCache.delete(imgCache.keys().next().value);return p;
 }
-const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const capHTML=s=>esc(s).replace(/\*([^*]+)\*/g,'<span class="hl">$1</span>');
 const rectsHit=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
 const grow=(r,k)=>({x:r.x-r.w*k,y:r.y-r.h*k,w:r.w*(1+2*k),h:r.h*(1+2*k)});
+const src=p=>`${BASE}/${p}`;
 
 window.init=async(base,spec,faces)=>{
   BASE=base;SPEC=spec;FACES=faces||{};
-  const p=PALETTES[spec.palette||'laranja'],r=document.documentElement.style;
-  r.setProperty('--pri',p.pri);r.setProperty('--pri-dark',p.priDark);r.setProperty('--bg1',p.bg1);r.setProperty('--bg2',p.bg2);r.setProperty('--win',p.win);r.setProperty('--loss',p.loss);
+  PAL=PALETTES[spec.palette||'dourado'];const r=document.documentElement.style;
+  r.setProperty('--pri',PAL.pri);r.setProperty('--pri-dark',PAL.priDark);r.setProperty('--bg1',PAL.bg1);r.setProperty('--bg2',PAL.bg2);r.setProperty('--win',PAL.win);r.setProperty('--loss',PAL.loss);
   let t0=0;scenes=spec.scenes.map((s,i)=>{const o={...s,i,t0};t0+=s.dur;return o;});
   await document.fonts.ready;
-  return t0;
+  return spec.duration||t0;
 };
-window.sceneFaces=(s,frameIdx)=>{ // faces in 1080x1920 frame coords (before kb transform)
-  const key=s.bg.type==='clip'?`scene${s.i}`:s.bg.src;
-  const f=FACES[key];if(!f)return [];
-  if(Array.isArray(f))return f;           // photo: list
-  // clip: {step, frames:[[...],...]} nearest sampled frame
-  const k=Math.min(f.frames.length-1,Math.round(frameIdx/f.step));return f.frames[k]||[];
-};
-// Ken Burns + punch-in transform
+// recorte "cover" de uma imagem num retângulo, centrado no rosto (se houver)
+function fit(im,faces,tw,th,focus){
+  const a=tw/th,iw=im.naturalWidth||im.width,ih=im.naturalHeight||im.height;
+  let cx=iw/2,cy=ih/2;
+  if(focus&&focus.length===2){cx=focus[0];cy=focus[1];}
+  else if(faces&&faces.length){const f=faces[0];cx=f.x+f.w/2;cy=f.y+f.h/2;}
+  let sw,sh,sx,sy;
+  if(iw/ih>a){sh=ih;sw=sh*a;sx=clamp(cx-sw/2,0,iw-sw);sy=0;}
+  else{sw=iw;sh=sw/a;sy=clamp(cy-sh*0.38,0,ih-sh);sx=0;}
+  return {sx,sy,sw,sh,k:tw/sw};
+}
+const mapR=(b,c,tx,ty)=>({x:tx+(b.x-c.sx)*c.k,y:ty+(b.y-c.sy)*c.k,w:b.w*c.k,h:b.h*c.k});
 function camera(s,lt){
   const kb=s.bg.kb||'in';
-  let sc=kb==='out'?1.16-0.08*(lt/s.dur):1.05+0.08*(lt/s.dur);
-  const punch=1-eOut(lt/.28);                // scene-start punch
+  let sc=kb==='none'?1.04:kb==='out'?1.16-0.08*(lt/s.dur):1.05+0.08*(lt/s.dur);
+  const punch=s.noPunch?0:1-eOut(lt/.28);
   sc+=0.14*punch;
   return {sc,blur:10*punch};
 }
-const mapBox=(b,sc)=>({x:W/2+(b.x-W/2)*sc,y:H/2+(b.y-H/2)*sc,w:b.w*sc,h:b.h*sc});
-
-// pick a spot for an element that avoids faces. candidates: list of rects, returns first free
+const camBox=(b,sc)=>({x:W/2+(b.x-W/2)*sc,y:H/2+(b.y-H/2)*sc,w:b.w*sc,h:b.h*sc});
 function freeSpot(cands,faces,avoid=[]){
   const blocks=[...faces.map(f=>grow(f,.18)),...avoid];
   for(const c of cands)if(!blocks.some(b=>rectsHit(c,b)))return c;
   return null;
 }
-
+function pixelate(cx,r,block){
+  const x=Math.max(0,r.x|0),y=Math.max(0,r.y|0),w=Math.min(W-x,r.w|0),h=Math.min(H-y,r.h|0);if(w<4||h<4)return;
+  const sw=Math.max(1,(w/block)|0),sh=Math.max(1,(h/block)|0);
+  const tmp=pixelate.c||(pixelate.c=document.createElement('canvas'));tmp.width=sw;tmp.height=sh;
+  const tx=tmp.getContext('2d');tx.drawImage(cx.canvas,x,y,w,h,0,0,sw,sh);
+  cx.imageSmoothingEnabled=false;cx.drawImage(tmp,0,0,sw,sh,x,y,w,h);cx.imageSmoothingEnabled=true;
+}
+function navyBg(cx){
+  const g=cx.createRadialGradient(W/2,H*.4,50,W/2,H*.4,H*.75);g.addColorStop(0,PAL.bg2);g.addColorStop(1,PAL.bg1);
+  cx.fillStyle=g;cx.fillRect(0,0,W,H);cx.fillStyle='rgba(255,255,255,.035)';for(let y=0;y<H;y+=6)cx.fillRect(0,y,W,2);
+}
+// ---------- render de um quadro ----------
 window.render=async(T)=>{
   const s=scenes.find(x=>T>=x.t0&&T<x.t0+x.dur)||scenes[scenes.length-1];
-  const lt=T-s.t0, fps=SPEC.fps, ov=document.getElementById('ov'), cv=document.getElementById('bg'), cx=cv.getContext('2d');
-  let html='';
+  const lt=T-s.t0,fps=SPEC.fps,ov=document.getElementById('ov'),cv=document.getElementById('bg'),cx=cv.getContext('2d');
+  let html='';const regions={};      // regiões nomeadas (para círculos): face, left, right, box
   cx.setTransform(1,0,0,1,0,0);cx.filter='none';cx.fillStyle='#000';cx.fillRect(0,0,W,H);
-  let faces=[];
-  if(s.bg.type==='board'){
-    html+=board(s,lt);
-  }else{
-    const fi=Math.floor(lt*fps);
-    const url=s.bg.type==='clip'?`${BASE}/.cache/scene${s.i}/${String(Math.min(fi,s._n?s._n-1:fi)+1).padStart(4,'0')}.jpg`:`${BASE}/.cache/${s.bg.src.replace(/\W/g,'_')}.jpg`;
-    const im=await img(url);
+  let faces=[];const b=s.bg;
+  if(b.type==='board'){html+=board(s,lt);}
+  else{
     const {sc,blur}=camera(s,lt);
     cx.filter=blur>0.3?`blur(${blur.toFixed(1)}px)`:'none';
     cx.setTransform(sc,0,0,sc,W/2*(1-sc),H/2*(1-sc));
-    cx.drawImage(im,0,0,W,H);
-    cx.setTransform(1,0,0,1,0,0);cx.filter='none';
-    faces=sceneFaces(s,fi).map(b=>mapBox(b,sc));
-    // pixelate faces
-    const px=(s.fx||[]).find(f=>f.type==='pixelate');
-    if(px&&lt<px.until){
-      for(const f of faces){const g=grow(f,.12);pixelate(cx,g,26);}
+    if(b.type==='photo'){
+      const im=await img(src(b.src)),fs=FACES[b.src]||[],c=fit(im,fs,W,H,b.focus);
+      cx.drawImage(im,c.sx,c.sy,c.sw,c.sh,0,0,W,H);faces=fs.map(f=>mapR(f,c,0,0));
+      if(b.box)regions.box=mapR({x:b.box[0],y:b.box[1],w:b.box[2],h:b.box[3]},c,0,0);
+    }else if(b.type==='clip'){
+      const fi=Math.min(Math.floor(lt*fps),(s._n||1)-1);
+      const im=await img(`${BASE}/.cache/scene${s.i}/${String(fi+1).padStart(4,'0')}.jpg`);
+      cx.drawImage(im,0,0,W,H);
+      const f=FACES['scene'+s.i];if(f)faces=f.frames[Math.min(f.frames.length-1,Math.round(fi/f.step))]||[];
+    }else if(b.type==='card'){
+      const im=await img(src(b.src)),fs=FACES[b.src]||[];
+      const c=fit(im,fs,W,H);cx.save();cx.filter='blur(34px) brightness(.45)';cx.drawImage(im,c.sx,c.sy,c.sw,c.sh,-60,-60,W+120,H+120);cx.restore();
+      if(blur>0.3)cx.filter=`blur(${blur.toFixed(1)}px)`;
+      const cw=980,k=cw/im.naturalWidth,ch=im.naturalHeight*k,x0=(W-cw)/2,y0=(b.y||760)-ch/2;
+      cx.save();cx.shadowColor=PAL.pri+'88';cx.shadowBlur=50;cx.fillStyle='#fff';
+      cx.beginPath();cx.roundRect(x0-10,y0-10,cw+20,ch+20,30);cx.fill();cx.restore();
+      cx.save();cx.beginPath();cx.roundRect(x0,y0,cw,ch,22);cx.clip();cx.drawImage(im,x0,y0,cw,ch);cx.restore();
+      const c2={sx:0,sy:0,k};faces=fs.map(f=>mapR(f,c2,x0,y0));
+      if(b.box)regions.box=mapR({x:b.box[0],y:b.box[1],w:b.box[2],h:b.box[3]},c2,x0,y0);
+    }else if(b.type==='panel'){
+      navyBg(cx);
+      if(b.img){const im=await img(src(b.img)),w=b.imgW||620,h=w*im.naturalHeight/im.naturalWidth,k=pop(lt-.05,.35)*(1+0.03*Math.sin(lt*3));
+        cx.save();cx.translate(W/2,(b.y||760));cx.scale(k,k);cx.shadowColor=PAL.pri+'66';cx.shadowBlur=60;cx.drawImage(im,-w/2,-h/2,w,h);cx.restore();}
+    }else if(b.type==='split'){
+      for(const side of ['left','right']){
+        const p=b[side],x0=side==='left'?0:W/2,ap=p.t||0;if(!p)continue;
+        cx.save();cx.beginPath();cx.rect(x0,0,W/2,H);cx.clip();
+        if(lt<ap||!p.src){navyBg(cx);}
+        if(p.src&&lt>=ap){
+          const im=await img(src(p.src)),fs=FACES[p.src]||[],c=fit(im,fs,W/2,H);
+          const slide=side==='right'?(1-eOut((lt-ap)/.3))*W/2:-(1-eOut((lt-ap)/.3))*W/2;
+          cx.drawImage(im,c.sx,c.sy,c.sw,c.sh,x0+(ap>0?slide:0),0,W/2,H);
+          const ff=fs.map(f=>mapR(f,c,x0,0));faces.push(...ff);if(ff[0])regions[side]=ff[0];
+        }
+        cx.restore();
+        if(p.placeholder&&lt<ap)html+=`<div class="qmark" style="left:${x0}px;width:${W/2}px;top:520px;transform:scale(${(pop(lt-.1,.3)*(1+.04*Math.sin(lt*4))).toFixed(3)})">${esc(p.placeholder)}</div>`;
+      }
+      cx.fillStyle=PAL.pri;cx.fillRect(W/2-4,0,8,H);
     }
-    // vignette
-    const vg=cx.createRadialGradient(W/2,H*.45,H*.25,W/2,H*.45,H*.75);
-    vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.55)');cx.fillStyle=vg;cx.fillRect(0,0,W,H);
+    cx.setTransform(1,0,0,1,0,0);cx.filter='none';
+    faces=faces.map(f=>camBox(f,sc));for(const k in regions)regions[k]=camBox(regions[k],sc);
+    if(faces[0]&&!regions.face)regions.face=faces[0];
+    const px=(s.fx||[]).find(f=>f.type==='pixelate');
+    if(px&&lt<px.until){for(const f of faces)pixelate(cx,grow(f,.15),28);}
+    if(b.type!=='panel'){const vg=cx.createRadialGradient(W/2,H*.45,H*.25,W/2,H*.45,H*.75);
+      vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,.5)');cx.fillStyle=vg;cx.fillRect(0,0,W,H);}
   }
-  // caption position: avoid faces (move below if needed)
+  // posição da legenda (desvia de rostos)
   let capY=CAP_Y;
-  const capBox={x:60,y:capY-20,w:W-120,h:CAP_H};
-  if(faces.some(f=>rectsHit(grow(f,.1),capBox)))capY=1600;
-  // fx
-  for(const f of (s.fx||[])){
-    const ft=lt-(f.t||0);if(f.type!=='pixelate'&&ft<0)continue;
+  if(faces.some(f=>rectsHit(grow(f,.08),{x:60,y:capY-20,w:W-120,h:CAP_H})))capY=1620;
+  // efeitos
+  const fx=s.fx||[];
+  const titles=fx.filter(f=>f.type==='title'&&lt>=f.t);
+  if(titles.length){const f=titles[titles.length-1];const nx=fx.find(g=>g.type==='title'&&g.t>f.t);html+=title(f,lt-f.t,faces,s,lt,capY,nx?nx.t:s.dur);}
+  for(const f of fx){
+    const ft=lt-(f.t||0);if(f.type==='pixelate'||f.type==='title'||ft<0)continue;
     if(f.type==='sticker')html+=sticker(f,ft,faces,lt,s);
-    if(f.type==='title')html+=title(f,ft,faces,s,lt,capY);
-    if(f.type==='circle')html+=circle(f,ft,faces);
+    if(f.type==='circle')html+=circle(f,ft,regions);
+    if(f.type==='number')html+=numberCard(f,ft,faces,lt,s,capY);
   }
-  // captions
-  const caps=s.caps||[];let ci=-1;caps.forEach((c,k)=>{if(lt>=c.t)ci=k;});
-  if(ci>=0){
-    const c=caps[ci],ct=lt-c.t,k=ct<0.16?0.82+0.18*eBack(ct/.16):1;
+  // legenda (tempos absolutos)
+  const caps=SPEC.captions||[];let c=null;
+  for(const k of caps){if(T>=k.t)c=k;else break;}
+  if(c&&T<(c.end??1e9)+0.5){
+    const ct=T-c.t,k=ct<0.16?0.82+0.18*eBack(ct/.16):1;
     html+=`<div class="cap" style="top:${capY}px;transform:scale(${k.toFixed(3)})">${capHTML(c.text)}</div>`;
   }
   html+=`<div class="wm" style="top:${capY+WM_GAP}px">${esc(SPEC.watermark||'')}</div>`;
   ov.innerHTML=html;
 };
-
-function pixelate(cx,r,block){
-  const x=Math.max(0,r.x|0),y=Math.max(0,r.y|0),w=Math.min(W-x,r.w|0),h=Math.min(H-y,r.h|0);if(w<4||h<4)return;
-  const sw=Math.max(1,(w/block)|0),sh=Math.max(1,(h/block)|0);
-  const tmp=pixelate.c||(pixelate.c=document.createElement('canvas'));tmp.width=sw;tmp.height=sh;
-  const tx=tmp.getContext('2d');tx.imageSmoothingEnabled=true;tx.drawImage(cx.canvas,x,y,w,h,0,0,sw,sh);
-  cx.imageSmoothingEnabled=false;cx.drawImage(tmp,0,0,sw,sh,x,y,w,h);cx.imageSmoothingEnabled=true;
-}
 function sticker(f,ft,faces,lt,s){
-  const sw=300,sh=225+18+100;
-  // candidates: above head, then side spots, then upper corners
+  const sw=300,sh=f.label?240+18+100:240;
   const cands=[];
-  for(const fc of faces){cands.push({x:fc.x+fc.w/2-sw/2,y:fc.y-sh-30,w:sw,h:sh});}
-  cands.push({x:60,y:160,w:sw,h:sh},{x:W-60-sw,y:160,w:sw,h:sh},{x:60,y:620,w:sw,h:sh},{x:W-60-sw,y:620,w:sw,h:sh});
-  const ok=cands.filter(c=>c.x>=30&&c.y>=120&&c.x+c.w<=W-30);
-  const spot=freeSpot(ok,faces)||ok[1];
-  const k=pop(ft,.32),end=fadeOut(lt,s.dur,.18),rot=-7+Math.sin(ft*2.4)*1.5,bob=Math.sin(ft*2)*6;
+  for(const fc of faces)cands.push({x:fc.x+fc.w/2-sw/2,y:fc.y-sh-40,w:sw,h:sh});
+  const yy=f.y||170;
+  cands.push({x:W-60-sw,y:yy,w:sw,h:sh},{x:60,y:yy,w:sw,h:sh},{x:W-60-sw,y:620,w:sw,h:sh},{x:60,y:620,w:sw,h:sh});
+  const ok=cands.filter(c=>c.x>=30&&c.y>=120&&c.x+c.w<=W-30&&c.y+c.h<CAP_Y-40);
+  const spot=freeSpot(ok,faces)||ok[0];
+  const hold=f.hold||2.6,k=pop(ft,.32),end=Math.min(fadeOut(lt,s.dur,.18),clamp((hold-ft)/.2)),rot=(f.rot??-7)+Math.sin(ft*2.4)*1.5,bob=Math.sin(ft*2)*6;
+  const im=f.flag?`node_modules/flag-icons/flags/4x3/${f.flag}.svg`:src(f.src);
   return `<div class="sticker" style="left:${spot.x}px;top:${spot.y+bob}px;transform:scale(${(k*end).toFixed(3)}) rotate(${rot.toFixed(2)}deg)">
-    <div class="card"><img src="node_modules/flag-icons/flags/4x3/${f.flag}.svg"></div>
-    ${f.label?`<div class="label">${esc(f.label)}</div>`:''}</div>`;
+    <div class="card"><img src="${im}"></div>${f.label?`<div class="label">${esc(f.label)}</div>`:''}</div>`;
 }
-function title(f,ft,faces,s,lt,capY){
-  const th=250;
-  const bands=[160,330,620,860,1080].map(y=>({x:80,y,w:W-160,h:th}));
+function title(f,ft,faces,s,lt,capY,until){
+  const th=230;
+  const ys=f.y?[f.y]:[150,330,560,800,1030];
+  const bands=ys.map(y=>({x:80,y,w:W-160,h:th}));
   const spot=freeSpot(bands.filter(b=>b.y+b.h<capY-20),faces)||bands[0];
-  const k=ft<.22?1.35-0.35*eOut(ft/.22):1, o=clamp(ft/.12)*fadeOut(lt,s.dur,.2);
-  return `<div class="title" style="top:${spot.y}px;opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${esc(f.text)}</div>`;
+  const k=ft<.22?1.35-0.35*eOut(ft/.22):1,o=clamp(ft/.12)*fadeOut(lt,until,.15);
+  const size=f.size||(f.text.length>9?Math.max(120,Math.round(220*9/f.text.length)):220);
+  return `<div class="title" style="top:${spot.y+(th-size)/2}px;font-size:${size}px;opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${esc(f.text)}</div>`;
 }
-function circle(f,ft,faces){
-  const fc=faces[0];if(!fc)return '';
+function numberCard(f,ft,faces,lt,s,capY){
+  const h=300,ys=[300,520,760,980].map(y=>({x:120,y,w:W-240,h}));
+  const spot=freeSpot(ys.filter(b=>b.y+b.h<capY-20),faces)||ys[1];
+  const until=f.until?f.until:s.dur;if(lt>until)return '';
+  const k=pop(ft,.3)*fadeOut(lt,until,.15);
+  return `<div class="num" style="top:${spot.y}px;transform:scale(${k.toFixed(3)})"><div class="box"><div class="v">${esc(f.text)}</div>${f.sub?`<div class="s">${esc(f.sub)}</div>`:''}</div></div>`;
+}
+function circle(f,ft,regions){
+  const fc=regions[f.target||'face'];if(!fc)return '';
   const dur=f.hold||1.6,draw=eInOut(ft/.45),o=clamp((dur+.45-ft)/.25);if(o<=0)return '';
-  let rx=fc.w*.72,ry=fc.h*.70,cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
-  const m=26; ry=Math.min(ry,cyp-m,H-m-cyp); rx=Math.min(rx,cxp-m,W-m-cxp); ry=Math.max(ry,fc.h*.56); if(cyp-ry<m)cyp=ry+m;
-  const C=Math.PI*(3*(rx+ry)-Math.sqrt((3*rx+ry)*(rx+3*ry)));
-  const pad=20,sw=12;
+  const isBox=f.target==='box';
+  let rx=fc.w*(isBox?1.0:.72),ry=fc.h*(isBox?0.95:.70),cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
+  const m=26;ry=Math.min(ry,cyp-m,H-m-cyp);rx=Math.min(rx,cxp-m,W-m-cxp);ry=Math.max(ry,fc.h*.56);
+  const C=Math.PI*(3*(rx+ry)-Math.sqrt((3*rx+ry)*(rx+3*ry))),pad=20,sw=12;
   return `<svg class="abs" style="left:${cxp-rx-pad}px;top:${cyp-ry-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 10px color-mix(in srgb,var(--pri) 70%,transparent))" width="${2*(rx+pad)}" height="${2*(ry+pad)}">
    <ellipse cx="${rx+pad}" cy="${ry+pad}" rx="${rx}" ry="${ry}" fill="none" stroke="var(--pri)" stroke-width="${sw}" stroke-linecap="round"
     stroke-dasharray="${(C*draw).toFixed(2)} ${(C*(1-draw)+0.01).toFixed(2)}" stroke-dashoffset="${(-C*0.62).toFixed(1)}"/></svg>`;
 }
 function board(s,lt){
   const b=s.bg,L=115,R=635,top=650;
-  const sh=(t0,x,team)=>{const k=pop(lt-t0,.32);return `<div class="shield" style="left:${x}px;top:${top}px;transform:scale(${k.toFixed(3)})"><div class="g"></div><div class="s"><img src="node_modules/flag-icons/flags/4x3/${team.flag}.svg"></div></div>`;};
+  const sh=(t0,x,team)=>{const k=pop(lt-t0,.32),im=team.src?src(team.src):`node_modules/flag-icons/flags/4x3/${team.flag}.svg`;return `<div class="shield" style="left:${x}px;top:${top}px;transform:scale(${k.toFixed(3)})"><div class="g"></div><div class="s"><img src="${im}"></div></div>`;};
   const sc=(t0,x,team,cls)=>{const k=pop(lt-t0,.3);return `<div class="score ${cls}" style="left:${x}px;top:330px;transform:scale(${k.toFixed(3)})">${team.score}</div>`;};
   const lbl=(t0,x,team)=>`<div class="lbl" style="left:${x}px;top:1070px;opacity:${clamp((lt-t0)/.2)}">${esc(team.name)}</div>`;
   const hw=b.home.score>b.away.score;
@@ -203,17 +260,18 @@ function board(s,lt){
   h+=sc(1.1,L,b.home,hw?'w':'l')+sc(1.5,R,b.away,hw?'l':'w');
   return h;
 }
-// sound events for the mixer
 window.events=()=>{
   const ev=[];
   for(const s of scenes){
-    if(s.i>0)ev.push({t:s.t0-0.12,k:'whoosh'});
+    if(s.i>0&&!s.noPunch)ev.push({t:s.t0-0.12,k:'whoosh'});
     for(const f of (s.fx||[])){
-      if(f.type==='sticker')ev.push({t:s.t0+f.t,k:'pop'});
-      if(f.type==='title')ev.push({t:s.t0+f.t,k:'hit'});
-      if(f.type==='circle')ev.push({t:s.t0+f.t,k:'swish'});
+      const t=s.t0+(f.t||0);
+      if(f.type==='sticker')ev.push({t,k:'pop'});
+      if(f.type==='title'||f.type==='number')ev.push({t,k:'hit'});
+      if(f.type==='circle')ev.push({t,k:'swish'});
       if(f.type==='pixelate')ev.push({t:s.t0+f.until,k:'reveal'});
     }
+    if(s.bg.type==='split')for(const side of ['left','right']){const p=s.bg[side];if(p&&p.t)ev.push({t:s.t0+p.t,k:'whoosh'});}
     if(s.bg.type==='board'){[.15,.6].forEach(d=>ev.push({t:s.t0+d,k:'pop'}));[1.1,1.5].forEach(d=>ev.push({t:s.t0+d,k:'hit'}));}
   }
   return ev;
