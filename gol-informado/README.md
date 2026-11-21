@@ -35,6 +35,16 @@ node build.js ../projetos/<nome-do-video>
 
 O vídeo sai em `projetos/<nome-do-video>/video.mp4`.
 
+
+### Narração e legenda
+
+```bash
+python3 transcrever.py ../projetos/<video>            # tempo de cada palavra
+python3 cortar_silencios.py ../projetos/<video>       # opcional: corta pausas longas e reajusta tudo
+python3 legendas.py ../projetos/<video>               # legenda palavra por palavra (destaques em legenda.json)
+node build.js ../projetos/<video>
+```
+
 ## Formato do `spec.json`
 
 Veja `projetos/exemplo/spec.json`. Cada cena tem:

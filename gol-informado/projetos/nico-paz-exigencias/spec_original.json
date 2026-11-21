@@ -1,0 +1,581 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "scenes": [
+  {
+   "dur": 5.7,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_paz_como_frente.jpg"
+   },
+   "fx": [
+    {
+     "type": "pixelate",
+     "until": 1.38
+    },
+    {
+     "type": "circle",
+     "t": 1.4
+    },
+    {
+     "type": "title",
+     "t": 4.26,
+     "text": "2 EXIGÊNCIAS"
+    }
+   ]
+  },
+  {
+   "dur": 2.35,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_real.png",
+    "imgW": 520,
+    "y": 720
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.95,
+   "bg": {
+    "type": "card",
+    "src": "media/nico_paz_real.jpg",
+    "box": [
+     528,
+     300,
+     46,
+     56
+    ]
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.45,
+     "target": "box"
+    }
+   ]
+  },
+  {
+   "dur": 10.3,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_paz_lances.mp4",
+    "start": 49.1
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 6.14,
+     "text": "€80 MILHÕES",
+     "sub": "RECOMPRA DO REAL"
+    }
+   ]
+  },
+  {
+   "dur": 9.2,
+   "bg": {
+    "type": "split",
+    "left": {
+     "src": "media/nico_paz_como_frente.jpg"
+    },
+    "right": {
+     "src": "media/yamal_barcelona.jpg",
+     "t": 7.6,
+     "placeholder": "?"
+    }
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 7.7,
+     "target": "right"
+    }
+   ]
+  },
+  {
+   "dur": 3.45,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.12,
+     "text": "2 CONDIÇÕES",
+     "y": 640
+    },
+    {
+     "type": "title",
+     "t": 2.22,
+     "text": "CONDIÇÃO 1",
+     "y": 640
+    }
+   ]
+  },
+  {
+   "dur": 4.95,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_paz_lances.mp4",
+    "start": 29.05
+   },
+   "fx": []
+  },
+  {
+   "dur": 5.05,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_paz_como_maos.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.88,
+     "text": "CONDIÇÃO 2"
+    },
+    {
+     "type": "title",
+     "t": 3.5,
+     "text": "TITULAR"
+    }
+   ]
+  },
+  {
+   "dur": 2.85,
+   "bg": {
+    "type": "split",
+    "left": {
+     "src": "media/bellingham_real.jpg"
+    },
+    "right": {
+     "src": "media/arda_guler_real.jpg",
+     "t": 1.99
+    }
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.19,
+     "target": "left",
+     "hold": 1.2
+    },
+    {
+     "type": "circle",
+     "t": 2.05,
+     "target": "right",
+     "hold": 0.9
+    }
+   ]
+  },
+  {
+   "dur": 4.9,
+   "bg": {
+    "type": "card",
+    "src": "media/nico_paz_real.jpg",
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.54,
+     "src": "media/escudo_real.png",
+     "hold": 3.0
+    }
+   ]
+  },
+  {
+   "dur": 4.35,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_paz_lances.mp4",
+    "start": 24.12,
+    "speed": 0.7
+   },
+   "fx": []
+  },
+  {
+   "dur": 3.67,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_paz_como_frente.jpg",
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.41,
+     "text": "TITULAR?"
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.86,
+   "text": "O Real Madrid"
+  },
+  {
+   "t": 0.86,
+   "end": 1.86,
+   "text": "quer o *Nico Paz*"
+  },
+  {
+   "t": 1.86,
+   "end": 2.44,
+   "text": "de volta"
+  },
+  {
+   "t": 2.86,
+   "end": 3.68,
+   "text": "mas o argentino"
+  },
+  {
+   "t": 3.68,
+   "end": 4.74,
+   "text": "teria feito duas"
+  },
+  {
+   "t": 4.74,
+   "end": 5.48,
+   "text": "*exigências*"
+  },
+  {
+   "t": 5.74,
+   "end": 6.46,
+   "text": "e uma delas"
+  },
+  {
+   "t": 6.46,
+   "end": 7.24,
+   "text": "pode *atrapalhar*"
+  },
+  {
+   "t": 7.24,
+   "end": 7.68,
+   "text": "tudo"
+  },
+  {
+   "t": 8.14,
+   "end": 8.9,
+   "text": "Ele foi formado"
+  },
+  {
+   "t": 8.9,
+   "end": 9.58,
+   "text": "na base do"
+  },
+  {
+   "t": 9.58,
+   "end": 9.78,
+   "text": "Real"
+  },
+  {
+   "t": 10.02,
+   "end": 10.66,
+   "text": "e hoje é"
+  },
+  {
+   "t": 10.66,
+   "end": 11.3,
+   "text": "um dos meias"
+  },
+  {
+   "t": 11.3,
+   "end": 12.42,
+   "text": "mais decisivos da"
+  },
+  {
+   "t": 12.42,
+   "end": 12.9,
+   "text": "temporada"
+  },
+  {
+   "t": 13.1,
+   "end": 13.88,
+   "text": "jogando pelo Como"
+  },
+  {
+   "t": 14.44,
+   "end": 15.06,
+   "text": "Tanto que o"
+  },
+  {
+   "t": 15.06,
+   "end": 15.58,
+   "text": "Real tem uma"
+  },
+  {
+   "t": 15.58,
+   "end": 16.14,
+   "text": "recompra de"
+  },
+  {
+   "t": 16.14,
+   "end": 17.38,
+   "text": "*80 milhões* de"
+  },
+  {
+   "t": 17.38,
+   "end": 17.68,
+   "text": "euros"
+  },
+  {
+   "t": 17.88,
+   "end": 18.4,
+   "text": "e a imprensa"
+  },
+  {
+   "t": 18.4,
+   "end": 19.34,
+   "text": "espanhola diz que"
+  },
+  {
+   "t": 19.34,
+   "end": 19.82,
+   "text": "vai usar"
+  },
+  {
+   "t": 20.4,
+   "end": 20.96,
+   "text": "Antes das"
+  },
+  {
+   "t": 20.96,
+   "end": 21.6,
+   "text": "*exigências*"
+  },
+  {
+   "t": 21.86,
+   "end": 22.56,
+   "text": "perguntaram com"
+  },
+  {
+   "t": 22.56,
+   "end": 23.26,
+   "text": "quem ele sonha"
+  },
+  {
+   "t": 23.26,
+   "end": 23.92,
+   "text": "jogar junto"
+  },
+  {
+   "t": 24.42,
+   "end": 25.14,
+   "text": "Dava para esperar"
+  },
+  {
+   "t": 25.14,
+   "end": 25.62,
+   "text": "um nome do"
+  },
+  {
+   "t": 25.62,
+   "end": 25.86,
+   "text": "Real"
+  },
+  {
+   "t": 26.3,
+   "end": 27.1,
+   "text": "mas a resposta"
+  },
+  {
+   "t": 27.1,
+   "end": 27.9,
+   "text": "teria sido"
+  },
+  {
+   "t": 27.9,
+   "end": 29.04,
+   "text": "*Lamine Yamal*"
+  },
+  {
+   "t": 29.62,
+   "end": 30.12,
+   "text": "Agora"
+  },
+  {
+   "t": 30.4,
+   "end": 31.16,
+   "text": "as condições"
+  },
+  {
+   "t": 31.72,
+   "end": 32.26,
+   "text": "A primeira é"
+  },
+  {
+   "t": 32.26,
+   "end": 32.62,
+   "text": "simples"
+  },
+  {
+   "t": 33.02,
+   "end": 33.88,
+   "text": "o próximo clube"
+  },
+  {
+   "t": 33.88,
+   "end": 34.92,
+   "text": "precisa jogar a"
+  },
+  {
+   "t": 34.92,
+   "end": 35.34,
+   "text": "*Champions*"
+  },
+  {
+   "t": 35.84,
+   "end": 36.56,
+   "text": "Essa o Real"
+  },
+  {
+   "t": 36.56,
+   "end": 37.48,
+   "text": "tira de letra"
+  },
+  {
+   "t": 37.96,
+   "end": 38.64,
+   "text": "O problema é"
+  },
+  {
+   "t": 38.64,
+   "end": 39.1,
+   "text": "a segunda"
+  },
+  {
+   "t": 39.48,
+   "end": 40.24,
+   "text": "ele só iria"
+  },
+  {
+   "t": 40.24,
+   "end": 40.82,
+   "text": "para um time"
+  },
+  {
+   "t": 40.82,
+   "end": 41.4,
+   "text": "onde fosse"
+  },
+  {
+   "t": 41.4,
+   "end": 42.7,
+   "text": "*titular garantido*"
+  },
+  {
+   "t": 43.04,
+   "end": 43.52,
+   "text": "E no meio"
+  },
+  {
+   "t": 43.52,
+   "end": 44.14,
+   "text": "do Real tem"
+  },
+  {
+   "t": 44.14,
+   "end": 44.94,
+   "text": "*Bellingham* e"
+  },
+  {
+   "t": 44.94,
+   "end": 45.46,
+   "text": "*Arda Güler*"
+  },
+  {
+   "t": 45.9,
+   "end": 46.38,
+   "text": "Ou seja"
+  },
+  {
+   "t": 46.6,
+   "end": 47.34,
+   "text": "para voltar para"
+  },
+  {
+   "t": 47.34,
+   "end": 47.76,
+   "text": "casa"
+  },
+  {
+   "t": 47.96,
+   "end": 48.62,
+   "text": "o *Nico Paz* teria"
+  },
+  {
+   "t": 48.62,
+   "end": 49.42,
+   "text": "que tirar um"
+  },
+  {
+   "t": 49.42,
+   "end": 50.06,
+   "text": "dos dois do"
+  },
+  {
+   "t": 50.06,
+   "end": 50.28,
+   "text": "time"
+  },
+  {
+   "t": 50.8,
+   "end": 51.42,
+   "text": "Por enquanto"
+  },
+  {
+   "t": 51.8,
+   "end": 52.12,
+   "text": "segundo o"
+  },
+  {
+   "t": 52.12,
+   "end": 52.9,
+   "text": "*Fabrizio Romano*"
+  },
+  {
+   "t": 53.16,
+   "end": 53.86,
+   "text": "ele termina a"
+  },
+  {
+   "t": 53.86,
+   "end": 54.74,
+   "text": "temporada no Como"
+  },
+  {
+   "t": 55.12,
+   "end": 55.6,
+   "text": "E fica a"
+  },
+  {
+   "t": 55.6,
+   "end": 55.94,
+   "text": "pergunta"
+  },
+  {
+   "t": 56.32,
+   "end": 56.84,
+   "text": "no Real"
+  },
+  {
+   "t": 57.04,
+   "end": 57.86,
+   "text": "ele seria *titular?*"
+  }
+ ],
+ "duration": 58.46,
+ "faces": {
+  "media/nico_paz_como_maos.jpg": [
+   [
+    320,
+    280,
+    380,
+    420
+   ]
+  ]
+ }
+}
