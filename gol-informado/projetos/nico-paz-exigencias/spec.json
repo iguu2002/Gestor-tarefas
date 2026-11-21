@@ -39,20 +39,22 @@
   {
    "dur": 1.833,
    "bg": {
-    "type": "card",
-    "src": "media/nico_paz_real.jpg",
+    "type": "photo",
+    "src": "media/nico_paz_real_ajoelhado.jpg",
     "box": [
-     528,
-     300,
-     46,
-     56
-    ]
+     1051,
+     866,
+     93,
+     93
+    ],
+    "kb": "in"
    },
    "fx": [
     {
      "type": "circle",
-     "t": 1.435,
-     "target": "box"
+     "t": 0.45,
+     "target": "box",
+     "hold": 1.2
     }
    ]
   },
@@ -171,8 +173,8 @@
   {
    "dur": 4.381,
    "bg": {
-    "type": "card",
-    "src": "media/nico_paz_real.jpg",
+    "type": "photo",
+    "src": "media/nico_paz_real_ajoelhado.jpg",
     "kb": "out"
    },
    "fx": [
