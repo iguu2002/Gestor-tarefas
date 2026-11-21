@@ -111,7 +111,10 @@ const camBox=(b,sc)=>({x:W/2+(b.x-W/2)*sc,y:H/2+(b.y-H/2)*sc,w:b.w*sc,h:b.h*sc})
 function freeSpot(cands,faces,avoid=[]){
   const blocks=[...faces.map(f=>grow(f,.18)),...avoid];
   for(const c of cands)if(!blocks.some(b=>rectsHit(c,b)))return c;
-  return null;
+  // nenhum lugar livre: escolhe o que menos invade os rostos
+  const ov=(a,b)=>Math.max(0,Math.min(a.x+a.w,b.x+b.w)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.y+a.h,b.y+b.h)-Math.max(a.y,b.y));
+  let best=null,bv=1e18;for(const c of cands){const v=faces.reduce((t,f)=>t+ov(c,f),0);if(v<bv){bv=v;best=c;}}
+  return best;
 }
 function pixelate(cx,r,block){
   const x=Math.max(0,r.x|0),y=Math.max(0,r.y|0),w=Math.min(W-x,r.w|0),h=Math.min(H-y,r.h|0);if(w<4||h<4)return;
