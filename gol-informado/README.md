@@ -12,7 +12,7 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 | Títulos | Anton, dourado **sólido** com glow suave da mesma cor (nunca branco com brilho colorido). Entram com impacto (escala 1.35 → 1) |
 | Marca d'água | `GOL INFORMADO`, Archivo Black, branca com 26% de opacidade, abaixo da legenda |
 | Figurinha | Bandeira/imagem em cartão branco arredondado, borda dourada, pop com overshoot e leve flutuação |
-| Círculo | **Só para chamar atenção**: na primeira menção do jogador (rosto) ou num detalhe citado (ex.: escudo do time novo). Desenha em 0,45s, fica ~1,6s, some |
+| Círculo | **Só para chamar atenção**: na primeira menção do jogador (rosto) ou num detalhe citado (ex.: escudo do time novo). **Anel redondo (nunca oval), grosso, em dourado sólido**, com brilho discreto só de charme. Aparece em "relógio" a partir das 12h em 0,45s, fica ~1,6s, some |
 | Pixelado | Único efeito permitido sobre o rosto: esconder o jogador até a revelação |
 | Câmera | Zoom lento em toda cena + "punch" de zoom com desfoque na troca de cena |
 | Sons | Whoosh nas transições, pop nas figurinhas, batida no placar e no título |

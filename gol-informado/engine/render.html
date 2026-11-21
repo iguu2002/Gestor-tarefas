@@ -239,15 +239,18 @@ function numberCard(f,ft,faces,lt,s,capY){
   return `<div class="num" style="top:${spot.y}px;transform:scale(${k.toFixed(3)})"><div class="box"><div class="v">${esc(f.text)}</div>${f.sub?`<div class="s">${esc(f.sub)}</div>`:''}</div></div>`;
 }
 function circle(f,ft,regions){
+  // anel redondo (nunca oval), cor sólida, brilho discreto; aparece em "relógio" a partir das 12h
   const fc=regions[f.target||'face'];if(!fc)return '';
   const dur=f.hold||1.6,draw=eInOut(ft/.45),o=clamp((dur+.45-ft)/.25);if(o<=0)return '';
   const isBox=f.target==='box';
-  let rx=fc.w*(isBox?1.0:.72),ry=fc.h*(isBox?0.95:.70),cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
-  const m=26;ry=Math.min(ry,cyp-m,H-m-cyp);rx=Math.min(rx,cxp-m,W-m-cxp);ry=Math.max(ry,fc.h*.56);
-  const C=Math.PI*(3*(rx+ry)-Math.sqrt((3*rx+ry)*(rx+3*ry))),pad=20,sw=12;
-  return `<svg class="abs" style="left:${cxp-rx-pad}px;top:${cyp-ry-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 10px color-mix(in srgb,var(--pri) 70%,transparent))" width="${2*(rx+pad)}" height="${2*(ry+pad)}">
-   <ellipse cx="${rx+pad}" cy="${ry+pad}" rx="${rx}" ry="${ry}" fill="none" stroke="var(--pri)" stroke-width="${sw}" stroke-linecap="round"
-    stroke-dasharray="${(C*draw).toFixed(2)} ${(C*(1-draw)+0.01).toFixed(2)}" stroke-dashoffset="${(-C*0.62).toFixed(1)}"/></svg>`;
+  const cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
+  let r=Math.max(fc.w,fc.h)*(isBox?0.95:0.66);r=Math.max(r,isBox?70:120);
+  const sw=Math.round(clamp(r*0.11,16,30)),m=10+sw/2;
+  r=Math.min(r,cxp-m,W-m-cxp,cyp-m,H-m-cyp);
+  const C=2*Math.PI*r,pad=sw+14,S=2*(r+pad);
+  return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 7px color-mix(in srgb,var(--pri) 40%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
+   <circle cx="${S/2}" cy="${S/2}" r="${r}" fill="none" stroke="var(--pri)" stroke-width="${sw}"
+    stroke-dasharray="${(C*draw).toFixed(2)} ${(C*(1-draw)+0.01).toFixed(2)}" transform="rotate(-90 ${S/2} ${S/2})"/></svg>`;
 }
 function board(s,lt){
   const b=s.bg,L=115,R=635,top=650;
