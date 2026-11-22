@@ -1,0 +1,5 @@
+{"fps":30,"palette":"dourado","watermark":"GOL INFORMADO",
+ "scenes":[
+  {"dur":2.6,"bg":{"type":"photo","src":"media/yamal_barcelona.jpg","kb":"none"},"noPunch":true,"fx":[{"type":"circle","t":0.3}]},
+  {"dur":2.6,"bg":{"type":"photo","src":"media/bellingham_real.jpg","kb":"none"},"fx":[{"type":"circle","t":0.3,"color":"roxo"}]}
+ ]}

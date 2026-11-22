@@ -241,7 +241,7 @@ function numberCard(f,ft,faces,lt,s,capY){
 function circle(f,ft,regions){
   // anel redondo (nunca oval), cor sólida, brilho discreto; aparece em "relógio" a partir das 12h
   const fc=regions[f.target||'face'];if(!fc)return '';
-  const dur=f.hold||1.6,draw=eInOut(ft/.45),o=clamp((dur+.45-ft)/.25);if(o<=0)return '';
+  const DRAW=f.draw||0.75,dur=f.hold||1.6,draw=Math.pow(clamp(ft/DRAW),2.6),o=clamp((dur+DRAW-ft)/.35);if(o<=0)return '';  // começa lento e termina rápido (tipo time remapping)
   const isBox=f.target==='box';
   const cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
   let r=Math.max(fc.w,fc.h)*(isBox?0.95:0.66);r=Math.max(r,isBox?70:120);
@@ -250,7 +250,7 @@ function circle(f,ft,regions){
   const C=2*Math.PI*r,pad=sw+14,S=2*(r+pad);
   const RING={dourado:'#FFC845',roxo:'#A855F7',azul:'#2F8CFF',verde:'#7CFF2B',vermelho:'#FF3B4E',laranja:'#FF7A1A',ciano:'#22D3EE',rosa:'#FF4FA3'};
   const col=RING[f.color]||f.color||RING[SPEC.ringColor]||SPEC.ringColor||'var(--pri)';
-  return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 7px color-mix(in srgb,${col} 40%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
+  return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 10px color-mix(in srgb,${col} 65%,transparent)) drop-shadow(0 0 26px color-mix(in srgb,${col} 35%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
    <circle cx="${S/2}" cy="${S/2}" r="${r}" fill="none" stroke="${col}" stroke-width="${sw}"
     stroke-dasharray="${(C*draw).toFixed(2)} ${(C*(1-draw)+0.01).toFixed(2)}" transform="rotate(-90 ${S/2} ${S/2})"/></svg>`;
 }
