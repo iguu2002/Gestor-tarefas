@@ -17,6 +17,12 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 | Câmera | Zoom lento em toda cena + "punch" de zoom com desfoque na troca de cena |
 | Sons | Whoosh nas transições, pop nas figurinhas, batida no placar e no título |
 
+**Regras do canal (aprendidas nos vídeos):**
+- **Círculo só em foto**, nunca em vídeo (em vídeo o rosto se mexe e o círculo fica "bugado").
+- **Não repetir o mesmo trecho de vídeo** no mesmo Short. Cada clipe aparece uma vez; se faltar material, pedir mais vídeos ao canal.
+- **Não repetir a mesma foto** em cenas seguidas; no máximo 2 vezes no vídeo, com enquadramento diferente.
+- **Sem tela dividida.**
+
 **Regra de ouro:** nenhum elemento cobre o rosto do jogador. O gerador detecta rostos (face-api)
 em cada foto e vídeo e posiciona título, figurinha, legenda e círculo nos espaços livres.
 

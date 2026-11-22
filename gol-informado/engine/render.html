@@ -205,7 +205,7 @@ window.render=async(T)=>{
   for(const f of fx){
     const ft=lt-(f.t||0);if(f.type==='pixelate'||f.type==='title'||ft<0)continue;
     if(f.type==='sticker')html+=sticker(f,ft,faces,lt,s);
-    if(f.type==='circle')html+=circle(f,ft,regions);
+    if(f.type==='circle')html+=circle(f,ft,regions,b.type);
     if(f.type==='number')html+=numberCard(f,ft,faces,lt,s,capY);
   }
   // legenda (tempos absolutos)
@@ -247,7 +247,8 @@ function numberCard(f,ft,faces,lt,s,capY){
   const k=pop(ft,.3)*fadeOut(lt,until,.15);
   return `<div class="num" style="top:${spot.y}px;transform:scale(${k.toFixed(3)})"><div class="box"><div class="v">${esc(f.text)}</div>${f.sub?`<div class="s">${esc(f.sub)}</div>`:''}</div></div>`;
 }
-function circle(f,ft,regions){
+function circle(f,ft,regions,bgType){
+  if(bgType==='clip')return '';   // regra do canal: círculo só em foto
   // anel redondo (nunca oval), cor sólida, brilho discreto; aparece em "relógio" a partir das 12h
   const fc=regions[f.target||'face'];if(!fc)return '';
   const DRAW=f.draw||0.75,dur=f.hold||1.6,draw=Math.pow(clamp(ft/DRAW),2.6),o=clamp((dur+DRAW-ft)/.35);if(o<=0)return '';  // começa lento e termina rápido (tipo time remapping)
