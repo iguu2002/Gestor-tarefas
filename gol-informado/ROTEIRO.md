@@ -60,7 +60,7 @@ Escreva entre colchetes, ao lado da frase:
 [figurinha: bandeira Portugal]  [bandeiras: Portugal, Espanha, Inglaterra]
 [placar: Coritiba 0 x 1 Santos] [título: CANETA]
 [número: 4 passes decisivos]    [escudos: Real, Juventus, United, Al Nassr]
-[tela dividida: Júnior x Yamal]
+
 ```
 
 Onde não houver marcação, o editor escolhe seguindo a identidade (ver README).
@@ -76,7 +76,7 @@ Onde não houver marcação, o editor escolhe seguindo a identidade (ver README)
 | Lance (caneta, drible, gol) | Clipe do lance + título curto |
 | Estatística | Card de número animado |
 | Transferência | Jogador + escudo do time novo circulado |
-| Comparação | Tela dividida |
+| Comparação | Uma foto de cada jogador em sequência (sem tela dividida) |
 
 ## Checklist antes de gravar
 
@@ -107,6 +107,7 @@ Onde não houver marcação, o editor escolhe seguindo a identidade (ver README)
 - Zoom-in no vídeo/lance até o rosto, com círculo entrando quando o nome é falado
 - Clipe do lance principal já rolando, título por cima
 - Placar animado logo de cara (quando o resultado é o gancho)
-- Tela dividida (comparação ou "?" que vira o jogador)
 
 Evitar repetir a mesma abertura em vídeos seguidos.
+
+**Não usar tela dividida** (decisão do canal). Comparações viram cenas em sequência.
