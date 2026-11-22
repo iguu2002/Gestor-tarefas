@@ -100,3 +100,13 @@ Onde não houver marcação, o editor escolhe seguindo a identidade (ver README)
    - personalidade do Gol Informado (apelidos, humor leve, opinião com prova).
 4. Devolve o roteiro já com as **marcações de cena** e a lista de mídias necessárias (fotos, lances, escudos).
 5. O canal grava a narração e envia com as mídias, e o vídeo é montado.
+
+## Aberturas (variar de vídeo para vídeo, nada é regra fixa)
+
+- Rosto pixelado e revelado no nome, com círculo
+- Zoom-in no vídeo/lance até o rosto, com círculo entrando quando o nome é falado
+- Clipe do lance principal já rolando, título por cima
+- Placar animado logo de cara (quando o resultado é o gancho)
+- Tela dividida (comparação ou "?" que vira o jogador)
+
+Evitar repetir a mesma abertura em vídeos seguidos.
