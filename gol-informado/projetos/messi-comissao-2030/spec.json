@@ -17,13 +17,7 @@
      2.4
     ]
    },
-   "fx": [
-    {
-     "type": "circle",
-     "t": 0.34,
-     "hold": 1.8
-    }
-   ],
+   "fx": [],
    "noPunch": true
   },
   {
@@ -117,8 +111,8 @@
    "dur": 2.488,
    "bg": {
     "type": "clip",
-    "src": "media/messi_video2.mp4",
-    "start": 2.112
+    "src": "media/messi_video3.mp4",
+    "start": 3.112
    },
    "fx": []
   },
@@ -126,8 +120,7 @@
    "dur": 3.226,
    "bg": {
     "type": "photo",
-    "src": "media/scaloni.jpg",
-    "kb": "out"
+    "src": "media/messi_punho.jpg"
    },
    "fx": []
   },
@@ -172,12 +165,13 @@
    "dur": 5.321,
    "bg": {
     "type": "clip",
-    "src": "media/messi_video2.mp4",
-    "start": 0.579,
-    "zoom": [
-     1.0,
-     1.9,
-     2.4
+    "src": "media/messi_video4.mp4",
+    "start": 4.979,
+    "delogo": [
+     598,
+     38,
+     98,
+     96
     ]
    },
    "fx": [
