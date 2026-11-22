@@ -1,0 +1,193 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "celeste",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "scenes": [
+  {
+   "dur": 6.5,
+   "bg": {
+    "type": "clip",
+    "src": "media/messi_video2.mp4",
+    "start": 0.0,
+    "zoom": [
+     1.0,
+     1.9,
+     2.4
+    ]
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.34,
+     "hold": 1.8
+    }
+   ],
+   "noPunch": true
+  },
+  {
+   "dur": 4.5,
+   "bg": {
+    "type": "clip",
+    "src": "media/messi_video1.mp4",
+    "start": 8.4
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 3.06,
+     "text": "2 COPAS AMÉRICAS",
+     "until": 4.5
+    }
+   ]
+  },
+  {
+   "dur": 1.0,
+   "bg": {
+    "type": "clip",
+    "src": "media/messi_video1.mp4",
+    "start": 0.6,
+    "cropX": 0.85
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.0,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_taca_erguida.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_beijando_taca.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.1,
+     "text": "CAMPEÃO",
+     "y": 1050
+    }
+   ]
+  },
+  {
+   "dur": 1.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_sentado_triste.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_despedida.jpg",
+    "zoom": [
+     1.0,
+     1.6
+    ],
+    "zoomAt": [
+     540,
+     1250
+    ]
+   },
+   "fx": []
+  },
+  {
+   "dur": 5.0,
+   "bg": {
+    "type": "photo",
+    "src": "media/scaloni.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.24,
+     "color": "celeste"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "type": "clip",
+    "src": "media/messi_video2.mp4",
+    "start": 2.0
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.0,
+   "bg": {
+    "type": "photo",
+    "src": "media/scaloni.jpg",
+    "kb": "out"
+   },
+   "fx": []
+  },
+  {
+   "dur": 5.1,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_scaloni_taca.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.62,
+     "text": "VAGA ABERTA"
+    }
+   ]
+  },
+  {
+   "dur": 3.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_ombros_aguero.jpg"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.84,
+     "text": "ATÉ 2030",
+     "sub": "CONTRATO DO SCALONI"
+    }
+   ]
+  },
+  {
+   "dur": 5.1,
+   "bg": {
+    "type": "photo",
+    "src": "media/messi_taca_noite.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 5.9,
+   "bg": {
+    "type": "clip",
+    "src": "media/messi_video2.mp4",
+    "start": 0.0,
+    "zoom": [
+     1.0,
+     1.9,
+     2.4
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 3.62,
+     "text": "AUXILIAR OU JOGADOR?"
+    }
+   ],
+   "noPunch": false
+  }
+ ]
+}

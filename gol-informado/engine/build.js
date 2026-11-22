@@ -11,7 +11,8 @@ spec.scenes.forEach((s,i)=>{
   if(s.bg.type!=='clip')return;
   const d=path.join(cache,'scene'+i);fs.rmSync(d,{recursive:true,force:true});fs.mkdirSync(d);
   const sp=s.bg.speed||1;
-  ff(['-ss',String(s.bg.start||0),'-t',String(s.dur*sp+0.2),'-i',path.join(proj,s.bg.src),'-an','-vf',`setpts=PTS/${sp},fps=${fps},${COVER}`,'-q:v','3',path.join(d,'%04d.jpg')]);
+  const cvr=s.bg.cropX!=null?`scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H}:(iw-${W})*${s.bg.cropX}:(ih-${H})/2`:COVER;
+  ff(['-ss',String(s.bg.start||0),'-t',String(s.dur*sp+0.2),'-i',path.join(proj,s.bg.src),'-an','-vf',`setpts=PTS/${sp},fps=${fps},${cvr}`,'-q:v','3',path.join(d,'%04d.jpg')]);
   s._n=fs.readdirSync(d).length;
 });
 // imagens usadas (para detecção de rosto)

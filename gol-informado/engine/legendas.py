@@ -6,7 +6,7 @@ import sys, json, os, re
 proj = sys.argv[1]
 words = json.load(open(os.path.join(proj, '.cache', 'words.json')))
 cfg = json.load(open(os.path.join(proj, 'legenda.json'))) if os.path.exists(os.path.join(proj, 'legenda.json')) else {}
-fix = cfg.get('corrigir', {}); hls = [h.lower().split() for h in cfg.get('destaques', [])]
+fix = cfg.get('corrigir', {}); hls = [[re.sub(r'[^\wÀ-ÿ€]', '', t).lower() for t in h.split()] for h in cfg.get('destaques', [])]
 for w in words:
     core = re.sub(r'[^\wÀ-ÿ€]', '', w['w'])
     if core in fix: w['w'] = w['w'].replace(core, fix[core])

@@ -136,11 +136,20 @@ window.render=async(T)=>{
   let faces=[];const b=s.bg;
   if(b.type==='board'){html+=board(s,lt);}
   else{
-    const {sc,blur}=camera(s,lt);
+    let {sc,blur}=camera(s,lt);let ox=W/2,oy=H/2;
+    if(b.zoom){                       // zoom-in até o rosto: [escala inicial, final, segundos]
+      const zd=b.zoom[2]||s.dur;sc=b.zoom[0]+(b.zoom[1]-b.zoom[0])*eInOut(lt/zd)+(sc-camera({...s,noPunch:true},lt).sc);
+      let f0=null;
+      if(b.type==='clip'){const fz=FACES['scene'+s.i];if(fz){const fr=fz.frames.find(x=>x.length);if(fr)f0=fr[0];}}
+      else if(b.type==='photo'&&FACES[b.src]&&FACES[b.src][0]){f0={...FACES[b.src][0],_img:true};}
+      if(b.zoomAt){ox=b.zoomAt[0];oy=b.zoomAt[1];}else if(f0&&!f0._img){ox=f0.x+f0.w/2;oy=f0.y+f0.h/2;}
+      s._zo=[ox,oy];
+    }
     cx.filter=blur>0.3?`blur(${blur.toFixed(1)}px)`:'none';
-    cx.setTransform(sc,0,0,sc,W/2*(1-sc),H/2*(1-sc));
+    cx.setTransform(sc,0,0,sc,ox*(1-sc),oy*(1-sc));
     if(b.type==='photo'){
-      const im=await img(src(b.src)),fs=FACES[b.src]||[],c=fit(im,fs,W,H,b.focus);
+      const im=await img(src(b.src)),fs=FACES[b.src]||[],ih0=im.naturalHeight,iw0=im.naturalWidth;
+      const foc=b.pan?[iw0/2,ih0*(b.pan[0]+(b.pan[1]-b.pan[0])*eInOut(lt/s.dur))]:b.focus;const c=fit(im,fs,W,H,foc);
       cx.drawImage(im,c.sx,c.sy,c.sw,c.sh,0,0,W,H);faces=fs.map(f=>mapR(f,c,0,0));
       if(b.box)regions.box=mapR({x:b.box[0],y:b.box[1],w:b.box[2],h:b.box[3]},c,0,0);
     }else if(b.type==='clip'){
@@ -179,7 +188,7 @@ window.render=async(T)=>{
       cx.fillStyle=PAL.pri;cx.fillRect(W/2-4,0,8,H);
     }
     cx.setTransform(1,0,0,1,0,0);cx.filter='none';
-    faces=faces.map(f=>camBox(f,sc));for(const k in regions)regions[k]=camBox(regions[k],sc);
+    const cb=r=>({x:ox+(r.x-ox)*sc,y:oy+(r.y-oy)*sc,w:r.w*sc,h:r.h*sc});faces=faces.map(cb);for(const k in regions)regions[k]=cb(regions[k]);
     if(faces[0]&&!regions.face)regions.face=faces[0];
     const px=(s.fx||[]).find(f=>f.type==='pixelate');
     if(px&&lt<px.until){for(const f of faces)pixelate(cx,grow(f,.15),28);}
@@ -248,7 +257,7 @@ function circle(f,ft,regions){
   const sw=Math.round(clamp(r*0.11,16,30)),m=10+sw/2;
   r=Math.min(r,cxp-m,W-m-cxp,cyp-m,H-m-cyp);
   const C=2*Math.PI*r,pad=sw+14,S=2*(r+pad);
-  const RING={dourado:'#FFC845',roxo:'#A855F7',azul:'#2F8CFF',verde:'#7CFF2B',vermelho:'#FF3B4E',laranja:'#FF7A1A',ciano:'#22D3EE',rosa:'#FF4FA3'};
+  const RING={celeste:'#5EC8FF',dourado:'#FFC845',roxo:'#A855F7',azul:'#2F8CFF',verde:'#7CFF2B',vermelho:'#FF3B4E',laranja:'#FF7A1A',ciano:'#22D3EE',rosa:'#FF4FA3'};
   const col=RING[f.color]||f.color||RING[SPEC.ringColor]||SPEC.ringColor||'var(--pri)';
   return `<svg class="abs" style="left:${cxp-r-pad}px;top:${cyp-r-pad}px;opacity:${o.toFixed(3)};filter:drop-shadow(0 0 10px color-mix(in srgb,${col} 65%,transparent)) drop-shadow(0 0 26px color-mix(in srgb,${col} 35%,transparent)) drop-shadow(0 3px 4px rgba(0,0,0,.35))" width="${S}" height="${S}">
    <circle cx="${S/2}" cy="${S/2}" r="${r}" fill="none" stroke="${col}" stroke-width="${sw}"
