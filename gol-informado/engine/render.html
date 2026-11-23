@@ -290,8 +290,8 @@ window.events=()=>{
   for(const s of scenes){
     if(s.i>0){
       if(s.riser)ev.push({t:s.t0-1.55,k:'riser_metallic'});
-      else if(s.trans)ev.push({t:s.t0-0.15,k:W3[(wi++)%W3.length]});
-      else if(!s.noPunch)ev.push({t:s.t0-0.12,k:W3[(wi++)%W3.length]});
+      else if(s.trans)ev.push({t:s.t0,k:'burn_'+s.trans});           // som original do film burn
+      else if(!s.noPunch&&(s.whoosh??(s.i%3===2)))ev.push({t:s.t0-0.12,k:W3[(wi++)%W3.length]});  // whoosh só em parte das trocas
     }
     for(const f of (s.fx||[])){
       const t=s.t0+(f.t||0);

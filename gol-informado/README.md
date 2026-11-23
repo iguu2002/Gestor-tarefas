@@ -31,7 +31,8 @@ Guia de roteiro (estrutura, ganchos, marcações de cena): veja [`ROTEIRO.md`](R
 ## Sons e transições do canal
 
 - `engine/sfx/`: **marker** (lápis, sempre junto do círculo), **riser_metallic** (troca de cena logo depois do gancho; `"riser": true` na cena seguinte), whoosh1-3, pop1-2. Recortados dos packs enviados pelo canal.
-- `engine/transicoes/`: film burn / light leak (laranja, azul, vermelho, amarelo), aplicados em modo *screen* no começo da cena com `"trans": "laranja"`. Usar em algumas trocas, não em todas; alternar com o punch-in.
+- `engine/transicoes/`: film burn / light leak (laranja, azul, vermelho, amarelo), aplicados em modo *screen* no começo da cena com `"trans": "laranja"`. Usar em algumas trocas, não em todas; alternar com o punch-in. **Cada film burn toca o próprio som** (`sfx/burn_*.wav`), nunca whoosh por cima.
+- **Whoosh só em parte das trocas** (nem toda troca tem som). Efeitos sempre discretos, abaixo da narração.
 
 ## Como produzir um vídeo
 
