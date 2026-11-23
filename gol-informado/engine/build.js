@@ -70,7 +70,7 @@ const port=srv.address().port,U=p=>`http://127.0.0.1:${port}${p}`;
   const sv=spec.sfxVolume??(spec.audio?0.45:1);
   const args=['-f','lavfi','-t',String(total),'-i','anullsrc=r=48000:cl=stereo'];let fc='',n0=2,mixIn='[1]';
   if(spec.audio){args.push('-i',path.join(proj,spec.audio));fc+=`[2]aformat=sample_rates=48000:channel_layouts=stereo[nar];`;mixIn+='[nar]';n0=3;}
-  const LIB=path.join(__dirname,'sfx'),VOL={marker:1.8,riser_metallic:1.2,whoosh1:0.7,whoosh2:0.7,whoosh3:0.7,pop1:0.8};
+  const LIB=path.join(__dirname,'sfx'),VOL={marker:0.75,riser_metallic:0.75,pop1:0.8};for(let i=1;i<=10;i++)VOL['whoosh'+i]=0.38;
   ev.forEach((e,k)=>{const lf=path.join(LIB,e.k+'.wav');if(fs.existsSync(lf))args.push('-i',lf);else args.push('-f','lavfi','-i',sfx[e.k]);const ms=Math.max(0,Math.round(e.t*1000));fc+=`[${k+n0}]aformat=sample_rates=48000:channel_layouts=stereo,volume=${sv},adelay=${ms}|${ms},volume=${VOL[e.k]??1}[a${k}];`;mixIn+=`[a${k}]`;});
   const nin=1+(spec.audio?1:0)+ev.length;
   fc+=`${mixIn}amix=inputs=${nin}:normalize=0,atrim=0:${total},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[mix]`;

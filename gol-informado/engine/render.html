@@ -286,12 +286,12 @@ function board(s,lt){
   return h;
 }
 window.events=()=>{
-  const ev=[];let wi=0;const W3=['whoosh1','whoosh2','whoosh3'];
+  const ev=[];let wi=0;const W3=['whoosh2','whoosh7','whoosh4','whoosh9','whoosh1','whoosh6','whoosh3','whoosh10','whoosh5','whoosh8'];
   for(const s of scenes){
     if(s.i>0){
       if(s.riser)ev.push({t:s.t0-1.55,k:'riser_metallic'});
-      else if(s.trans)ev.push({t:s.t0-0.15,k:W3[(wi++)%3]});
-      else if(!s.noPunch)ev.push({t:s.t0-0.12,k:W3[(wi++)%3]});
+      else if(s.trans)ev.push({t:s.t0-0.15,k:W3[(wi++)%W3.length]});
+      else if(!s.noPunch)ev.push({t:s.t0-0.12,k:W3[(wi++)%W3.length]});
     }
     for(const f of (s.fx||[])){
       const t=s.t0+(f.t||0);
