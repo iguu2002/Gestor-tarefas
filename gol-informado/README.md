@@ -28,6 +28,11 @@ em cada foto e vídeo e posiciona título, figurinha, legenda e círculo nos esp
 
 Guia de roteiro (estrutura, ganchos, marcações de cena): veja [`ROTEIRO.md`](ROTEIRO.md).
 
+## Sons e transições do canal
+
+- `engine/sfx/`: **marker** (lápis, sempre junto do círculo), **riser_metallic** (troca de cena logo depois do gancho; `"riser": true` na cena seguinte), whoosh1-3, pop1-2. Recortados dos packs enviados pelo canal.
+- `engine/transicoes/`: film burn / light leak (laranja, azul, vermelho, amarelo), aplicados em modo *screen* no começo da cena com `"trans": "laranja"`. Usar em algumas trocas, não em todas; alternar com o punch-in.
+
 ## Como produzir um vídeo
 
 1. Criar `projetos/<nome-do-video>/` com `media/` (fotos e vídeos) e um `spec.json`.
