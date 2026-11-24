@@ -39,3 +39,9 @@ O contrato do Neymar com o Santos acaba em trinta e cinco dias. E ele ainda não
 - Foto do trio MSN no Barcelona (Messi, Suárez, Neymar)
 - Vídeos: Neymar falando na zona mista/entrevista; um lance dele pelo Santos (fecho)
 - PNG: escudos do Santos, Grêmio e Inter Miami (posso pegar os vetoriais)
+
+## Trechos escolhidos
+
+- neymar_entrevista.mp4: 0:00-0:10 (fala na zona mista); depois disso é estádio, não usar
+- neymar_caneta.mp4: a jogada aparece 2x no arquivo; usar só a 1ª (0:00-0:10,3), sem o light leak do meio
+- Escudos: Santos (Commons PNG), Grêmio e Inter Miami (SVG do Wikimedia renderizados)
