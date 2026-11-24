@@ -95,9 +95,7 @@
    "dur": 3.4,
    "bg": {
     "type": "photo",
-    "src": "media/olise_casaco.jpg",
-    "kb": "out",
-    "lift": 220
+    "src": "media/olise_silencio.jpg"
    },
    "fx": [
     {
@@ -112,13 +110,9 @@
    "dur": 5.6,
    "bg": {
     "type": "photo",
-    "src": "media/hainer_presidente.jpg"
+    "src": "media/olise_melhor_em_campo.jpg"
    },
    "fx": [
-    {
-     "type": "circle",
-     "t": 0.25
-    },
     {
      "type": "number",
      "t": 2.26,
