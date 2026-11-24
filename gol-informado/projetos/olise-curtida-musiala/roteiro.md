@@ -40,3 +40,7 @@ Uma curtida do Michael Olise deixou o Bayern de cabelo em pé. Tudo começou com
 - Print do post do Fabrizio Romano (se tiver, com a curtida do Olise)
 - Vídeos (opcional): lances do Olise e do Musiala
 - PNG: escudo do Bayern, escudo do Real Madrid (já temos), logo da FIFPRO
+
+## Créditos de imagem
+
+- rummenigge.jpg: Wikimedia Commons, "2015-02-06 Rummenigge 0370 (cropped).JPG" (licença livre do Commons; conferir autor/licença na página do arquivo antes de publicar)
