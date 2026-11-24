@@ -9,8 +9,7 @@
    "dur": 4.3,
    "bg": {
     "type": "photo",
-    "src": "media/olise_casaco.jpg",
-    "lift": 300
+    "src": "media/olise_casaco.jpg"
    },
    "fx": [
     {
@@ -75,7 +74,7 @@
    ]
   },
   {
-   "dur": 3.8,
+   "dur": 5.2,
    "bg": {
     "type": "panel"
    },
@@ -91,20 +90,6 @@
     }
    ],
    "trans": "azul"
-  },
-  {
-   "dur": 1.4,
-   "bg": {
-    "type": "photo",
-    "src": "media/olise_coracao.jpg"
-   },
-   "fx": [
-    {
-     "type": "title",
-     "t": 0.1,
-     "text": "CURTIU"
-    }
-   ]
   },
   {
    "dur": 3.4,

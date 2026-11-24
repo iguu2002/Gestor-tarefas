@@ -22,6 +22,11 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 - **Não repetir o mesmo trecho de vídeo** no mesmo Short. Cada clipe aparece uma vez; se faltar material, pedir mais vídeos ao canal.
 - **Não repetir a mesma foto** em cenas seguidas; no máximo 2 vezes no vídeo, com enquadramento diferente.
 - **Sem tela dividida.**
+- **Foto sempre preenche 100% da tela** (recorte + upscale). Nada de faixa desfocada em cima/embaixo nem card pequeno.
+- **Nenhuma foto repetida no mesmo vídeo.** Se faltar imagem, pedir mais ao canal antes de montar.
+- **Pessoa pouco conhecida** (dirigente, presidente): preferir vídeo de entrevista/lance em vez de foto parada.
+- **Cards/gráficos ficam na tela até o fim da fala correspondente** (não cortar no meio para uma foto rápida).
+- **SFX discretos**, bem abaixo da narração; whoosh só curto/suave (motion), nunca longo tipo onda.
 
 **Regra de ouro:** nenhum elemento cobre o rosto do jogador. O gerador detecta rostos (face-api)
 em cada foto e vídeo e posiciona título, figurinha, legenda e círculo nos espaços livres.
