@@ -9,8 +9,7 @@
    "dur": 3.664,
    "bg": {
     "type": "photo",
-    "src": "media/olise_casaco.jpg",
-    "lift": 300
+    "src": "media/olise_treino.jpg"
    },
    "fx": [
     {
@@ -75,7 +74,7 @@
    ]
   },
   {
-   "dur": 3.445,
+   "dur": 4.153,
    "bg": {
     "type": "panel"
    },
@@ -85,7 +84,7 @@
      "t": 0,
      "src": "NOTA DA FIFPRO",
      "text": "“O Bayern tem o dever de cuidar do jogador, e não de expô-lo.”",
-     "heart": 2.99,
+     "heart": 3.52,
      "liker": "Olise curtiu",
      "y": 440
     }
@@ -93,26 +92,10 @@
    "trans": "azul"
   },
   {
-   "dur": 0.708,
-   "bg": {
-    "type": "photo",
-    "src": "media/olise_coracao.jpg"
-   },
-   "fx": [
-    {
-     "type": "title",
-     "t": 0.029,
-     "text": "CURTIU"
-    }
-   ]
-  },
-  {
    "dur": 3.023,
    "bg": {
     "type": "photo",
-    "src": "media/olise_casaco.jpg",
-    "kb": "out",
-    "lift": 220
+    "src": "media/olise_silencio.jpg"
    },
    "fx": [
     {
@@ -127,13 +110,9 @@
    "dur": 4.835,
    "bg": {
     "type": "photo",
-    "src": "media/hainer_presidente.jpg"
+    "src": "media/olise_melhor_em_campo.jpg"
    },
    "fx": [
-    {
-     "type": "circle",
-     "t": 0.25
-    },
     {
      "type": "number",
      "t": 2.058,
@@ -147,7 +126,8 @@
    "dur": 5.025,
    "bg": {
     "type": "photo",
-    "src": "media/olise_treino.jpg"
+    "src": "media/olise_casaco.jpg",
+    "kb": "in"
    },
    "fx": [
     {

@@ -320,7 +320,7 @@ window.events=()=>{
     for(const f of (s.fx||[])){
       const t=s.t0+(f.t||0);
       if(f.type==='sticker')ev.push({t,k:'pop1'});
-      if(f.type==='title'||f.type==='number'){const money=f.cash??/€|R\$|US\$|MILH|SAL[AÁ]RIO|EUROS/i.test((f.text||'')+' '+(f.sub||''));ev.push({t,k:money?'cash':'hit'});}
+      if(f.type==='title'||f.type==='number'){const money=f.cash??/€|R\$|US\$|MILH|SAL[AÁ]RIO|EUROS/i.test((f.text||'')+' '+(f.sub||''));ev.push({t,k:money?((ev.filter(e=>e.k.startsWith('cash')).length%2)?'cash2':'cash'):'hit'});}
       if(f.type==='post'&&f.heart!=null)ev.push({t:s.t0+f.heart,k:'pop1'});
       if(f.type==='circle'&&s.bg.type!=='clip')ev.push({t,k:'marker'});
       if(f.type==='pixelate')ev.push({t:s.t0+f.until,k:'reveal'});

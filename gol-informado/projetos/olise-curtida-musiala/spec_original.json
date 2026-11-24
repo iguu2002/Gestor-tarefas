@@ -9,7 +9,7 @@
    "dur": 4.3,
    "bg": {
     "type": "photo",
-    "src": "media/olise_casaco.jpg"
+    "src": "media/olise_treino.jpg"
    },
    "fx": [
     {
@@ -126,7 +126,8 @@
    "dur": 5.6,
    "bg": {
     "type": "photo",
-    "src": "media/olise_treino.jpg"
+    "src": "media/olise_casaco.jpg",
+    "kb": "in"
    },
    "fx": [
     {
