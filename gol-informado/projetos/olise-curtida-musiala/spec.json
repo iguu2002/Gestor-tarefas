@@ -1,0 +1,415 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao_cortada.wav",
+ "scenes": [
+  {
+   "dur": 3.664,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_casaco.jpg",
+    "lift": 300
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.98
+    }
+   ]
+  },
+  {
+   "dur": 1.558,
+   "bg": {
+    "type": "photo",
+    "src": "media/musiala_comemorando.jpg"
+   },
+   "fx": [],
+   "riser": true
+  },
+  {
+   "dur": 5.818,
+   "bg": {
+    "type": "photo",
+    "src": "media/rummenigge.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.731
+    }
+   ]
+  },
+  {
+   "dur": 3.372,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_bayern.png",
+    "imgW": 440,
+    "y": 1000
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 0.86,
+     "text": "€25 MILHÕES",
+     "sub": "POR ANO"
+    }
+   ]
+  },
+  {
+   "dur": 7.995,
+   "bg": {
+    "type": "photo",
+    "src": "media/musiala_lesionado.jpg"
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.198,
+     "src": "media/logo_fifpro.png",
+     "hold": 5.5,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "dur": 3.445,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "post",
+     "t": 0,
+     "src": "NOTA DA FIFPRO",
+     "text": "“O Bayern tem o dever de cuidar do jogador, e não de expô-lo.”",
+     "heart": 2.99,
+     "liker": "Olise curtiu",
+     "y": 440
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 0.708,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_coracao.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.029,
+     "text": "CURTIU"
+    }
+   ]
+  },
+  {
+   "dur": 3.023,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_casaco.jpg",
+    "kb": "out",
+    "lift": 220
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.4,
+     "src": "media/escudo_real.png",
+     "hold": 2.0
+    }
+   ]
+  },
+  {
+   "dur": 4.835,
+   "bg": {
+    "type": "photo",
+    "src": "media/hainer_presidente.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.25
+    },
+    {
+     "type": "number",
+     "t": 2.058,
+     "text": "ATÉ 2029",
+     "sub": "CONTRATO DO OLISE"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 5.025,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_treino.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 3.927,
+     "text": "RECADO?"
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.98,
+   "text": "Uma *curtida* do"
+  },
+  {
+   "t": 0.98,
+   "end": 1.9,
+   "text": "Michael *Olise*"
+  },
+  {
+   "t": 1.9,
+   "end": 2.6,
+   "text": "deixou o Bayern"
+  },
+  {
+   "t": 2.6,
+   "end": 3.44,
+   "text": "de cabelo em"
+  },
+  {
+   "t": 3.44,
+   "end": 3.664,
+   "text": "pé"
+  },
+  {
+   "t": 3.779,
+   "end": 4.559,
+   "text": "Tudo começou com"
+  },
+  {
+   "t": 4.559,
+   "end": 5.219,
+   "text": "o *Musiala*"
+  },
+  {
+   "t": 5.322,
+   "end": 6.182,
+   "text": "Depois de tantas"
+  },
+  {
+   "t": 6.182,
+   "end": 6.714,
+   "text": "lesões"
+  },
+  {
+   "t": 6.833,
+   "end": 7.553,
+   "text": "o *Rummenigge*"
+  },
+  {
+   "t": 7.753,
+   "end": 8.293,
+   "text": "presidente de"
+  },
+  {
+   "t": 8.293,
+   "end": 9.01,
+   "text": "honra do Bayern"
+  },
+  {
+   "t": 9.24,
+   "end": 9.62,
+   "text": "questionou"
+  },
+  {
+   "t": 9.62,
+   "end": 10.48,
+   "text": "publicamente o"
+  },
+  {
+   "t": 10.48,
+   "end": 11.017,
+   "text": "salário dele"
+  },
+  {
+   "t": 11.14,
+   "end": 11.9,
+   "text": "São cerca de"
+  },
+  {
+   "t": 11.9,
+   "end": 13.26,
+   "text": "*25 milhões* de"
+  },
+  {
+   "t": 13.26,
+   "end": 14.009,
+   "text": "euros por ano"
+  },
+  {
+   "t": 14.412,
+   "end": 15.37,
+   "text": "A resposta veio"
+  },
+  {
+   "t": 15.37,
+   "end": 16.09,
+   "text": "da *FIFPRO*"
+  },
+  {
+   "t": 16.242,
+   "end": 16.802,
+   "text": "o sindicato"
+  },
+  {
+   "t": 16.802,
+   "end": 17.482,
+   "text": "mundial dos"
+  },
+  {
+   "t": 17.482,
+   "end": 17.962,
+   "text": "jogadores"
+  },
+  {
+   "t": 18.14,
+   "end": 18.86,
+   "text": "Eles disseram que"
+  },
+  {
+   "t": 18.86,
+   "end": 19.52,
+   "text": "o Bayern tem"
+  },
+  {
+   "t": 19.52,
+   "end": 20.62,
+   "text": "o *dever de cuidar*"
+  },
+  {
+   "t": 20.62,
+   "end": 21.441,
+   "text": "do jogador e"
+  },
+  {
+   "t": 21.441,
+   "end": 22.221,
+   "text": "não de expor"
+  },
+  {
+   "t": 22.221,
+   "end": 22.407,
+   "text": "ele"
+  },
+  {
+   "t": 22.496,
+   "end": 23.356,
+   "text": "O *Fabrizio Romano*"
+  },
+  {
+   "t": 23.356,
+   "end": 24.176,
+   "text": "publicou a nota"
+  },
+  {
+   "t": 24.732,
+   "end": 25.412,
+   "text": "E adivinha quem"
+  },
+  {
+   "t": 25.412,
+   "end": 25.881,
+   "text": "*curtiu?*"
+  },
+  {
+   "t": 25.881,
+   "end": 26.553,
+   "text": "O *Olise*"
+  },
+  {
+   "t": 26.7,
+   "end": 27.6,
+   "text": "E isso pesa"
+  },
+  {
+   "t": 27.7,
+   "end": 27.98,
+   "text": "porque o"
+  },
+  {
+   "t": 27.98,
+   "end": 28.9,
+   "text": "*Real Madrid* segue"
+  },
+  {
+   "t": 28.9,
+   "end": 29.553,
+   "text": "de olho nele"
+  },
+  {
+   "t": 29.683,
+   "end": 30.263,
+   "text": "O Bayern já"
+  },
+  {
+   "t": 30.263,
+   "end": 30.575,
+   "text": "avisou"
+  },
+  {
+   "t": 30.661,
+   "end": 31.421,
+   "text": "Ele tem contrato"
+  },
+  {
+   "t": 31.421,
+   "end": 32.944,
+   "text": "até *2029* e"
+  },
+  {
+   "t": 32.944,
+   "end": 33.764,
+   "text": "o clube sabe"
+  },
+  {
+   "t": 33.764,
+   "end": 34.344,
+   "text": "se defender"
+  },
+  {
+   "t": 34.503,
+   "end": 35.223,
+   "text": "Mas depois dessa"
+  },
+  {
+   "t": 35.223,
+   "end": 36.083,
+   "text": "*curtida*"
+  },
+  {
+   "t": 36.323,
+   "end": 36.903,
+   "text": "fica a pergunta"
+  },
+  {
+   "t": 37.025,
+   "end": 37.665,
+   "text": "O *Olise* está"
+  },
+  {
+   "t": 37.665,
+   "end": 38.625,
+   "text": "mandando um *recado*"
+  },
+  {
+   "t": 38.625,
+   "end": 39.185,
+   "text": "para o Bayern?"
+  }
+ ],
+ "duration": 39.79
+}

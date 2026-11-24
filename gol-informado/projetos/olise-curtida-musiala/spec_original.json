@@ -1,0 +1,162 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "scenes": [
+  {
+   "dur": 4.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_casaco.jpg",
+    "lift": 300
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.98
+    }
+   ]
+  },
+  {
+   "dur": 1.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/musiala_comemorando.jpg"
+   },
+   "fx": [],
+   "riser": true
+  },
+  {
+   "dur": 6.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/rummenigge.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.92
+    }
+   ]
+  },
+  {
+   "dur": 4.0,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_bayern.png",
+    "imgW": 440,
+    "y": 1000
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 0.86,
+     "text": "€25 MILHÕES",
+     "sub": "POR ANO"
+    }
+   ]
+  },
+  {
+   "dur": 9.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/musiala_lesionado.jpg"
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.4,
+     "src": "media/logo_fifpro.png",
+     "hold": 5.5,
+     "rot": -4
+    }
+   ]
+  },
+  {
+   "dur": 3.8,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "post",
+     "t": 0,
+     "src": "NOTA DA FIFPRO",
+     "text": "“O Bayern tem o dever de cuidar do jogador, e não de expô-lo.”",
+     "heart": 3.4,
+     "liker": "Olise curtiu",
+     "y": 440
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 1.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_coracao.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.1,
+     "text": "CURTIU"
+    }
+   ]
+  },
+  {
+   "dur": 3.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_casaco.jpg",
+    "kb": "out",
+    "lift": 220
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 1.4,
+     "src": "media/escudo_real.png",
+     "hold": 2.0
+    }
+   ]
+  },
+  {
+   "dur": 5.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/hainer_presidente.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.25
+    },
+    {
+     "type": "number",
+     "t": 2.26,
+     "text": "ATÉ 2029",
+     "sub": "CONTRATO DO OLISE"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 5.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/olise_treino.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 4.4,
+     "text": "RECADO?"
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ]
+}
