@@ -1,0 +1,447 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "roxo",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao_cortada.wav",
+ "scenes": [
+  {
+   "dur": 7.327,
+   "bg": {
+    "type": "clip",
+    "src": "media/gol_psv_penalti.mp4",
+    "start": 1.273,
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 6.307,
+     "text": "NINGUÉM IMAGINAVA",
+     "y": 200
+    }
+   ]
+  },
+  {
+   "dur": 5.018,
+   "bg": {
+    "type": "board",
+    "tag": "CHAMPIONS · 5ª RODADA",
+    "home": {
+     "name": "REAL MADRID",
+     "src": "media/escudo_real.png",
+     "score": 0
+    },
+    "away": {
+     "name": "PSV",
+     "src": "media/escudo_psv.png",
+     "score": 1
+    }
+   },
+   "fx": [],
+   "riser": true
+  },
+  {
+   "dur": 4.754,
+   "bg": {
+    "type": "clip",
+    "src": "media/gol_valverde.mp4",
+    "start": 0.846
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.798,
+     "text": "CALCANHAR",
+     "font": "black"
+    }
+   ]
+  },
+  {
+   "dur": 2.393,
+   "bg": {
+    "type": "photo",
+    "src": "media/bellingham_comemorando.jpg",
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.893
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 4.432,
+   "bg": {
+    "type": "clip",
+    "src": "media/gol_bellingham.mp4",
+    "start": 5.768,
+    "delogo": [
+     228,
+     572,
+     120,
+     30
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 3.917,
+     "text": "GOLAÇO",
+     "font": "black"
+    }
+   ]
+  },
+  {
+   "dur": 4.682,
+   "bg": {
+    "type": "clip",
+    "src": "media/gol_mbappe.mp4",
+    "start": 8.318
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 3.806,
+     "text": "2 ASSISTÊNCIAS",
+     "sub": "ARDA GÜLER",
+     "size": 118
+    }
+   ]
+  },
+  {
+   "dur": 1.653,
+   "bg": {
+    "type": "photo",
+    "src": "media/vini_grito.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.003,
+     "hold": 1.0
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 3.932,
+   "bg": {
+    "type": "clip",
+    "src": "media/gol_vini.mp4",
+    "start": 0.668
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 3.177,
+     "text": "ENFIM"
+    }
+   ]
+  },
+  {
+   "dur": 2.158,
+   "bg": {
+    "type": "board",
+    "tag": "FINAL",
+    "home": {
+     "name": "REAL MADRID",
+     "src": "media/escudo_real.png",
+     "score": 5
+    },
+    "away": {
+     "name": "PSV",
+     "src": "media/escudo_psv.png",
+     "score": 1
+    }
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.104,
+   "bg": {
+    "type": "photo",
+    "src": "media/guler_joinha.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.026,
+     "text": "QUAL O MELHOR?"
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.9,
+   "text": "O PSV"
+  },
+  {
+   "t": 0.9,
+   "end": 2.227,
+   "text": "*calou o Bernabéu*"
+  },
+  {
+   "t": 2.37,
+   "end": 2.83,
+   "text": "e foi a"
+  },
+  {
+   "t": 2.83,
+   "end": 3.83,
+   "text": "*pior coisa* que"
+  },
+  {
+   "t": 3.83,
+   "end": 4.51,
+   "text": "eles podiam ter"
+  },
+  {
+   "t": 4.51,
+   "end": 4.803,
+   "text": "feito"
+  },
+  {
+   "t": 4.867,
+   "end": 5.327,
+   "text": "Porque o que"
+  },
+  {
+   "t": 5.327,
+   "end": 5.987,
+   "text": "veio depois"
+  },
+  {
+   "t": 6.307,
+   "end": 7.315,
+   "text": "*ninguém imaginava*"
+  },
+  {
+   "t": 7.367,
+   "end": 8.347,
+   "text": "O PSV saiu"
+  },
+  {
+   "t": 8.347,
+   "end": 9.187,
+   "text": "na frente com"
+  },
+  {
+   "t": 9.187,
+   "end": 9.867,
+   "text": "o pênalti do"
+  },
+  {
+   "t": 9.867,
+   "end": 10.402,
+   "text": "*Perišić*"
+  },
+  {
+   "t": 10.475,
+   "end": 10.935,
+   "text": "e o Real"
+  },
+  {
+   "t": 10.935,
+   "end": 11.795,
+   "text": "foi pro intervalo"
+  },
+  {
+   "t": 11.795,
+   "end": 12.338,
+   "text": "perdendo"
+  },
+  {
+   "t": 12.385,
+   "end": 13.065,
+   "text": "Mas no segundo"
+  },
+  {
+   "t": 13.065,
+   "end": 13.472,
+   "text": "tempo"
+  },
+  {
+   "t": 13.643,
+   "end": 14.243,
+   "text": "o Arda *Güler*"
+  },
+  {
+   "t": 14.243,
+   "end": 14.843,
+   "text": "deu um passe"
+  },
+  {
+   "t": 14.843,
+   "end": 15.998,
+   "text": "de *calcanhar* e"
+  },
+  {
+   "t": 15.998,
+   "end": 16.558,
+   "text": "o *Valverde*"
+  },
+  {
+   "t": 16.558,
+   "end": 17.005,
+   "text": "empatou"
+  },
+  {
+   "t": 17.079,
+   "end": 18.019,
+   "text": "Aí veio o"
+  },
+  {
+   "t": 18.019,
+   "end": 18.679,
+   "text": "*lance da noite*"
+  },
+  {
+   "t": 18.772,
+   "end": 19.472,
+   "text": "O *Bellingham*"
+  },
+  {
+   "t": 19.472,
+   "end": 20.292,
+   "text": "dominou a bola"
+  },
+  {
+   "t": 20.292,
+   "end": 20.812,
+   "text": "no alto"
+  },
+  {
+   "t": 21.042,
+   "end": 22.361,
+   "text": "ajeitou e encobriu"
+  },
+  {
+   "t": 22.361,
+   "end": 22.889,
+   "text": "no canto"
+  },
+  {
+   "t": 23.409,
+   "end": 23.924,
+   "text": "*golaço!*"
+  },
+  {
+   "t": 23.924,
+   "end": 24.818,
+   "text": "Depois foi a"
+  },
+  {
+   "t": 24.818,
+   "end": 25.498,
+   "text": "vez do *Mbappé*"
+  },
+  {
+   "t": 25.638,
+   "end": 26.298,
+   "text": "que fez dois"
+  },
+  {
+   "t": 26.43,
+   "end": 27.27,
+   "text": "Um deles com"
+  },
+  {
+   "t": 27.27,
+   "end": 27.73,
+   "text": "mais uma"
+  },
+  {
+   "t": 27.73,
+   "end": 28.29,
+   "text": "assistência do"
+  },
+  {
+   "t": 28.29,
+   "end": 28.57,
+   "text": "*Güler*"
+  },
+  {
+   "t": 28.719,
+   "end": 29.435,
+   "text": "E pra fechar"
+  },
+  {
+   "t": 29.579,
+   "end": 30.303,
+   "text": "o *Vinícius*"
+  },
+  {
+   "t": 30.476,
+   "end": 31.156,
+   "text": "Depois de acertar"
+  },
+  {
+   "t": 31.156,
+   "end": 31.476,
+   "text": "a trave"
+  },
+  {
+   "t": 31.476,
+   "end": 32.376,
+   "text": "*duas vezes*"
+  },
+  {
+   "t": 32.616,
+   "end": 33.676,
+   "text": "ele finalmente fez"
+  },
+  {
+   "t": 33.676,
+   "end": 34.075,
+   "text": "o dele"
+  },
+  {
+   "t": 34.311,
+   "end": 36.349,
+   "text": "*Real 5* PSV 1"
+  },
+  {
+   "t": 36.461,
+   "end": 36.808,
+   "text": "E aí"
+  },
+  {
+   "t": 36.955,
+   "end": 37.355,
+   "text": "qual foi o"
+  },
+  {
+   "t": 37.355,
+   "end": 37.575,
+   "text": "melhor?"
+  },
+  {
+   "t": 37.712,
+   "end": 38.492,
+   "text": "O *golaço* do"
+  },
+  {
+   "t": 38.492,
+   "end": 39.432,
+   "text": "*Bellingham* ou o"
+  },
+  {
+   "t": 39.432,
+   "end": 39.972,
+   "text": "*calcanhar* do"
+  },
+  {
+   "t": 39.972,
+   "end": 40.252,
+   "text": "*Güler?*"
+  }
+ ],
+ "duration": 40.85
+}
