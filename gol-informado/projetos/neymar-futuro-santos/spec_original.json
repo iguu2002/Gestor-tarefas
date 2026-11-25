@@ -1,0 +1,138 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "dourado",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "scenes": [
+  {
+   "dur": 6.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/neymar_serio.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.78
+    }
+   ]
+  },
+  {
+   "dur": 3.1,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.3,
+     "text": "31/12",
+     "sub": "FIM DO CONTRATO",
+     "y": null
+    }
+   ],
+   "riser": true
+  },
+  {
+   "dur": 5.8,
+   "bg": {
+    "type": "board",
+    "tag": "BRASILEIRÃO",
+    "home": {
+     "name": "SANTOS",
+     "src": "media/escudo_santos.png",
+     "score": 0
+    },
+    "away": {
+     "name": "GRÊMIO",
+     "src": "media/escudo_gremio.png",
+     "score": 2
+    }
+   },
+   "fx": []
+  },
+  {
+   "dur": 8.8,
+   "bg": {
+    "type": "clip",
+    "src": "media/neymar_entrevista.mp4",
+    "start": 0.3
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 7.16,
+     "text": "VAMOS CONVERSAR",
+     "y": 1050
+    }
+   ]
+  },
+  {
+   "dur": 3.7,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_santos.png",
+    "imgW": 560,
+    "y": 760
+   },
+   "fx": [],
+   "trans": "laranja"
+  },
+  {
+   "dur": 8.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/neymar_pensativo.jpg"
+   },
+   "fx": [
+    {
+     "type": "sticker",
+     "t": 7.45,
+     "src": "media/escudo_intermiami.png",
+     "hold": 1.6
+    }
+   ]
+  },
+  {
+   "dur": 6.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/msn_barcelona.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 4.5,
+     "text": "MSN"
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 5.0,
+   "bg": {
+    "type": "photo",
+    "src": "media/neymar_campo.jpg"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 2.8,
+     "text": "10 GOLS",
+     "sub": "8 ASSISTÊNCIAS · 29 JOGOS"
+    }
+   ]
+  },
+  {
+   "dur": 5.4,
+   "bg": {
+    "type": "clip",
+    "src": "media/neymar_caneta.mp4",
+    "start": 4.0
+   },
+   "fx": [],
+   "trans": "amarelo"
+  }
+ ]
+}
