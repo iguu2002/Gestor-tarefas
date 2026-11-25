@@ -9,7 +9,8 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 |---|---|
 | Paleta | **Dourado Troféu**: destaque `#FFC845`, fundo das cenas gráficas azul-marinho (`#070B18` → `#18234A`) com textura de linhas, vitória `#3DFF8B`, derrota `#FF3D57` |
 | Legenda | Palavra por palavra (1 a 3 palavras), Baloo 2 ExtraBold, branca com contorno preto, palavra-chave em dourado sólido com glow suave. Entra com "pop" leve |
-| Títulos | Anton, dourado **sólido** com glow suave da mesma cor (nunca branco com brilho colorido). Entram com impacto (escala 1.35 → 1) |
+| Títulos | Cor e peso variam com a cena: usar a cor do clube/foto (`"color": "vermelho"`, azul, grena, celeste...) e `"font": "black"` (Archivo Black, mais grossa) quando pedir mais impacto. Sempre cor sólida + glow da mesma cor. |
+| Títulos (base) | Anton, dourado **sólido** com glow suave da mesma cor (nunca branco com brilho colorido). Entram com impacto (escala 1.35 → 1) |
 | Marca d'água | `GOL INFORMADO`, Archivo Black, branca com 26% de opacidade, abaixo da legenda |
 | Figurinha | Bandeira/imagem em cartão branco arredondado, borda dourada, pop com overshoot e leve flutuação |
 | Círculo | **Só para chamar atenção**: na primeira menção do jogador (rosto) ou num detalhe citado (ex.: escudo do time novo). **Anel redondo (nunca oval), grosso, em cor sólida e viva** (dourado, roxo, azul, verde, vermelho, laranja, ciano, rosa; varia de vídeo para vídeo com `"ringColor"` no spec ou `"color"` no efeito), com brilho discreto só de charme. Aparece em "relógio" a partir das 12h em 0,75s, **começando lento e terminando rápido** (tipo time remapping), fica ~1,6s, some |

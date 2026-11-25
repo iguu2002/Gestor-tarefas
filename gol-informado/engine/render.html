@@ -258,7 +258,13 @@ function title(f,ft,faces,s,lt,capY,until){
   const spot=freeSpot(bands.filter(b=>b.y+b.h<capY-20),faces)||bands[0];
   const k=ft<.22?1.35-0.35*eOut(ft/.22):1,o=clamp(ft/.12)*fadeOut(lt,until,.15);
   const size=f.size||(f.text.length>9?Math.max(120,Math.round(220*9/f.text.length)):220);
-  return `<div class="title" style="top:${spot.y+(th-size)/2}px;font-size:${size}px;opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${esc(f.text)}</div>`;
+  // cor e peso por título (combinar com as cores do clube/cena)
+  const TC={dourado:'#FFC845',vermelho:'#E8233F',azul:'#2F7BFF',grena:'#A50044',celeste:'#5EC8FF',verde:'#2EE87A',roxo:'#A855F7',laranja:'#FF7A1A',branco:'#FFFFFF',rosa:'#FF5FA8'};
+  const col=TC[f.color]||f.color,heavy=f.font==='black';
+  const st=(col?`color:${col};-webkit-text-stroke:9px color-mix(in srgb,${col} 18%,#000);text-shadow:0 0 26px color-mix(in srgb,${col} 75%,transparent),0 0 70px color-mix(in srgb,${col} 40%,transparent),0 12px 26px rgba(0,0,0,.6);`:'')
+    +(heavy?`font-family:Archivo;letter-spacing:-2px;`:'');
+  const sz=heavy?Math.round(size*0.86):size;
+  return `<div class="title" style="top:${spot.y+(th-sz)/2}px;font-size:${sz}px;${st}opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${esc(f.text)}</div>`;
 }
 function numberCard(f,ft,faces,lt,s,capY){
   const h=300,ys=[300,520,760,980].map(y=>({x:120,y,w:W-240,h}));

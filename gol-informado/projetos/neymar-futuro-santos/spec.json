@@ -103,7 +103,9 @@
     {
      "type": "title",
      "t": 3.858,
-     "text": "MSN"
+     "text": "MSN",
+     "color": "vermelho",
+     "font": "black"
     }
    ],
    "trans": "azul"
