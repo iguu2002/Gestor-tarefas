@@ -26,6 +26,14 @@ Ritmo de narração: ~3,3 palavras por segundo.
 
 ## Tipos de gancho
 
+**Regra do canal:** o gancho tem que provocar. Impacto, choque, "ninguém imaginava", consequência sem explicar a causa.
+Nunca começar resumindo o resultado ("o Real perdia e virou"). Fatos continuam 100% verdadeiros: o exagero vai no tom, não no fato.
+
+- **Consequência dramática:** "O PSV calou o Bernabéu. E foi a pior coisa que eles podiam ter feito."
+- **Ninguém imaginava:** "O que aconteceu depois ninguém imaginava."
+- **Superlativo com cautela:** "Esse pode ser o gol mais absurdo da Champions." (usar "pode ser", "um dos")
+
+
 - **Polêmica / tapa na cara:** "O que o Neymar fez é um tapa na cara de quem diz que ele está acabado."
 - **Curiosidade (decisão escondida):** "Ele podia escolher entre cinco seleções, mas tomou uma decisão pesada."
 - **Autoridade revela:** "O Cucurella revelou por que todo mundo quer o Arda Güler."

@@ -8,7 +8,7 @@ NÃO confirmado (fora do roteiro): "Mourinho tirou três jogadores no intervalo"
 
 ## Roteiro
 
-1. O Real Madrid tava perdendo pro PSV no Bernabéu. Terminou com cinco gols e um dos golaços do ano.
+1. O PSV calou o Bernabéu. E foi a pior coisa que eles podiam ter feito. Porque o que veio depois ninguém imaginava.
    `[foto: Bellingham comemorando] [círculo no rosto]`
 2. O PSV saiu na frente com pênalti do Perišić.
    `[placar: Real Madrid 0 x 1 PSV]`
@@ -30,7 +30,7 @@ NÃO confirmado (fora do roteiro): "Mourinho tirou três jogadores no intervalo"
 
 ## Texto corrido (ElevenLabs)
 
-O Real Madrid tava perdendo pro PSV no Bernabéu. Terminou com cinco gols e um dos golaços do ano. O PSV saiu na frente com pênalti do Perišić. E o Real foi pro intervalo perdendo. Mas no segundo tempo, o Arda Güler deu um passe de calcanhar... e o Valverde empatou. Aí veio o lance da noite. O Bellingham dominou a bola no alto, ajeitou, e encobriu no canto. Golaço. Depois foi a vez do Mbappé, que fez dois. Um deles com mais uma assistência do Güler. E pra fechar, o Vinícius. Depois de acertar a trave duas vezes, ele finalmente fez o dele. Real cinco, PSV um. E aí, qual foi o melhor: o golaço do Bellingham ou o calcanhar do Güler?
+O PSV calou o Bernabéu. E foi a pior coisa que eles podiam ter feito. Porque o que veio depois ninguém imaginava. O PSV saiu na frente com pênalti do Perišić. E o Real foi pro intervalo perdendo. Mas no segundo tempo, o Arda Güler deu um passe de calcanhar... e o Valverde empatou. Aí veio o lance da noite. O Bellingham dominou a bola no alto, ajeitou, e encobriu no canto. Golaço. Depois foi a vez do Mbappé, que fez dois. Um deles com mais uma assistência do Güler. E pra fechar, o Vinícius. Depois de acertar a trave duas vezes, ele finalmente fez o dele. Real cinco, PSV um. E aí, qual foi o melhor: o golaço do Bellingham ou o calcanhar do Güler?
 
 ## Mídias para buscar (sem repetir nenhuma)
 
