@@ -23,6 +23,7 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 - **Não repetir o mesmo trecho de vídeo** no mesmo Short. Cada clipe aparece uma vez; se faltar material, pedir mais vídeos ao canal.
 - **Não repetir a mesma foto** em cenas seguidas; no máximo 2 vezes no vídeo, com enquadramento diferente.
 - **Sem tela dividida.**
+- **Abertura aprovada pelo canal:** a 1ª cena entra com zoom + desfoque que vai revelando a imagem nas primeiras palavras. Manter; variar entre zoom-in (`"kb": "in"`) e zoom-out (`"kb": "out"`) de vídeo para vídeo.
 - **Foto sempre preenche 100% da tela** (recorte + upscale). Nada de faixa desfocada em cima/embaixo nem card pequeno.
 - **Nenhuma foto repetida no mesmo vídeo.** Se faltar imagem, pedir mais ao canal antes de montar.
 - **Pessoa pouco conhecida** (dirigente, presidente): preferir vídeo de entrevista/lance em vez de foto parada.
