@@ -42,11 +42,11 @@
    "riser": true
   },
   {
-   "dur": 5.6,
+   "dur": 5.15,
    "bg": {
     "type": "clip",
     "src": "media/gol_valverde.mp4",
-    "start": 0.0
+    "start": 6.51
    },
    "fx": [
     {
@@ -58,7 +58,7 @@
    ]
   },
   {
-   "dur": 2.7,
+   "dur": 3.15,
    "bg": {
     "type": "photo",
     "src": "media/bellingham_comemorando.jpg",
@@ -67,7 +67,7 @@
    "fx": [
     {
      "type": "circle",
-     "t": 2.2
+     "t": 0.15
     }
    ],
    "trans": "laranja"
@@ -95,16 +95,16 @@
    ]
   },
   {
-   "dur": 5.7,
+   "dur": 5.05,
    "bg": {
     "type": "clip",
     "src": "media/gol_mbappe.mp4",
-    "start": 7.3
+    "start": 7.6
    },
    "fx": [
     {
      "type": "number",
-     "t": 4.46,
+     "t": 3.2,
      "text": "2 ASSISTÊNCIAS",
      "sub": "ARDA GÜLER",
      "size": 118
@@ -112,7 +112,7 @@
    ]
   },
   {
-   "dur": 1.8,
+   "dur": 2.45,
    "bg": {
     "type": "photo",
     "src": "media/vini_grito.jpg"
@@ -120,8 +120,7 @@
    "fx": [
     {
      "type": "circle",
-     "t": 1.15,
-     "hold": 1.0
+     "t": 0.12
     }
    ],
    "trans": "azul"
@@ -133,13 +132,7 @@
     "src": "media/gol_vini.mp4",
     "start": 0.0
    },
-   "fx": [
-    {
-     "type": "title",
-     "t": 3.46,
-     "text": "ENFIM"
-    }
-   ]
+   "fx": []
   },
   {
    "dur": 2.5,

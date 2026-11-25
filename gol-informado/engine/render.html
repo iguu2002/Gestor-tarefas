@@ -94,6 +94,15 @@ window.init=async(base,spec,faces,trans)=>{
   PAL=PALETTES[spec.palette||'dourado'];const r=document.documentElement.style;
   r.setProperty('--pri',PAL.pri);r.setProperty('--pri-dark',PAL.priDark);r.setProperty('--bg1',PAL.bg1);r.setProperty('--bg2',PAL.bg2);r.setProperty('--win',PAL.win);r.setProperty('--loss',PAL.loss);
   let t0=0;scenes=spec.scenes.map((s,i)=>{const o={...s,i,t0};t0+=s.dur;return o;});
+  // regra: o círculo tem que aparecer inteiro (entrar, segurar, sair) antes da cena acabar; senão, sem círculo
+  for(const sc of scenes){sc.fx=(sc.fx||[]).filter(f=>{
+    if(f.type!=='circle')return true;
+    if(sc.bg.type==='clip')return false;
+    const D=f.draw||0.75,F=0.35,minHold=0.5;
+    if(sc.dur<D+F+minHold+0.15)return false;
+    f.t=Math.min(f.t||0,Math.max(0.12,sc.dur-(D+F+1.0)));
+    f.hold=Math.min(f.hold||1.6,sc.dur-f.t-D-F-0.05);
+    return f.hold>=minHold;});}
   await document.fonts.ready;
   return spec.duration||t0;
 };
@@ -289,7 +298,7 @@ function circle(f,ft,regions,bgType){
   if(bgType==='clip')return '';   // regra do canal: círculo só em foto
   // anel redondo (nunca oval), cor sólida, brilho discreto; aparece em "relógio" a partir das 12h
   const fc=regions[f.target||'face'];if(!fc)return '';
-  const DRAW=f.draw||0.75,dur=f.hold||1.6,draw=Math.pow(clamp(ft/DRAW),2.6),o=clamp((dur+DRAW-ft)/.35);if(o<=0)return '';  // começa lento e termina rápido (tipo time remapping)
+  const DRAW=f.draw||0.75,dur=f.hold||1.6,draw=Math.pow(clamp(ft/DRAW),2.6),o=clamp((dur+DRAW+.35-ft)/.35);if(o<=0)return '';  // começa lento e termina rápido (tipo time remapping)
   const isBox=f.target==='box';
   const cxp=fc.x+fc.w/2,cyp=fc.y+fc.h/2;
   let r=Math.max(fc.w,fc.h)*(isBox?0.95:0.66);r=Math.max(r,isBox?70:120);

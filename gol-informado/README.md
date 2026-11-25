@@ -23,6 +23,8 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 - **Não repetir o mesmo trecho de vídeo** no mesmo Short. Cada clipe aparece uma vez; se faltar material, pedir mais vídeos ao canal.
 - **Não repetir a mesma foto** em cenas seguidas; no máximo 2 vezes no vídeo, com enquadramento diferente.
 - **Sem tela dividida.**
+- **Círculo aparece inteiro:** entra, segura e sai antes da troca de cena (o motor ajusta sozinho; se a cena for curta demais, não tem círculo). Nunca cortar a cena no meio da animação.
+- **Lance de gol sempre até a bola na rede** antes de trocar de cena (conferir o trecho exato no vídeo).
 - **Abertura aprovada pelo canal:** a 1ª cena entra com zoom + desfoque que vai revelando a imagem nas primeiras palavras. Manter; variar entre zoom-in (`"kb": "in"`) e zoom-out (`"kb": "out"`) de vídeo para vídeo.
 - **Foto sempre preenche 100% da tela** (recorte + upscale). Foto pequena: `python3 engine/upscale.py foto.jpg saida.jpg` (Real-ESRGAN 4x, modelo em `engine/models/`). Nada de faixa desfocada em cima/embaixo nem card pequeno.
 - **Nenhuma foto repetida no mesmo vídeo.** Se faltar imagem, pedir mais ao canal antes de montar.
