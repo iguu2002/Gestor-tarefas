@@ -1,0 +1,125 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "scenes": [
+  {
+   "dur": 7.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_serio.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.3
+    }
+   ]
+  },
+  {
+   "dur": 1.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_comemorando.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.45,
+     "text": "ENDRICK"
+    }
+   ]
+  },
+  {
+   "dur": 7.7,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_milan.png",
+    "imgW": 420,
+    "y": 1050
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 3.1,
+     "text": "€70 MILHÕES",
+     "sub": "≈ R$ 440 MILHÕES"
+    }
+   ],
+   "riser": true
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_aquecimento.jpg"
+   },
+   "fx": [],
+   "trans": "laranja"
+  },
+  {
+   "dur": 5.1,
+   "bg": {
+    "type": "clip",
+    "src": "media/mourinho.mp4",
+    "start": 14.0
+   },
+   "fx": []
+  },
+  {
+   "dur": 3.7,
+   "bg": {
+    "type": "clip",
+    "src": "media/mbappe_gol.mp4",
+    "start": 8.6
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.76,
+     "text": "PLANO B",
+     "font": "black"
+    }
+   ]
+  },
+  {
+   "dur": 4.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_beijo.jpg"
+   },
+   "fx": [],
+   "trans": "azul"
+  },
+  {
+   "dur": 4.6,
+   "bg": {
+    "type": "clip",
+    "src": "media/endrick_premio.mp4",
+    "start": 0.0
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.8,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_escudo.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.4,
+     "text": "REAL OU MILAN?",
+     "font": "black",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ]
+}

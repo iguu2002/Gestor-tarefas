@@ -1,0 +1,388 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao_cortada.wav",
+ "scenes": [
+  {
+   "dur": 7.168,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_serio.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.3
+    }
+   ]
+  },
+  {
+   "dur": 1.443,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_comemorando.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.45,
+     "text": "ENDRICK"
+    }
+   ]
+  },
+  {
+   "dur": 6.952,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_milan.png",
+    "imgW": 420,
+    "y": 1050
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 2.951,
+     "text": "€70 MILHÕES",
+     "sub": "≈ R$ 440 MILHÕES"
+    }
+   ],
+   "riser": true
+  },
+  {
+   "dur": 2.247,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_aquecimento.jpg"
+   },
+   "fx": [],
+   "trans": "laranja"
+  },
+  {
+   "dur": 4.353,
+   "bg": {
+    "type": "clip",
+    "src": "media/mourinho.mp4",
+    "start": 14.747
+   },
+   "fx": []
+  },
+  {
+   "dur": 3.504,
+   "bg": {
+    "type": "clip",
+    "src": "media/mbappe_gol.mp4",
+    "start": 8.796
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.607,
+     "text": "PLANO B",
+     "font": "black"
+    }
+   ]
+  },
+  {
+   "dur": 3.564,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_beijo.jpg"
+   },
+   "fx": [],
+   "trans": "azul"
+  },
+  {
+   "dur": 3.911,
+   "bg": {
+    "type": "clip",
+    "src": "media/endrick_premio.mp4",
+    "start": 0.689
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.327,
+   "bg": {
+    "type": "photo",
+    "src": "media/endrick_escudo.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.025,
+     "text": "REAL OU MILAN?",
+     "font": "black",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.54,
+   "text": "O *Milan* quer"
+  },
+  {
+   "t": 0.54,
+   "end": 2.84,
+   "text": "pagar *440 milhões*"
+  },
+  {
+   "t": 2.84,
+   "end": 3.6,
+   "text": "de reais por"
+  },
+  {
+   "t": 3.6,
+   "end": 4.5,
+   "text": "um brasileiro que"
+  },
+  {
+   "t": 4.5,
+   "end": 5.48,
+   "text": "*quase não joga* no"
+  },
+  {
+   "t": 5.48,
+   "end": 6.008,
+   "text": "Real Madrid"
+  },
+  {
+   "t": 6.136,
+   "end": 6.596,
+   "text": "E o *Mourinho*"
+  },
+  {
+   "t": 6.596,
+   "end": 7.168,
+   "text": "*disse não*"
+  },
+  {
+   "t": 7.26,
+   "end": 8.06,
+   "text": "O jogador é"
+  },
+  {
+   "t": 8.06,
+   "end": 8.568,
+   "text": "o *Endrick*"
+  },
+  {
+   "t": 8.731,
+   "end": 9.311,
+   "text": "Segundo a rádio"
+  },
+  {
+   "t": 9.311,
+   "end": 9.731,
+   "text": "espanhola"
+  },
+  {
+   "t": 9.731,
+   "end": 10.391,
+   "text": "*Cadena SER*"
+  },
+  {
+   "t": 10.642,
+   "end": 11.362,
+   "text": "a oferta é"
+  },
+  {
+   "t": 11.362,
+   "end": 12.842,
+   "text": "de *70 milhões* de"
+  },
+  {
+   "t": 12.842,
+   "end": 13.146,
+   "text": "euros"
+  },
+  {
+   "t": 13.28,
+   "end": 14.42,
+   "text": "60 fixos e"
+  },
+  {
+   "t": 14.42,
+   "end": 15.2,
+   "text": "mais 10 em"
+  },
+  {
+   "t": 15.2,
+   "end": 15.563,
+   "text": "bônus"
+  },
+  {
+   "t": 15.617,
+   "end": 16.197,
+   "text": "E o próprio"
+  },
+  {
+   "t": 16.197,
+   "end": 17.157,
+   "text": "*Endrick* já sabe"
+  },
+  {
+   "t": 17.157,
+   "end": 17.802,
+   "text": "do interesse"
+  },
+  {
+   "t": 17.89,
+   "end": 18.73,
+   "text": "O problema é"
+  },
+  {
+   "t": 18.73,
+   "end": 19.308,
+   "text": "o *Mourinho*"
+  },
+  {
+   "t": 19.419,
+   "end": 20.379,
+   "text": "Mesmo dando poucos"
+  },
+  {
+   "t": 20.379,
+   "end": 20.839,
+   "text": "minutos"
+  },
+  {
+   "t": 21.019,
+   "end": 21.259,
+   "text": "ele"
+  },
+  {
+   "t": 21.259,
+   "end": 22.163,
+   "text": "*não quer liberar*"
+  },
+  {
+   "t": 22.195,
+   "end": 22.822,
+   "text": "Para o *Mourinho*"
+  },
+  {
+   "t": 22.95,
+   "end": 23.57,
+   "text": "o *Endrick* é"
+  },
+  {
+   "t": 23.57,
+   "end": 24.41,
+   "text": "a *carta na manga*"
+  },
+  {
+   "t": 24.41,
+   "end": 25.03,
+   "text": "se o *Mbappé*"
+  },
+  {
+   "t": 25.03,
+   "end": 25.667,
+   "text": "se machucar"
+  },
+  {
+   "t": 25.667,
+   "end": 26.53,
+   "text": "Os empresários do"
+  },
+  {
+   "t": 26.53,
+   "end": 27.23,
+   "text": "*Endrick* vão se"
+  },
+  {
+   "t": 27.23,
+   "end": 27.79,
+   "text": "reunir com o"
+  },
+  {
+   "t": 27.79,
+   "end": 28.49,
+   "text": "Real ainda"
+  },
+  {
+   "t": 28.49,
+   "end": 29.17,
+   "text": "*nesta semana*"
+  },
+  {
+   "t": 29.32,
+   "end": 29.72,
+   "text": "E se não"
+  },
+  {
+   "t": 29.72,
+   "end": 30.32,
+   "text": "der certo em"
+  },
+  {
+   "t": 30.32,
+   "end": 30.76,
+   "text": "janeiro"
+  },
+  {
+   "t": 30.94,
+   "end": 31.54,
+   "text": "o *Milan* já"
+  },
+  {
+   "t": 31.54,
+   "end": 31.862,
+   "text": "avisou"
+  },
+  {
+   "t": 32.092,
+   "end": 32.552,
+   "text": "Volta no"
+  },
+  {
+   "t": 32.552,
+   "end": 33.122,
+   "text": "*meio do ano*"
+  },
+  {
+   "t": 33.202,
+   "end": 33.536,
+   "text": "E aí"
+  },
+  {
+   "t": 33.647,
+   "end": 34.467,
+   "text": "o *Endrick* deveria"
+  },
+  {
+   "t": 34.467,
+   "end": 35.207,
+   "text": "ficar no Real"
+  },
+  {
+   "t": 35.207,
+   "end": 35.887,
+   "text": "ou ir para"
+  },
+  {
+   "t": 35.887,
+   "end": 36.427,
+   "text": "o *Milan* para"
+  },
+  {
+   "t": 36.427,
+   "end": 36.987,
+   "text": "jogar todo"
+  },
+  {
+   "t": 36.987,
+   "end": 37.407,
+   "text": "domingo?"
+  }
+ ],
+ "duration": 38.01
+}
