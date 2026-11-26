@@ -1,0 +1,183 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "music": "alias",
+ "noCaptions": true,
+ "scenes": [
+  {
+   "dur": 7.6,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_branca.jpg",
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.15,
+     "text": "NÃO É QUEM VOCÊ PENSA",
+     "font": "black",
+     "color": "vermelho",
+     "y": 760
+    },
+    {
+     "type": "sfx",
+     "t": 1.36,
+     "k": "vineboom"
+    }
+   ]
+  },
+  {
+   "dur": 4.3,
+   "bg": {
+    "type": "photo",
+    "src": "media/carrascal_sorrindo.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.8
+    }
+   ],
+   "riser": true
+  },
+  {
+   "dur": 2.7,
+   "bg": {
+    "type": "clip",
+    "src": "media/lino_lances.mp4",
+    "start": 42.3,
+    "crop": [
+     576,
+     376,
+     0,
+     324
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.0,
+     "text": "RECUSOU",
+     "font": "black",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 4.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/jose_boto.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 2.1,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_flamengo.png",
+    "imgW": 420,
+    "y": 820
+   },
+   "fx": []
+  },
+  {
+   "dur": 6.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/carrascal_comemorando.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 5.2,
+     "text": "CARRASCAL",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 4.9,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 2.2,
+     "text": "€12–15 MILHÕES",
+     "sub": "VALOR DO CARRASCAL · UOL"
+    }
+   ]
+  },
+  {
+   "dur": 2.8,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_maos_olhos.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.6,
+     "text": "EUROPA"
+    }
+   ]
+  },
+  {
+   "dur": 7.2,
+   "bg": {
+    "type": "photo",
+    "src": "media/leonardo_jardim.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 4.4
+    }
+   ]
+  },
+  {
+   "dur": 5.5,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_telefone.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.9,
+     "text": "LINO OU CARRASCAL?",
+     "font": "black",
+     "color": "vermelho",
+     "y": 1380
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ]
+}

@@ -12,7 +12,7 @@ spec.scenes.forEach((s,i)=>{
   const d=path.join(cache,'scene'+i);fs.rmSync(d,{recursive:true,force:true});fs.mkdirSync(d);
   const sp=s.bg.speed||1;
   const cvr=s.bg.cropX!=null?`scale=${W}:${H}:force_original_aspect_ratio=increase,crop=${W}:${H}:(iw-${W})*${s.bg.cropX}:(ih-${H})/2`:COVER;
-  const dl=s.bg.delogo?`delogo=x=${s.bg.delogo[0]}:y=${s.bg.delogo[1]}:w=${s.bg.delogo[2]}:h=${s.bg.delogo[3]},`:'';
+  const cr=s.bg.crop?`crop=${s.bg.crop.join(':')},`:'';const dl=(s.bg.crop?cr:'')+(s.bg.delogo?`delogo=x=${s.bg.delogo[0]}:y=${s.bg.delogo[1]}:w=${s.bg.delogo[2]}:h=${s.bg.delogo[3]},`:'');
   ff(['-ss',String(s.bg.start||0),'-t',String(s.dur*sp+0.2),'-i',path.join(proj,s.bg.src),'-an','-vf',`${dl}setpts=PTS/${sp},fps=${fps},${cvr}`,'-q:v','3',path.join(d,'%04d.jpg')]);
   s._n=fs.readdirSync(d).length;
 });

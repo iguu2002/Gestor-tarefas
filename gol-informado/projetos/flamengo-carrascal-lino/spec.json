@@ -1,0 +1,1002 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "vermelho",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao_cortada.wav",
+ "music": "alias",
+ "noCaptions": true,
+ "scenes": [
+  {
+   "dur": 6.925,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_branca.jpg",
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 1.79,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.076,
+     "text": "NÃO É QUEM VOCÊ PENSA",
+     "font": "black",
+     "color": "vermelho",
+     "y": 760
+    },
+    {
+     "type": "sfx",
+     "t": 1.286,
+     "k": "vineboom"
+    }
+   ]
+  },
+  {
+   "dur": 3.939,
+   "bg": {
+    "type": "photo",
+    "src": "media/carrascal_sorrindo.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 1.795
+    }
+   ],
+   "riser": true
+  },
+  {
+   "dur": 2.28,
+   "bg": {
+    "type": "clip",
+    "src": "media/lino_lances.mp4",
+    "start": 42.72,
+    "crop": [
+     576,
+     376,
+     0,
+     324
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.995,
+     "text": "RECUSOU",
+     "font": "black",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 3.969,
+   "bg": {
+    "type": "photo",
+    "src": "media/jose_boto.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.6
+    }
+   ]
+  },
+  {
+   "dur": 1.755,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_flamengo.png",
+    "imgW": 420,
+    "y": 820
+   },
+   "fx": []
+  },
+  {
+   "dur": 5.511,
+   "bg": {
+    "type": "photo",
+    "src": "media/carrascal_comemorando.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 4.771,
+     "text": "CARRASCAL",
+     "color": "vermelho"
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 4.354,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 2.053,
+     "text": "€12–15 MILHÕES",
+     "sub": "VALOR DO CARRASCAL · UOL"
+    }
+   ]
+  },
+  {
+   "dur": 2.606,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_maos_olhos.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.6,
+     "text": "EUROPA"
+    }
+   ]
+  },
+  {
+   "dur": 6.395,
+   "bg": {
+    "type": "photo",
+    "src": "media/leonardo_jardim.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 3.869
+    }
+   ]
+  },
+  {
+   "dur": 4.277,
+   "bg": {
+    "type": "photo",
+    "src": "media/lino_telefone.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.155,
+     "text": "LINO OU CARRASCAL?",
+     "font": "black",
+     "color": "vermelho",
+     "y": 1380
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.26,
+   "text": "O",
+   "sw": true
+  },
+  {
+   "t": 0.26,
+   "end": 0.66,
+   "text": "Flamengo",
+   "sw": true
+  },
+  {
+   "t": 0.66,
+   "end": 1.14,
+   "text": "recusou",
+   "sw": true
+  },
+  {
+   "t": 1.14,
+   "end": 1.74,
+   "text": "propostas",
+   "sw": true
+  },
+  {
+   "t": 1.74,
+   "end": 2.1,
+   "text": "por",
+   "sw": true
+  },
+  {
+   "t": 2.1,
+   "end": 2.36,
+   "text": "dois",
+   "sw": true
+  },
+  {
+   "t": 2.36,
+   "end": 2.58,
+   "text": "dos",
+   "sw": true
+  },
+  {
+   "t": 2.58,
+   "end": 2.84,
+   "text": "seus",
+   "sw": true
+  },
+  {
+   "t": 2.84,
+   "end": 3.4,
+   "text": "craques",
+   "sw": true
+  },
+  {
+   "t": 3.4,
+   "end": 3.62,
+   "text": "mas",
+   "sw": true
+  },
+  {
+   "t": 3.62,
+   "end": 3.84,
+   "text": "em",
+   "sw": true
+  },
+  {
+   "t": 3.84,
+   "end": 4.94,
+   "text": "2027",
+   "sw": true
+  },
+  {
+   "t": 4.94,
+   "end": 5.42,
+   "text": "um",
+   "sw": true
+  },
+  {
+   "t": 5.42,
+   "end": 5.84,
+   "text": "deles",
+   "sw": true
+  },
+  {
+   "t": 5.84,
+   "end": 6.16,
+   "text": "pode",
+   "sw": true
+  },
+  {
+   "t": 6.16,
+   "end": 6.44,
+   "text": "ter",
+   "sw": true
+  },
+  {
+   "t": 6.44,
+   "end": 6.66,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 6.66,
+   "end": 6.971,
+   "text": "sair",
+   "sw": true
+  },
+  {
+   "t": 6.971,
+   "end": 7.231,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 7.231,
+   "end": 7.491,
+   "text": "não",
+   "sw": true
+  },
+  {
+   "t": 7.491,
+   "end": 7.711,
+   "text": "é",
+   "sw": true
+  },
+  {
+   "t": 7.711,
+   "end": 7.811,
+   "text": "quem",
+   "sw": true
+  },
+  {
+   "t": 7.811,
+   "end": 8.071,
+   "text": "você",
+   "sw": true
+  },
+  {
+   "t": 8.071,
+   "end": 8.211,
+   "text": "está",
+   "sw": true
+  },
+  {
+   "t": 8.211,
+   "end": 8.75,
+   "text": "pensando",
+   "sw": true
+  },
+  {
+   "t": 8.75,
+   "end": 8.91,
+   "text": "Na",
+   "sw": true
+  },
+  {
+   "t": 8.91,
+   "end": 9.19,
+   "text": "última",
+   "sw": true
+  },
+  {
+   "t": 9.19,
+   "end": 9.93,
+   "text": "janela",
+   "sw": true
+  },
+  {
+   "t": 9.93,
+   "end": 10.17,
+   "text": "chegaram",
+   "sw": true
+  },
+  {
+   "t": 10.17,
+   "end": 10.61,
+   "text": "ofertas",
+   "sw": true
+  },
+  {
+   "t": 10.61,
+   "end": 10.87,
+   "text": "pelo",
+   "sw": true
+  },
+  {
+   "t": 10.87,
+   "end": 11.37,
+   "text": "Samuel",
+   "sw": true
+  },
+  {
+   "t": 11.37,
+   "end": 11.67,
+   "text": "Lino",
+   "sw": true
+  },
+  {
+   "t": 11.67,
+   "end": 11.87,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 11.87,
+   "end": 12.09,
+   "text": "pelo",
+   "sw": true
+  },
+  {
+   "t": 12.09,
+   "end": 12.689,
+   "text": "Carrascal",
+   "sw": true
+  },
+  {
+   "t": 12.689,
+   "end": 12.829,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 12.829,
+   "end": 12.969,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 12.969,
+   "end": 13.329,
+   "text": "Flamengo",
+   "sw": true
+  },
+  {
+   "t": 13.329,
+   "end": 13.629,
+   "text": "disse",
+   "sw": true
+  },
+  {
+   "t": 13.629,
+   "end": 14.029,
+   "text": "não",
+   "sw": true
+  },
+  {
+   "t": 14.029,
+   "end": 14.269,
+   "text": "para",
+   "sw": true
+  },
+  {
+   "t": 14.269,
+   "end": 14.469,
+   "text": "as",
+   "sw": true
+  },
+  {
+   "t": 14.469,
+   "end": 15.054,
+   "text": "duas",
+   "sw": true
+  },
+  {
+   "t": 15.054,
+   "end": 15.334,
+   "text": "Segundo",
+   "sw": true
+  },
+  {
+   "t": 15.334,
+   "end": 15.454,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 15.454,
+   "end": 15.814,
+   "text": "diretor",
+   "sw": true
+  },
+  {
+   "t": 15.814,
+   "end": 16.114,
+   "text": "José",
+   "sw": true
+  },
+  {
+   "t": 16.114,
+   "end": 16.664,
+   "text": "Boto",
+   "sw": true
+  },
+  {
+   "t": 16.664,
+   "end": 16.824,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 16.824,
+   "end": 17.424,
+   "text": "prioridade",
+   "sw": true
+  },
+  {
+   "t": 17.424,
+   "end": 17.624,
+   "text": "era",
+   "sw": true
+  },
+  {
+   "t": 17.624,
+   "end": 18.064,
+   "text": "brigar",
+   "sw": true
+  },
+  {
+   "t": 18.064,
+   "end": 18.344,
+   "text": "por",
+   "sw": true
+  },
+  {
+   "t": 18.344,
+   "end": 18.96,
+   "text": "títulos",
+   "sw": true
+  },
+  {
+   "t": 18.96,
+   "end": 19.16,
+   "text": "mas",
+   "sw": true
+  },
+  {
+   "t": 19.16,
+   "end": 19.68,
+   "text": "agora",
+   "sw": true
+  },
+  {
+   "t": 19.68,
+   "end": 19.98,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 19.98,
+   "end": 20.28,
+   "text": "conta",
+   "sw": true
+  },
+  {
+   "t": 20.28,
+   "end": 20.658,
+   "text": "chegou",
+   "sw": true
+  },
+  {
+   "t": 20.658,
+   "end": 20.824,
+   "text": "Para",
+   "sw": true
+  },
+  {
+   "t": 20.824,
+   "end": 21.164,
+   "text": "fechar",
+   "sw": true
+  },
+  {
+   "t": 21.164,
+   "end": 21.384,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 21.384,
+   "end": 21.604,
+   "text": "caixa",
+   "sw": true
+  },
+  {
+   "t": 21.604,
+   "end": 21.844,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 21.844,
+   "end": 22.824,
+   "text": "2027",
+   "sw": true
+  },
+  {
+   "t": 22.824,
+   "end": 23.244,
+   "text": "sem",
+   "sw": true
+  },
+  {
+   "t": 23.244,
+   "end": 23.564,
+   "text": "vender",
+   "sw": true
+  },
+  {
+   "t": 23.564,
+   "end": 23.824,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 23.824,
+   "end": 24.169,
+   "text": "Lino",
+   "sw": true
+  },
+  {
+   "t": 24.169,
+   "end": 24.289,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 24.289,
+   "end": 24.429,
+   "text": "nome",
+   "sw": true
+  },
+  {
+   "t": 24.429,
+   "end": 24.649,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 24.649,
+   "end": 25.049,
+   "text": "aparece",
+   "sw": true
+  },
+  {
+   "t": 25.049,
+   "end": 25.309,
+   "text": "é",
+   "sw": true
+  },
+  {
+   "t": 25.309,
+   "end": 25.509,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 25.509,
+   "end": 26.249,
+   "text": "Carrascal",
+   "sw": true
+  },
+  {
+   "t": 26.249,
+   "end": 26.549,
+   "text": "Segundo",
+   "sw": true
+  },
+  {
+   "t": 26.549,
+   "end": 26.729,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 26.729,
+   "end": 27.062,
+   "text": "UOL",
+   "sw": true
+  },
+  {
+   "t": 27.062,
+   "end": 27.242,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 27.242,
+   "end": 27.642,
+   "text": "colombiano",
+   "sw": true
+  },
+  {
+   "t": 27.642,
+   "end": 27.862,
+   "text": "vale",
+   "sw": true
+  },
+  {
+   "t": 27.862,
+   "end": 28.242,
+   "text": "entre",
+   "sw": true
+  },
+  {
+   "t": 28.242,
+   "end": 28.702,
+   "text": "12",
+   "sw": true
+  },
+  {
+   "t": 28.702,
+   "end": 28.902,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 28.902,
+   "end": 29.302,
+   "text": "$15$",
+   "sw": true
+  },
+  {
+   "t": 29.302,
+   "end": 29.822,
+   "text": "$milhões$",
+   "sw": true
+  },
+  {
+   "t": 29.822,
+   "end": 30.162,
+   "text": "$de$",
+   "sw": true
+  },
+  {
+   "t": 30.162,
+   "end": 30.623,
+   "text": "$euros$",
+   "sw": true
+  },
+  {
+   "t": 30.623,
+   "end": 30.803,
+   "text": "Já",
+   "sw": true
+  },
+  {
+   "t": 30.803,
+   "end": 31.003,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 31.003,
+   "end": 31.263,
+   "text": "Lino",
+   "sw": true
+  },
+  {
+   "t": 31.263,
+   "end": 31.403,
+   "text": "é",
+   "sw": true
+  },
+  {
+   "t": 31.403,
+   "end": 31.523,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 31.523,
+   "end": 31.743,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 31.743,
+   "end": 32.003,
+   "text": "mais",
+   "sw": true
+  },
+  {
+   "t": 32.003,
+   "end": 32.203,
+   "text": "chama",
+   "sw": true
+  },
+  {
+   "t": 32.203,
+   "end": 32.583,
+   "text": "atenção",
+   "sw": true
+  },
+  {
+   "t": 32.583,
+   "end": 32.783,
+   "text": "na",
+   "sw": true
+  },
+  {
+   "t": 32.783,
+   "end": 33.224,
+   "text": "Europa",
+   "sw": true
+  },
+  {
+   "t": 33.224,
+   "end": 33.384,
+   "text": "só",
+   "sw": true
+  },
+  {
+   "t": 33.384,
+   "end": 33.624,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 33.624,
+   "end": 33.804,
+   "text": "nada",
+   "sw": true
+  },
+  {
+   "t": 33.804,
+   "end": 34.004,
+   "text": "está",
+   "sw": true
+  },
+  {
+   "t": 34.004,
+   "end": 34.638,
+   "text": "decidido",
+   "sw": true
+  },
+  {
+   "t": 34.638,
+   "end": 35.218,
+   "text": "Antes",
+   "sw": true
+  },
+  {
+   "t": 35.218,
+   "end": 35.298,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 35.298,
+   "end": 35.558,
+   "text": "Flamengo",
+   "sw": true
+  },
+  {
+   "t": 35.558,
+   "end": 35.798,
+   "text": "ainda",
+   "sw": true
+  },
+  {
+   "t": 35.798,
+   "end": 36.138,
+   "text": "precisa",
+   "sw": true
+  },
+  {
+   "t": 36.138,
+   "end": 36.678,
+   "text": "definir",
+   "sw": true
+  },
+  {
+   "t": 36.678,
+   "end": 36.818,
+   "text": "se",
+   "sw": true
+  },
+  {
+   "t": 36.818,
+   "end": 37.038,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 37.038,
+   "end": 37.318,
+   "text": "Leonardo",
+   "sw": true
+  },
+  {
+   "t": 37.318,
+   "end": 37.858,
+   "text": "Jardim",
+   "sw": true
+  },
+  {
+   "t": 37.858,
+   "end": 38.158,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 38.158,
+   "end": 38.218,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 38.218,
+   "end": 38.558,
+   "text": "próprio",
+   "sw": true
+  },
+  {
+   "t": 38.558,
+   "end": 38.918,
+   "text": "Boto",
+   "sw": true
+  },
+  {
+   "t": 38.918,
+   "end": 39.547,
+   "text": "continuam",
+   "sw": true
+  },
+  {
+   "t": 39.547,
+   "end": 39.727,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 39.727,
+   "end": 40.0,
+   "text": "aí",
+   "sw": true
+  },
+  {
+   "t": 40.0,
+   "end": 40.12,
+   "text": "se",
+   "sw": true
+  },
+  {
+   "t": 40.12,
+   "end": 40.24,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 40.24,
+   "end": 40.54,
+   "text": "Flamengo",
+   "sw": true
+  },
+  {
+   "t": 40.54,
+   "end": 40.74,
+   "text": "tiver",
+   "sw": true
+  },
+  {
+   "t": 40.74,
+   "end": 40.9,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 40.9,
+   "end": 41.16,
+   "text": "vender",
+   "sw": true
+  },
+  {
+   "t": 41.16,
+   "end": 41.499,
+   "text": "um",
+   "sw": true
+  },
+  {
+   "t": 41.499,
+   "end": 41.679,
+   "text": "quem",
+   "sw": true
+  },
+  {
+   "t": 41.679,
+   "end": 42.099,
+   "text": "deveria",
+   "sw": true
+  },
+  {
+   "t": 42.099,
+   "end": 42.481,
+   "text": "sair?",
+   "sw": true
+  },
+  {
+   "t": 42.481,
+   "end": 42.921,
+   "text": "Lino",
+   "sw": true
+  },
+  {
+   "t": 42.921,
+   "end": 43.141,
+   "text": "ou",
+   "sw": true
+  },
+  {
+   "t": 43.141,
+   "end": 44.077,
+   "text": "Carrascal?",
+   "sw": true
+  }
+ ],
+ "duration": 44.33
+}

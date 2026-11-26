@@ -291,8 +291,15 @@ function title(f,ft,faces,s,lt,capY,until){
   const col=TC[f.color]||f.color,heavy=f.font==='black';
   const st=(col?`color:${col};-webkit-text-stroke:9px color-mix(in srgb,${col} 18%,#000);text-shadow:0 0 26px color-mix(in srgb,${col} 75%,transparent),0 0 70px color-mix(in srgb,${col} 40%,transparent),0 12px 26px rgba(0,0,0,.6);`:'')
     +(heavy?`font-family:Archivo;letter-spacing:-2px;`:'');
-  const sz=f.size||(heavy?Math.min(Math.round(size*0.86),Math.round(1180/Math.max(4,f.text.length))):size);
-  return `<div class="title" style="top:${spot.y+(th-sz)/2}px;font-size:${sz}px;${st}opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${esc(f.text)}</div>`;
+  // texto longo quebra em 2 linhas equilibradas; tamanho pela linha mais longa
+  let lines=[f.text];
+  if(!f.size&&f.text.length>11&&f.text.includes(' ')){const w=f.text.split(' ');let best=null;
+    for(let i=1;i<w.length;i++){const a=w.slice(0,i).join(' '),c=w.slice(i).join(' '),m=Math.max(a.length,c.length);if(!best||m<best[0])best=[m,[a,c]];}
+    lines=best[1];}
+  const longest=Math.max(...lines.map(l=>l.length));
+  const sz=f.size||Math.min(heavy?190:220,Math.round((heavy?1250:1650)/Math.max(4,longest)));
+  const txt=lines.map(esc).join('<br>');
+  return `<div class="title" style="top:${spot.y+(th-sz*lines.length)/2}px;font-size:${sz}px;line-height:1.02;${st}opacity:${o.toFixed(3)};transform:scale(${k.toFixed(3)})">${txt}</div>`;
 }
 function numberCard(f,ft,faces,lt,s,capY){
   const h=300,ys=[300,520,760,980].map(y=>({x:120,y,w:W-240,h}));
