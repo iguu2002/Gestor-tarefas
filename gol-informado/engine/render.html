@@ -121,6 +121,11 @@ const mapR=(b,c,tx,ty)=>({x:tx+(b.x-c.sx)*c.k,y:ty+(b.y-c.sy)*c.k,w:b.w*c.k,h:b.
 function camera(s,lt){
   const kb=s.bg.kb||'in';
   let sc=kb==='none'?1.04:kb==='out'?1.16-0.08*(lt/s.dur):1.05+0.08*(lt/s.dur);
+  if(s.i===0&&!s.noIntro){            // abertura do canal: zoom desfocado revelando a imagem (~1s)
+    const r=1-eOut(lt/1.0);
+    sc+=kb==='out'?0.38*r:-0.04*r+0.18*(1-r)*(1-clamp(lt/s.dur));
+    return {sc,blur:22*r};
+  }
   const punch=s.noPunch?0:1-eOut(lt/.28);
   sc+=0.14*punch;
   return {sc,blur:10*punch};
@@ -331,6 +336,7 @@ function board(s,lt0){
 window.events=()=>{
   const ev=[];let wi=0;const W3=['whoosh3','whoosh10','whoosh4'];  // só os curtos/suaves (sem whoosh longo tipo onda)
   for(const s of scenes){
+    if(s.i===0&&!s.noIntro)ev.push({t:0,k:'whoosh4'});   // som do zoom de abertura
     if(s.i>0){
       if(s.riser)ev.push({t:s.t0-1.55,k:'riser_metallic'});
       else if(s.trans)ev.push({t:s.t0,k:'burn_'+s.trans});           // som original do film burn

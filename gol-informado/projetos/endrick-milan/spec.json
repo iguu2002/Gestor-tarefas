@@ -10,12 +10,19 @@
    "bg": {
     "type": "photo",
     "src": "media/endrick_serio.jpg",
-    "kb": "in"
+    "kb": "out"
    },
    "fx": [
     {
      "type": "circle",
-     "t": 0.3
+     "t": 3.4
+    },
+    {
+     "type": "number",
+     "t": 0.88,
+     "text": "R$ 440 MILHÕES",
+     "until": 3.28,
+     "size": 120
     }
    ]
   },
@@ -44,7 +51,7 @@
    "fx": [
     {
      "type": "number",
-     "t": 2.951,
+     "t": 0.3,
      "text": "€70 MILHÕES",
      "sub": "≈ R$ 440 MILHÕES"
     }
