@@ -15,6 +15,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
 /* legenda */
 .cap{position:absolute;left:40px;right:40px;text-align:center;font-family:Baloo;font-size:100px;line-height:1.02;
   color:#fff;-webkit-text-stroke:11px #000;paint-order:stroke fill;text-shadow:0 8px 0 rgba(0,0,0,.5);transform-origin:50% 60%}
+.cap.sw{font-size:128px}
+.cap .money{color:#3DFF8B;-webkit-text-stroke:11px #0B3D22;text-shadow:0 0 26px rgba(61,255,139,.45),0 8px 0 rgba(0,0,0,.5)}
+.cap .alt{color:var(--alt,#5EC8FF);-webkit-text-stroke:11px color-mix(in srgb,var(--alt,#5EC8FF) 22%,#000);text-shadow:0 0 26px color-mix(in srgb,var(--alt,#5EC8FF) 45%,transparent),0 8px 0 rgba(0,0,0,.5)}
+.cap.ghost{opacity:.3;filter:blur(5px)}
 .cap .hl{color:var(--pri);-webkit-text-stroke:11px var(--pri-dark);
   text-shadow:0 0 26px color-mix(in srgb,var(--pri) 45%,transparent),0 8px 0 rgba(0,0,0,.5)}
 .wm{position:absolute;left:0;right:0;text-align:center;font-family:Archivo;font-size:30px;letter-spacing:6px;color:rgba(255,255,255,.26)}
@@ -84,7 +88,7 @@ function img(url){
   imgCache.set(url,p);if(imgCache.size>300)imgCache.delete(imgCache.keys().next().value);return p;
 }
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-const capHTML=s=>esc(s).replace(/\*([^*]+)\*/g,'<span class="hl">$1</span>');
+const capHTML=s=>esc(s).replace(/\$([^$]+)\$/g,'<span class="money">$1</span>').replace(/\^([^^]+)\^/g,'<span class="alt">$1</span>').replace(/\*([^*]+)\*/g,'<span class="hl">$1</span>');
 const rectsHit=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
 const grow=(r,k)=>({x:r.x-r.w*k,y:r.y-r.h*k,w:r.w*(1+2*k),h:r.h*(1+2*k)});
 const src=p=>`${BASE}/${p}`;
@@ -92,7 +96,7 @@ const src=p=>`${BASE}/${p}`;
 window.init=async(base,spec,faces,trans)=>{
   BASE=base;SPEC=spec;FACES=faces||{};TRANS=trans||{};
   PAL=PALETTES[spec.palette||'dourado'];const r=document.documentElement.style;
-  r.setProperty('--pri',PAL.pri);r.setProperty('--pri-dark',PAL.priDark);r.setProperty('--bg1',PAL.bg1);r.setProperty('--bg2',PAL.bg2);r.setProperty('--win',PAL.win);r.setProperty('--loss',PAL.loss);
+  r.setProperty('--pri',PAL.pri);if(spec.altColor)r.setProperty('--alt',spec.altColor);r.setProperty('--pri-dark',PAL.priDark);r.setProperty('--bg1',PAL.bg1);r.setProperty('--bg2',PAL.bg2);r.setProperty('--win',PAL.win);r.setProperty('--loss',PAL.loss);
   let t0=0;scenes=spec.scenes.map((s,i)=>{const o={...s,i,t0};t0+=s.dur;return o;});
   // regra: o círculo tem que aparecer inteiro (entrar, segurar, sair) antes da cena acabar; senão, sem círculo
   for(const sc of scenes){sc.fx=(sc.fx||[]).filter(f=>{
@@ -201,7 +205,7 @@ window.render=async(T)=>{
     }else if(b.type==='panel'){
       navyBg(cx);
       if(b.img){const im=await img(src(b.img)),w=b.imgW||620,h=w*im.naturalHeight/im.naturalWidth,k=pop(lt-.05,.35)*(1+0.03*Math.sin(lt*3));
-        cx.save();cx.translate(W/2,(b.y||760));cx.scale(k,k);cx.shadowColor=PAL.pri+'66';cx.shadowBlur=60;cx.drawImage(im,-w/2,-h/2,w,h);cx.restore();}
+        s._pbox={x:W/2-w/2-30,y:(b.y||760)-h/2-30,w:w+60,h:h+60};cx.save();cx.translate(W/2,(b.y||760));cx.scale(k,k);cx.shadowColor=PAL.pri+'66';cx.shadowBlur=60;cx.drawImage(im,-w/2,-h/2,w,h);cx.restore();}
     }else if(b.type==='split'){
       for(const side of ['left','right']){
         const p=b[side],x0=side==='left'?0:W/2,ap=p.t||0;if(!p)continue;
@@ -232,8 +236,10 @@ window.render=async(T)=>{
     cx.save();cx.globalCompositeOperation='screen';cx.drawImage(tim,0,0,W,H);cx.restore();
   }
   // posição da legenda (desvia de rostos)
-  let capY=CAP_Y;
-  if(faces.some(f=>rectsHit(grow(f,.08),{x:60,y:capY-20,w:W-120,h:CAP_H})))capY=1620;
+  if(b.type==='panel'&&b.img&&s._pbox)faces.push(s._pbox);   // escudo do painel também é obstáculo
+  // legenda centralizada (um pouco abaixo do meio); desvia de rosto
+  let capY=SPEC.capY||1060;
+  for(const y of [capY,1240,1420,860,1600]){if(!faces.some(f=>rectsHit(grow(f,.08),{x:60,y:y-20,w:W-120,h:CAP_H}))){capY=y;break;}}
   // efeitos
   const fx=s.fx||[];
   const titles=fx.filter(f=>f.type==='title'&&lt>=f.t);
@@ -249,8 +255,10 @@ window.render=async(T)=>{
   const caps=SPEC.captions||[];let c=null;
   for(const k of caps){if(T>=k.t)c=k;else break;}
   if(c&&T<(c.end??1e9)+0.5){
-    const ct=T-c.t,k=ct<0.16?0.82+0.18*eBack(ct/.16):1;
-    html+=`<div class="cap" style="top:${capY}px;transform:scale(${k.toFixed(3)})">${capHTML(c.text)}</div>`;
+    const ct=T-c.t,k=ct<0.16?0.78+0.22*eBack(ct/.16):1,sw=c.sw?' sw':'';
+    if(ct<0.2){const g=1-ct/0.2;  // rastro pequeno no pop
+      html+=`<div class="cap${sw} ghost" style="top:${capY+26*g}px;opacity:${(0.32*g).toFixed(3)};transform:scale(${(k*1.12).toFixed(3)})">${capHTML(c.text)}</div>`;}
+    html+=`<div class="cap${sw}" style="top:${capY}px;transform:scale(${k.toFixed(3)})">${capHTML(c.text)}</div>`;
   }
   html+=`<div class="wm" style="top:${capY+WM_GAP}px">${esc(SPEC.watermark||'')}</div>`;
   ov.innerHTML=html;

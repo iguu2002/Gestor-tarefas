@@ -149,264 +149,791 @@
  "captions": [
   {
    "t": 0.0,
+   "end": 0.22,
+   "text": "O",
+   "sw": true
+  },
+  {
+   "t": 0.22,
+   "end": 0.38,
+   "text": "*Milan*",
+   "sw": true
+  },
+  {
+   "t": 0.38,
    "end": 0.54,
-   "text": "O *Milan* quer"
+   "text": "quer",
+   "sw": true
   },
   {
    "t": 0.54,
+   "end": 0.88,
+   "text": "pagar",
+   "sw": true
+  },
+  {
+   "t": 0.88,
+   "end": 2.14,
+   "text": "$440$",
+   "sw": true
+  },
+  {
+   "t": 2.14,
    "end": 2.84,
-   "text": "pagar *440 milhões*"
+   "text": "$milhões$",
+   "sw": true
   },
   {
    "t": 2.84,
+   "end": 3.12,
+   "text": "$de$",
+   "sw": true
+  },
+  {
+   "t": 3.12,
+   "end": 3.42,
+   "text": "$reais$",
+   "sw": true
+  },
+  {
+   "t": 3.42,
    "end": 3.6,
-   "text": "de reais por"
+   "text": "por",
+   "sw": true
   },
   {
    "t": 3.6,
+   "end": 3.8,
+   "text": "um",
+   "sw": true
+  },
+  {
+   "t": 3.8,
+   "end": 4.2,
+   "text": "brasileiro",
+   "sw": true
+  },
+  {
+   "t": 4.2,
    "end": 4.5,
-   "text": "um brasileiro que"
+   "text": "que",
+   "sw": true
   },
   {
    "t": 4.5,
+   "end": 4.86,
+   "text": "^quase^",
+   "sw": true
+  },
+  {
+   "t": 4.86,
+   "end": 5.1,
+   "text": "^não^",
+   "sw": true
+  },
+  {
+   "t": 5.1,
+   "end": 5.36,
+   "text": "^joga^",
+   "sw": true
+  },
+  {
+   "t": 5.36,
    "end": 5.48,
-   "text": "*quase não joga* no"
+   "text": "no",
+   "sw": true
   },
   {
    "t": 5.48,
-   "end": 6.008,
-   "text": "Real Madrid"
+   "end": 5.7,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 5.7,
+   "end": 6.136,
+   "text": "Madrid",
+   "sw": true
   },
   {
    "t": 6.136,
+   "end": 6.196,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 6.196,
+   "end": 6.376,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 6.376,
    "end": 6.596,
-   "text": "E o *Mourinho*"
+   "text": "*Mourinho*",
+   "sw": true
   },
   {
    "t": 6.596,
-   "end": 7.168,
-   "text": "*disse não*"
+   "end": 6.856,
+   "text": "*disse*",
+   "sw": true
+  },
+  {
+   "t": 6.856,
+   "end": 7.26,
+   "text": "*não*",
+   "sw": true
   },
   {
    "t": 7.26,
+   "end": 7.38,
+   "text": "O",
+   "sw": true
+  },
+  {
+   "t": 7.38,
+   "end": 7.82,
+   "text": "jogador",
+   "sw": true
+  },
+  {
+   "t": 7.82,
    "end": 8.06,
-   "text": "O jogador é"
+   "text": "é",
+   "sw": true
   },
   {
    "t": 8.06,
-   "end": 8.568,
-   "text": "o *Endrick*"
+   "end": 8.22,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 8.22,
+   "end": 8.731,
+   "text": "^Endrick^",
+   "sw": true
   },
   {
    "t": 8.731,
+   "end": 8.971,
+   "text": "Segundo",
+   "sw": true
+  },
+  {
+   "t": 8.971,
+   "end": 9.091,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 9.091,
    "end": 9.311,
-   "text": "Segundo a rádio"
+   "text": "rádio",
+   "sw": true
   },
   {
    "t": 9.311,
    "end": 9.731,
-   "text": "espanhola"
+   "text": "espanhola",
+   "sw": true
   },
   {
    "t": 9.731,
-   "end": 10.391,
-   "text": "*Cadena SER*"
+   "end": 10.231,
+   "text": "*Cadena*",
+   "sw": true
+  },
+  {
+   "t": 10.231,
+   "end": 10.642,
+   "text": "*SER*",
+   "sw": true
   },
   {
    "t": 10.642,
+   "end": 10.802,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 10.802,
+   "end": 11.202,
+   "text": "oferta",
+   "sw": true
+  },
+  {
+   "t": 11.202,
    "end": 11.362,
-   "text": "a oferta é"
+   "text": "é",
+   "sw": true
   },
   {
    "t": 11.362,
+   "end": 11.602,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 11.602,
+   "end": 12.082,
+   "text": "$70$",
+   "sw": true
+  },
+  {
+   "t": 12.082,
+   "end": 12.582,
+   "text": "$milhões$",
+   "sw": true
+  },
+  {
+   "t": 12.582,
    "end": 12.842,
-   "text": "de *70 milhões* de"
+   "text": "$de$",
+   "sw": true
   },
   {
    "t": 12.842,
-   "end": 13.146,
-   "text": "euros"
+   "end": 13.28,
+   "text": "$euros$",
+   "sw": true
   },
   {
    "t": 13.28,
+   "end": 13.68,
+   "text": "60",
+   "sw": true
+  },
+  {
+   "t": 13.68,
+   "end": 14.24,
+   "text": "fixos",
+   "sw": true
+  },
+  {
+   "t": 14.24,
    "end": 14.42,
-   "text": "60 fixos e"
+   "text": "e",
+   "sw": true
   },
   {
    "t": 14.42,
+   "end": 14.66,
+   "text": "mais",
+   "sw": true
+  },
+  {
+   "t": 14.66,
+   "end": 14.92,
+   "text": "10",
+   "sw": true
+  },
+  {
+   "t": 14.92,
    "end": 15.2,
-   "text": "mais 10 em"
+   "text": "em",
+   "sw": true
   },
   {
    "t": 15.2,
-   "end": 15.563,
-   "text": "bônus"
+   "end": 15.617,
+   "text": "bônus",
+   "sw": true
   },
   {
    "t": 15.617,
+   "end": 15.857,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 15.857,
+   "end": 15.957,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 15.957,
    "end": 16.197,
-   "text": "E o próprio"
+   "text": "próprio",
+   "sw": true
   },
   {
    "t": 16.197,
+   "end": 16.637,
+   "text": "^Endrick^",
+   "sw": true
+  },
+  {
+   "t": 16.637,
+   "end": 16.957,
+   "text": "já",
+   "sw": true
+  },
+  {
+   "t": 16.957,
    "end": 17.157,
-   "text": "*Endrick* já sabe"
+   "text": "sabe",
+   "sw": true
   },
   {
    "t": 17.157,
-   "end": 17.802,
-   "text": "do interesse"
+   "end": 17.337,
+   "text": "do",
+   "sw": true
+  },
+  {
+   "t": 17.337,
+   "end": 17.89,
+   "text": "interesse",
+   "sw": true
   },
   {
    "t": 17.89,
+   "end": 18.09,
+   "text": "O",
+   "sw": true
+  },
+  {
+   "t": 18.09,
+   "end": 18.51,
+   "text": "problema",
+   "sw": true
+  },
+  {
+   "t": 18.51,
    "end": 18.73,
-   "text": "O problema é"
+   "text": "é",
+   "sw": true
   },
   {
    "t": 18.73,
-   "end": 19.308,
-   "text": "o *Mourinho*"
+   "end": 18.87,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 18.87,
+   "end": 19.419,
+   "text": "*Mourinho*",
+   "sw": true
   },
   {
    "t": 19.419,
+   "end": 19.719,
+   "text": "Mesmo",
+   "sw": true
+  },
+  {
+   "t": 19.719,
+   "end": 19.919,
+   "text": "dando",
+   "sw": true
+  },
+  {
+   "t": 19.919,
    "end": 20.379,
-   "text": "Mesmo dando poucos"
+   "text": "poucos",
+   "sw": true
   },
   {
    "t": 20.379,
-   "end": 20.839,
-   "text": "minutos"
+   "end": 21.019,
+   "text": "minutos",
+   "sw": true
   },
   {
    "t": 21.019,
    "end": 21.259,
-   "text": "ele"
+   "text": "ele",
+   "sw": true
   },
   {
    "t": 21.259,
-   "end": 22.163,
-   "text": "*não quer liberar*"
+   "end": 21.519,
+   "text": "^não^",
+   "sw": true
+  },
+  {
+   "t": 21.519,
+   "end": 21.699,
+   "text": "^quer^",
+   "sw": true
+  },
+  {
+   "t": 21.699,
+   "end": 22.195,
+   "text": "^liberar^",
+   "sw": true
   },
   {
    "t": 22.195,
-   "end": 22.822,
-   "text": "Para o *Mourinho*"
+   "end": 22.335,
+   "text": "Para",
+   "sw": true
+  },
+  {
+   "t": 22.335,
+   "end": 22.435,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 22.435,
+   "end": 22.95,
+   "text": "*Mourinho*",
+   "sw": true
   },
   {
    "t": 22.95,
+   "end": 23.11,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 23.11,
+   "end": 23.39,
+   "text": "^Endrick^",
+   "sw": true
+  },
+  {
+   "t": 23.39,
    "end": 23.57,
-   "text": "o *Endrick* é"
+   "text": "é",
+   "sw": true
   },
   {
    "t": 23.57,
+   "end": 23.77,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 23.77,
+   "end": 23.95,
+   "text": "*carta*",
+   "sw": true
+  },
+  {
+   "t": 23.95,
+   "end": 24.19,
+   "text": "*na*",
+   "sw": true
+  },
+  {
+   "t": 24.19,
    "end": 24.41,
-   "text": "a *carta na manga*"
+   "text": "*manga*",
+   "sw": true
   },
   {
    "t": 24.41,
+   "end": 24.59,
+   "text": "se",
+   "sw": true
+  },
+  {
+   "t": 24.59,
+   "end": 24.77,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 24.77,
    "end": 25.03,
-   "text": "se o *Mbappé*"
+   "text": "^Mbappé^",
+   "sw": true
   },
   {
    "t": 25.03,
+   "end": 25.21,
+   "text": "se",
+   "sw": true
+  },
+  {
+   "t": 25.21,
    "end": 25.667,
-   "text": "se machucar"
+   "text": "machucar",
+   "sw": true
   },
   {
    "t": 25.667,
+   "end": 25.95,
+   "text": "Os",
+   "sw": true
+  },
+  {
+   "t": 25.95,
+   "end": 26.37,
+   "text": "empresários",
+   "sw": true
+  },
+  {
+   "t": 26.37,
    "end": 26.53,
-   "text": "Os empresários do"
+   "text": "do",
+   "sw": true
   },
   {
    "t": 26.53,
+   "end": 26.85,
+   "text": "*Endrick*",
+   "sw": true
+  },
+  {
+   "t": 26.85,
+   "end": 27.01,
+   "text": "vão",
+   "sw": true
+  },
+  {
+   "t": 27.01,
    "end": 27.23,
-   "text": "*Endrick* vão se"
+   "text": "se",
+   "sw": true
   },
   {
    "t": 27.23,
+   "end": 27.51,
+   "text": "reunir",
+   "sw": true
+  },
+  {
+   "t": 27.51,
+   "end": 27.65,
+   "text": "com",
+   "sw": true
+  },
+  {
+   "t": 27.65,
    "end": 27.79,
-   "text": "reunir com o"
+   "text": "o",
+   "sw": true
   },
   {
    "t": 27.79,
+   "end": 27.93,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 27.93,
    "end": 28.49,
-   "text": "Real ainda"
+   "text": "ainda",
+   "sw": true
   },
   {
    "t": 28.49,
-   "end": 29.17,
-   "text": "*nesta semana*"
+   "end": 28.81,
+   "text": "^nesta^",
+   "sw": true
+  },
+  {
+   "t": 28.81,
+   "end": 29.32,
+   "text": "^semana^",
+   "sw": true
   },
   {
    "t": 29.32,
+   "end": 29.44,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 29.44,
+   "end": 29.56,
+   "text": "se",
+   "sw": true
+  },
+  {
+   "t": 29.56,
    "end": 29.72,
-   "text": "E se não"
+   "text": "não",
+   "sw": true
   },
   {
    "t": 29.72,
+   "end": 29.92,
+   "text": "der",
+   "sw": true
+  },
+  {
+   "t": 29.92,
+   "end": 30.14,
+   "text": "certo",
+   "sw": true
+  },
+  {
+   "t": 30.14,
    "end": 30.32,
-   "text": "der certo em"
+   "text": "em",
+   "sw": true
   },
   {
    "t": 30.32,
-   "end": 30.76,
-   "text": "janeiro"
+   "end": 30.94,
+   "text": "janeiro",
+   "sw": true
   },
   {
    "t": 30.94,
+   "end": 31.1,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 31.1,
+   "end": 31.26,
+   "text": "*Milan*",
+   "sw": true
+  },
+  {
+   "t": 31.26,
    "end": 31.54,
-   "text": "o *Milan* já"
+   "text": "já",
+   "sw": true
   },
   {
    "t": 31.54,
-   "end": 31.862,
-   "text": "avisou"
+   "end": 32.092,
+   "text": "avisou",
+   "sw": true
   },
   {
    "t": 32.092,
+   "end": 32.392,
+   "text": "Volta",
+   "sw": true
+  },
+  {
+   "t": 32.392,
    "end": 32.552,
-   "text": "Volta no"
+   "text": "no",
+   "sw": true
   },
   {
    "t": 32.552,
-   "end": 33.122,
-   "text": "*meio do ano*"
+   "end": 32.732,
+   "text": "^meio^",
+   "sw": true
+  },
+  {
+   "t": 32.732,
+   "end": 32.932,
+   "text": "^do^",
+   "sw": true
+  },
+  {
+   "t": 32.932,
+   "end": 33.202,
+   "text": "^ano^",
+   "sw": true
   },
   {
    "t": 33.202,
-   "end": 33.536,
-   "text": "E aí"
+   "end": 33.362,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 33.362,
+   "end": 33.647,
+   "text": "aí",
+   "sw": true
   },
   {
    "t": 33.647,
+   "end": 33.807,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 33.807,
+   "end": 34.067,
+   "text": "*Endrick*",
+   "sw": true
+  },
+  {
+   "t": 34.067,
    "end": 34.467,
-   "text": "o *Endrick* deveria"
+   "text": "deveria",
+   "sw": true
   },
   {
    "t": 34.467,
+   "end": 34.787,
+   "text": "ficar",
+   "sw": true
+  },
+  {
+   "t": 34.787,
+   "end": 34.927,
+   "text": "no",
+   "sw": true
+  },
+  {
+   "t": 34.927,
    "end": 35.207,
-   "text": "ficar no Real"
+   "text": "Real",
+   "sw": true
   },
   {
    "t": 35.207,
+   "end": 35.567,
+   "text": "ou",
+   "sw": true
+  },
+  {
+   "t": 35.567,
+   "end": 35.727,
+   "text": "ir",
+   "sw": true
+  },
+  {
+   "t": 35.727,
    "end": 35.887,
-   "text": "ou ir para"
+   "text": "para",
+   "sw": true
   },
   {
    "t": 35.887,
+   "end": 36.047,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 36.047,
+   "end": 36.227,
+   "text": "^Milan^",
+   "sw": true
+  },
+  {
+   "t": 36.227,
    "end": 36.427,
-   "text": "o *Milan* para"
+   "text": "para",
+   "sw": true
   },
   {
    "t": 36.427,
+   "end": 36.727,
+   "text": "jogar",
+   "sw": true
+  },
+  {
+   "t": 36.727,
    "end": 36.987,
-   "text": "jogar todo"
+   "text": "todo",
+   "sw": true
   },
   {
    "t": 36.987,
-   "end": 37.407,
-   "text": "domingo?"
+   "end": 37.757,
+   "text": "domingo?",
+   "sw": true
   }
  ],
- "duration": 38.01
+ "duration": 38.01,
+ "altColor": "#FF3B4E"
 }

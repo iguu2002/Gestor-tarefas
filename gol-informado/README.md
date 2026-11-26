@@ -8,7 +8,7 @@ Tudo é renderizado em código: HTML/CSS animado no Chromium (Playwright), quadr
 | Item | Definição |
 |---|---|
 | Paleta | **Dourado Troféu**: destaque `#FFC845`, fundo das cenas gráficas azul-marinho (`#070B18` → `#18234A`) com textura de linhas, vitória `#3DFF8B`, derrota `#FF3D57` |
-| Legenda | Palavra por palavra (1 a 3 palavras), Baloo 2 ExtraBold, branca com contorno preto, palavra-chave em dourado sólido com glow suave. Entra com "pop" leve |
+| Legenda | **Uma palavra por vez (single word)**, centralizada (um pouco abaixo do meio, desviando de rosto e escudo), Baloo 2 ExtraBold 128px, branca com contorno preto. Pop com rastro pequeno. Destaques alternam entre a cor do canal e a cor alternativa do vídeo (`altColor`); **dinheiro sempre em verde**. Gerada por `legendas.py`. |
 | Títulos | Cor e peso variam com a cena: usar a cor do clube/foto (`"color": "vermelho"`, azul, grena, celeste...) e `"font": "black"` (Archivo Black, mais grossa) quando pedir mais impacto. Sempre cor sólida + glow da mesma cor. |
 | Títulos (base) | Anton, dourado **sólido** com glow suave da mesma cor (nunca branco com brilho colorido). Entram com impacto (escala 1.35 → 1) |
 | Marca d'água | `GOL INFORMADO`, Archivo Black, branca com 26% de opacidade, abaixo da legenda |
