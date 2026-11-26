@@ -125,14 +125,17 @@ const mapR=(b,c,tx,ty)=>({x:tx+(b.x-c.sx)*c.k,y:ty+(b.y-c.sy)*c.k,w:b.w*c.k,h:b.
 function camera(s,lt){
   const kb=s.bg.kb||'in';
   let sc=kb==='none'?1.04:kb==='out'?1.16-0.08*(lt/s.dur):1.05+0.08*(lt/s.dur);
-  if(s.i===0&&!s.noIntro){            // abertura do canal: zoom desfocado revelando a imagem (~1s)
-    const r=1-eOut(lt/1.0);
-    sc+=kb==='out'?0.38*r:-0.04*r+0.18*(1-r)*(1-clamp(lt/s.dur));
-    return {sc,blur:22*r};
+  // fim do vídeo: volta a aproximar nos últimos 0,6s (emenda com a abertura, que começa bem perto → loop sem corte seco)
+  let outro=0;
+  if(s.i===scenes.length-1&&!SPEC.noOutro){const q=clamp((lt-(s.dur-0.6))/0.6);outro=q*q*q;}
+  if(s.i===0&&!s.noIntro){            // abertura do canal: começa MUITO perto e abre rápido até a tela normal
+    const r=1-eOut(lt/(kb==='out'?0.45:1.0));
+    sc+=kb==='out'?0.95*r:-0.04*r+0.18*(1-r)*(1-clamp(lt/s.dur));
+    return {sc:sc+0.6*outro,blur:22*r+8*outro};
   }
   const punch=s.noPunch?0:1-eOut(lt/.28);
-  sc+=0.14*punch;
-  return {sc,blur:10*punch};
+  sc+=0.14*punch+0.6*outro;
+  return {sc,blur:10*punch+8*outro};
 }
 const camBox=(b,sc)=>({x:W/2+(b.x-W/2)*sc,y:H/2+(b.y-H/2)*sc,w:b.w*sc,h:b.h*sc});
 function freeSpot(cands,faces,avoid=[]){

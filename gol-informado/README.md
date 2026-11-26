@@ -43,6 +43,8 @@ Guia de roteiro (estrutura, ganchos, marcações de cena): veja [`ROTEIRO.md`](R
 - `engine/sfx/`: **marker** (lápis, sempre junto do círculo), **riser_metallic** (troca de cena logo depois do gancho; `"riser": true` na cena seguinte), whoosh1-3, pop1-2. Recortados dos packs enviados pelo canal.
 - `engine/transicoes/`: film burn / light leak (laranja, azul, vermelho, amarelo), aplicados em modo *screen* no começo da cena com `"trans": "laranja"`. Usar em algumas trocas, não em todas; alternar com o punch-in. **Cada film burn toca o próprio som** (`sfx/burn_*.wav`), nunca whoosh por cima.
 - **Todo valor em dinheiro falado leva card de número + caixa registradora**, inclusive no gancho.
+- **Zoom-out de abertura começa MUITO perto** (1º frame bem fechado) e abre rápido (~0,45s) até a tela normal.
+- **Final volta a aproximar** nos últimos 0,6s, para emendar com a abertura e o loop não parar do nada.
 - **Abertura sempre com o zoom desfocado + som de zoom (whoosh)** — automático na 1ª cena (`"kb": "in"` ou `"out"` alterna o sentido).
 - **Dinheiro/salário → som de caixa registradora** (`sfx/cash.wav` e `sfx/cash2.wav`, enviados pelo canal, alternando): toca sozinho em cards de número com €, R$, milhões, salário, euros.
 - **Whoosh só em parte das trocas** (nem toda troca tem som). Efeitos sempre discretos, abaixo da narração.
