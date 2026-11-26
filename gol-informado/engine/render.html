@@ -252,7 +252,7 @@ window.render=async(T)=>{
     if(f.type==='post')html+=postCard(f,ft,lt,s);
   }
   // legenda (tempos absolutos)
-  const caps=SPEC.captions||[];let c=null;
+  const caps=SPEC.noCaptions?[]:(SPEC.captions||[]);let c=null;   // noCaptions: legenda feita fora (ex.: CapCut)
   for(const k of caps){if(T>=k.t)c=k;else break;}
   if(c&&T<(c.end??1e9)+0.5){
     const ct=T-c.t,k=ct<0.16?0.78+0.22*eBack(ct/.16):1,sw=c.sw?' sw':'';
@@ -260,7 +260,7 @@ window.render=async(T)=>{
       html+=`<div class="cap${sw} ghost" style="top:${capY+26*g}px;opacity:${(0.32*g).toFixed(3)};transform:scale(${(k*1.12).toFixed(3)})">${capHTML(c.text)}</div>`;}
     html+=`<div class="cap${sw}" style="top:${capY}px;transform:scale(${k.toFixed(3)})">${capHTML(c.text)}</div>`;
   }
-  html+=`<div class="wm" style="top:${capY+WM_GAP}px">${esc(SPEC.watermark||'')}</div>`;
+  html+=`<div class="wm" style="top:${SPEC.noCaptions?1720:capY+WM_GAP}px">${esc(SPEC.watermark||'')}</div>`;
   ov.innerHTML=html;
 };
 function sticker(f,ft,faces,lt,s){

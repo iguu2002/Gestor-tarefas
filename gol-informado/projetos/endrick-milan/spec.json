@@ -935,5 +935,6 @@
   }
  ],
  "duration": 38.01,
- "altColor": "#FF3B4E"
+ "altColor": "#FF3B4E",
+ "noCaptions": true
 }
