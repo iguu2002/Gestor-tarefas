@@ -8,11 +8,11 @@ permanências de Leonardo Jardim e José Boto ainda indefinidas (ge).
 
 ## Roteiro
 
-1. O Flamengo vai precisar vender alguém em 2027. E pra salvar um dos seus craques, o escolhido pode ser outro.
+1. O Flamengo recusou propostas por dois dos seus craques. Mas em 2027, um deles pode ter que sair. E não é quem você tá pensando.
    `[foto: Samuel Lino] [círculo no rosto] [abertura zoom-out]`
-2. Na última janela, chegaram propostas pelo Samuel Lino e pelo Carrascal.
+2. Na última janela, chegaram ofertas pelo Samuel Lino e pelo Carrascal.
    `[foto: Carrascal] [círculo no rosto]`
-3. E o Flamengo recusou as duas.
+3. E o Flamengo disse não pras duas.
 4. Segundo o diretor José Boto, a prioridade era brigar por títulos.
    `[foto/vídeo: José Boto]`
 5. Mas agora a conta chegou.
@@ -29,7 +29,7 @@ permanências de Leonardo Jardim e José Boto ainda indefinidas (ge).
 
 ## Texto corrido (ElevenLabs)
 
-O Flamengo vai precisar vender alguém em 2027. E pra salvar um dos seus craques, o escolhido pode ser outro. Na última janela, chegaram propostas pelo Samuel Lino e pelo Carrascal. E o Flamengo recusou as duas. Segundo o diretor José Boto, a prioridade era brigar por títulos. Mas agora a conta chegou. Pra fechar o caixa de 2027 sem vender o Lino, o nome que aparece é o Carrascal. Segundo o UOL, o colombiano vale entre doze e quinze milhões de euros. Já o Lino é o que mais chama atenção na Europa. Só que nada tá decidido. Antes, o Flamengo ainda precisa definir se o Leonardo Jardim e o próprio Boto continuam. E aí: se o Flamengo tiver que vender um, quem deveria sair: Lino ou Carrascal?
+O Flamengo recusou propostas por dois dos seus craques. Mas em 2027, um deles pode ter que sair. E não é quem você tá pensando. Na última janela, chegaram ofertas pelo Samuel Lino e pelo Carrascal. E o Flamengo disse não pras duas. Segundo o diretor José Boto, a prioridade era brigar por títulos. Mas agora a conta chegou. Pra fechar o caixa de 2027 sem vender o Lino, o nome que aparece é o Carrascal. Segundo o UOL, o colombiano vale entre doze e quinze milhões de euros. Já o Lino é o que mais chama atenção na Europa. Só que nada tá decidido. Antes, o Flamengo ainda precisa definir se o Leonardo Jardim e o próprio Boto continuam. E aí: se o Flamengo tiver que vender um, quem deveria sair: Lino ou Carrascal?
 
 ## Mídias para buscar (sem repetir nenhuma)
 

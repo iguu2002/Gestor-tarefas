@@ -31,6 +31,8 @@ Nunca começar resumindo o resultado ("o Real perdia e virou"). Fatos continuam 
 
 - **Consequência dramática:** "O PSV calou o Bernabéu. E foi a pior coisa que eles podiam ter feito."
 - **Ninguém imaginava:** "O que aconteceu depois ninguém imaginava."
+- **Quebra de expectativa:** "Um deles pode ter que sair. E não é quem você tá pensando."
+- **Evitar o óbvio:** nada de abrir com algo que todo mundo já espera ("o clube vai ter que vender alguém").
 - **Superlativo com cautela:** "Esse pode ser o gol mais absurdo da Champions." (usar "pode ser", "um dos")
 
 
