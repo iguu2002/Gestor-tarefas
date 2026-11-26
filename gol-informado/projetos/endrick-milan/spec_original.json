@@ -6,7 +6,7 @@
  "audio": "media/narracao.mp3",
  "scenes": [
   {
-   "dur": 7.9,
+   "dur": 6.54,
    "bg": {
     "type": "photo",
     "src": "media/endrick_serio.jpg",
@@ -25,6 +25,22 @@
      "size": 120
     }
    ]
+  },
+  {
+   "dur": 1.36,
+   "bg": {
+    "type": "photo",
+    "src": "media/mourinho_real.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "sfx",
+     "t": 0.5,
+     "k": "vineboom"
+    }
+   ],
+   "noPunch": false
   },
   {
    "dur": 1.9,
@@ -128,5 +144,6 @@
    ],
    "trans": "amarelo"
   }
- ]
+ ],
+ "music": "talk"
 }

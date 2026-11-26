@@ -70,9 +70,17 @@ const port=srv.address().port,U=p=>`http://127.0.0.1:${port}${p}`;
   const sv=spec.sfxVolume??(spec.audio?0.35:1);
   const args=['-f','lavfi','-t',String(total),'-i','anullsrc=r=48000:cl=stereo'];let fc='',n0=2,mixIn='[1]';
   if(spec.audio){args.push('-i',path.join(proj,spec.audio));fc+=`[2]aformat=sample_rates=48000:channel_layouts=stereo[nar];`;mixIn+='[nar]';n0=3;}
-  const LIB=path.join(__dirname,'sfx'),VOL={cash:0.6,cash2:0.6,marker:0.45,riser_metallic:0.32,pop1:0.4,hit:0.4,burn_laranja:1.5,burn_azul:1.5,burn_vermelho:1.5,burn_amarelo:1.5};for(let i=1;i<=20;i++)VOL['whoosh'+i]=0.18;
+  const LIB=path.join(__dirname,'sfx'),VOL={vineboom:0.22,cash:0.6,cash2:0.6,marker:0.45,riser_metallic:0.32,pop1:0.4,hit:0.4,burn_laranja:1.5,burn_azul:1.5,burn_vermelho:1.5,burn_amarelo:1.5};for(let i=1;i<=20;i++)VOL['whoosh'+i]=0.18;
   ev.forEach((e,k)=>{const lf=path.join(LIB,e.k+'.wav');if(fs.existsSync(lf))args.push('-i',lf);else args.push('-f','lavfi','-i',sfx[e.k]);const ms=Math.max(0,Math.round(e.t*1000));fc+=`[${k+n0}]aformat=sample_rates=48000:channel_layouts=stereo,volume=${sv},adelay=${ms}|${ms},volume=${VOL[e.k]??1}[a${k}];`;mixIn+=`[a${k}]`;});
-  const nin=1+(spec.audio?1:0)+ev.length;
+  let nin=1+(spec.audio?1:0)+ev.length;
+  if(spec.music){  // trilha de fundo baixa, com ducking automático sob a narração
+    const mi=args.filter(a=>a==='-i').length+1;args.push('-stream_loop','-1','-i',path.join(__dirname,'musica',spec.music+'.mp3'));
+    const mv=spec.musicVolume??0.10;
+    fc+=`[${mi}]aformat=sample_rates=48000:channel_layouts=stereo,atrim=0:${total},volume=${mv},afade=t=in:d=0.6,afade=t=out:st=${Math.max(0,total-1.2)}:d=1.2[mus0];`;
+    if(spec.audio){fc=fc.replace('[nar];','[nar0];[nar0]asplit=2[nar][narsc];');fc+=`[mus0][narsc]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=350[mus];`;}
+    else fc+='[mus0]anull[mus];';
+    mixIn+='[mus]';nin++;
+  }
   fc+=`${mixIn}amix=inputs=${nin}:normalize=0,atrim=0:${total},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[mix]`;
   ff(['-i',vtmp,...args,'-filter_complex',fc,'-map','0:v','-map','[mix]','-c:v','copy','-c:a','aac','-b:a','192k','-shortest',out]);
   console.log('pronto:',out);

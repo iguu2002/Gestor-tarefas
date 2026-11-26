@@ -46,6 +46,11 @@ Guia de roteiro (estrutura, ganchos, marcações de cena): veja [`ROTEIRO.md`](R
 - **Dinheiro/salário → som de caixa registradora** (`sfx/cash.wav` e `sfx/cash2.wav`, enviados pelo canal, alternando): toca sozinho em cards de número com €, R$, milhões, salário, euros.
 - **Whoosh só em parte das trocas** (nem toda troca tem som). Efeitos sempre discretos, abaixo da narração.
 
+## Trilha e efeitos extras
+
+- `engine/musica/`: trilhas hip hop enviadas pelo canal (talk, alias, where_the_trap_is). Alternar entre vídeos com `"music": "talk"` no spec. Fica baixa (`musicVolume`, padrão 0.10) e abaixa sozinha quando a narração fala (ducking).
+- `sfx/vineboom.wav`: Vine Boom, só em momento de impacto (`{"type":"sfx","k":"vineboom","t":...}`), volume bem baixo. Opcional, charme.
+
 ## Como produzir um vídeo
 
 1. Criar `projetos/<nome-do-video>/` com `media/` (fotos e vídeos) e um `spec.json`.

@@ -6,7 +6,7 @@
  "audio": "media/narracao_cortada.wav",
  "scenes": [
   {
-   "dur": 7.168,
+   "dur": 6.136,
    "bg": {
     "type": "photo",
     "src": "media/endrick_serio.jpg",
@@ -27,6 +27,22 @@
    ]
   },
   {
+   "dur": 1.032,
+   "bg": {
+    "type": "photo",
+    "src": "media/mourinho_real.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "sfx",
+     "t": 0.5,
+     "k": "vineboom"
+    }
+   ],
+   "noPunch": false
+  },
+  {
    "dur": 1.443,
    "bg": {
     "type": "photo",
@@ -35,7 +51,7 @@
    "fx": [
     {
      "type": "title",
-     "t": 0.45,
+     "t": 0.382,
      "text": "ENDRICK"
     }
    ]
@@ -129,6 +145,7 @@
    "trans": "amarelo"
   }
  ],
+ "music": "talk",
  "captions": [
   {
    "t": 0.0,
