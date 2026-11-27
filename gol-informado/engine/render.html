@@ -207,7 +207,7 @@ window.render=async(T)=>{
       if(b.box)regions.box=mapR({x:b.box[0],y:b.box[1],w:b.box[2],h:b.box[3]},c2,x0,y0);
     }else if(b.type==='panel'){
       navyBg(cx);
-      if(b.img){const im=await img(src(b.img)),w=b.imgW||620,h=w*im.naturalHeight/im.naturalWidth,k=pop(lt-.05,.35)*(1+0.03*Math.sin(lt*3));
+      if(b.img){const im=await img(src(b.img)),w=b.imgW||620,h=w*im.naturalHeight/im.naturalWidth,k=(s.i===0?1:pop(lt-.05,.35))*(1+0.03*Math.sin(lt*3));
         s._pbox={x:W/2-w/2-30,y:(b.y||760)-h/2-30,w:w+60,h:h+60};cx.save();cx.translate(W/2,(b.y||760));cx.scale(k,k);cx.shadowColor=PAL.pri+'66';cx.shadowBlur=60;cx.drawImage(im,-w/2,-h/2,w,h);cx.restore();}
     }else if(b.type==='split'){
       for(const side of ['left','right']){

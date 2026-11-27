@@ -41,6 +41,8 @@ Nunca começar resumindo o resultado ("o Real perdia e virou"). Fatos continuam 
 - **Autoridade revela:** "O Cucurella revelou por que todo mundo quer o Arda Güler."
 - **Resultado primeiro:** "O Haaland salvou a Noruega no último lance do jogo."
 
+**A imagem nunca revela antes da narração:** se o gancho esconde quem é, a tela também esconde (abrir com escudo/estádio; o jogador só aparece quando é nomeado).
+
 ## Banco de frases de transição
 
 - Virada: "Mesmo que…, o nome do jogo foi…", "Mas o que ninguém esperava…"
