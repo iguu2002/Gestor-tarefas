@@ -1,0 +1,208 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "azul",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao.mp3",
+ "music": "where_the_trap_is",
+ "noCaptions": true,
+ "scenes": [
+  {
+   "dur": 5.9,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_real.png",
+    "imgW": 440,
+    "y": 1000,
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.42,
+     "text": "€80 MILHÕES",
+     "sub": "PRA TRAZER DE VOLTA"
+    }
+   ]
+  },
+  {
+   "dur": 2.6,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.9,
+     "text": "PODE DIZER NÃO",
+     "font": "black",
+     "color": "azul",
+     "y": 700
+    },
+    {
+     "type": "title",
+     "t": 1.75,
+     "text": "DE NOVO",
+     "font": "black",
+     "color": "vermelho",
+     "y": 700
+    },
+    {
+     "type": "sfx",
+     "t": 1.78,
+     "k": "vineboom"
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video2.mp4",
+    "start": 15.6
+   },
+   "fx": [],
+   "riser": true
+  },
+  {
+   "dur": 6.7,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_como.png",
+    "imgW": 620,
+    "y": 1000
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 5.4,
+     "text": "21 ANOS",
+     "sub": "FORA DA SERIE A"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 3.2,
+   "bg": {
+    "type": "photo",
+    "src": "media/fabregas.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.7,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video1.mp4",
+    "start": 0.0,
+    "delogo": [
+     238,
+     852,
+     104,
+     32
+    ]
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.4,
+     "text": "6 GOLS · 8 ASSIST.",
+     "sub": "EM 14 JOGOS"
+    }
+   ]
+  },
+  {
+   "dur": 4.7,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_frente.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.3
+    },
+    {
+     "type": "number",
+     "t": 2.0,
+     "text": "RECOMPRA: €80 MI",
+     "until": 4.6
+    }
+   ]
+  },
+  {
+   "dur": 5.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_capitao.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 4.3,
+     "text": "FICOU"
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 3.5,
+   "bg": {
+    "type": "photo",
+    "src": "media/bellingham_real.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.4,
+   "bg": {
+    "type": "photo",
+    "src": "media/arda_guler_real.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 2.4,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video1.mp4",
+    "start": 18.3,
+    "delogo": [
+     238,
+     852,
+     104,
+     32
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 1.0,
+     "text": "DONO DO TIME",
+     "font": "black",
+     "color": "azul"
+    }
+   ]
+  },
+  {
+   "dur": 4.9,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_corpo.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.6,
+     "text": "REAL OU COMO?",
+     "font": "black",
+     "color": "azul",
+     "y": 1380
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ]
+}

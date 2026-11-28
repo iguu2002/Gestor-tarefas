@@ -1,0 +1,1075 @@
+{
+ "fps": 30,
+ "palette": "dourado",
+ "ringColor": "azul",
+ "watermark": "GOL INFORMADO",
+ "audio": "media/narracao_cortada.wav",
+ "music": "where_the_trap_is",
+ "noCaptions": true,
+ "scenes": [
+  {
+   "dur": 5.567,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_real.png",
+    "imgW": 440,
+    "y": 1000,
+    "kb": "out"
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.42,
+     "text": "€80 MILHÕES",
+     "sub": "PRA TRAZER DE VOLTA"
+    }
+   ]
+  },
+  {
+   "dur": 1.87,
+   "bg": {
+    "type": "panel"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.869,
+     "text": "PODE DIZER NÃO",
+     "font": "black",
+     "color": "azul",
+     "y": 700
+    },
+    {
+     "type": "title",
+     "t": 1.378,
+     "text": "DE NOVO",
+     "font": "black",
+     "color": "vermelho",
+     "y": 700
+    },
+    {
+     "type": "sfx",
+     "t": 1.408,
+     "k": "vineboom"
+    }
+   ]
+  },
+  {
+   "dur": 1.601,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video2.mp4",
+    "start": 15.799
+   },
+   "fx": [],
+   "riser": true
+  },
+  {
+   "dur": 6.31,
+   "bg": {
+    "type": "panel",
+    "img": "media/escudo_como.png",
+    "imgW": 620,
+    "y": 1000
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 5.286,
+     "text": "21 ANOS",
+     "sub": "FORA DA SERIE A"
+    }
+   ],
+   "trans": "laranja"
+  },
+  {
+   "dur": 2.682,
+   "bg": {
+    "type": "photo",
+    "src": "media/fabregas.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 4.404,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video1.mp4",
+    "start": 0.296,
+    "delogo": [
+     238,
+     852,
+     104,
+     32
+    ]
+   },
+   "fx": [
+    {
+     "type": "number",
+     "t": 1.359,
+     "text": "6 GOLS · 8 ASSIST.",
+     "sub": "EM 14 JOGOS"
+    }
+   ]
+  },
+  {
+   "dur": 4.147,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_frente.jpg"
+   },
+   "fx": [
+    {
+     "type": "circle",
+     "t": 0.162
+    },
+    {
+     "type": "number",
+     "t": 1.862,
+     "text": "RECOMPRA: €80 MI",
+     "until": 4.047
+    }
+   ]
+  },
+  {
+   "dur": 4.463,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_capitao.jpg"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 3.655,
+     "text": "FICOU"
+    }
+   ],
+   "trans": "azul"
+  },
+  {
+   "dur": 3.163,
+   "bg": {
+    "type": "photo",
+    "src": "media/bellingham_real.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.065,
+   "bg": {
+    "type": "photo",
+    "src": "media/arda_guler_real.jpg"
+   },
+   "fx": []
+  },
+  {
+   "dur": 1.869,
+   "bg": {
+    "type": "clip",
+    "src": "media/nico_video1.mp4",
+    "start": 18.831,
+    "delogo": [
+     238,
+     852,
+     104,
+     32
+    ]
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 0.894,
+     "text": "DONO DO TIME",
+     "font": "black",
+     "color": "azul"
+    }
+   ]
+  },
+  {
+   "dur": 4.528,
+   "bg": {
+    "type": "photo",
+    "src": "media/nico_corpo.jpg",
+    "kb": "in"
+   },
+   "fx": [
+    {
+     "type": "title",
+     "t": 2.228,
+     "text": "REAL OU COMO?",
+     "font": "black",
+     "color": "azul",
+     "y": 1380
+    }
+   ],
+   "trans": "amarelo"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "end": 0.24,
+   "text": "O",
+   "sw": true
+  },
+  {
+   "t": 0.24,
+   "end": 0.44,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 0.44,
+   "end": 0.8,
+   "text": "Madrid",
+   "sw": true
+  },
+  {
+   "t": 0.8,
+   "end": 1.04,
+   "text": "quer",
+   "sw": true
+  },
+  {
+   "t": 1.04,
+   "end": 1.42,
+   "text": "gastar",
+   "sw": true
+  },
+  {
+   "t": 1.42,
+   "end": 1.96,
+   "text": "$80$",
+   "sw": true
+  },
+  {
+   "t": 1.96,
+   "end": 2.56,
+   "text": "$milhões$",
+   "sw": true
+  },
+  {
+   "t": 2.56,
+   "end": 2.86,
+   "text": "$de$",
+   "sw": true
+  },
+  {
+   "t": 2.86,
+   "end": 3.1,
+   "text": "$euros$",
+   "sw": true
+  },
+  {
+   "t": 3.1,
+   "end": 3.34,
+   "text": "para",
+   "sw": true
+  },
+  {
+   "t": 3.34,
+   "end": 3.6,
+   "text": "trazer",
+   "sw": true
+  },
+  {
+   "t": 3.6,
+   "end": 3.86,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 3.86,
+   "end": 4.08,
+   "text": "volta",
+   "sw": true
+  },
+  {
+   "t": 4.08,
+   "end": 4.26,
+   "text": "um",
+   "sw": true
+  },
+  {
+   "t": 4.26,
+   "end": 4.52,
+   "text": "garoto",
+   "sw": true
+  },
+  {
+   "t": 4.52,
+   "end": 4.82,
+   "text": "da",
+   "sw": true
+  },
+  {
+   "t": 4.82,
+   "end": 5.14,
+   "text": "própria",
+   "sw": true
+  },
+  {
+   "t": 5.14,
+   "end": 5.616,
+   "text": "base",
+   "sw": true
+  },
+  {
+   "t": 5.616,
+   "end": 5.756,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 5.756,
+   "end": 5.996,
+   "text": "ele",
+   "sw": true
+  },
+  {
+   "t": 5.996,
+   "end": 6.256,
+   "text": "pode",
+   "sw": true
+  },
+  {
+   "t": 6.256,
+   "end": 6.576,
+   "text": "dizer",
+   "sw": true
+  },
+  {
+   "t": 6.576,
+   "end": 6.975,
+   "text": "não",
+   "sw": true
+  },
+  {
+   "t": 6.975,
+   "end": 7.155,
+   "text": "De",
+   "sw": true
+  },
+  {
+   "t": 7.155,
+   "end": 7.551,
+   "text": "novo",
+   "sw": true
+  },
+  {
+   "t": 7.551,
+   "end": 7.671,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 7.671,
+   "end": 7.911,
+   "text": "nome",
+   "sw": true
+  },
+  {
+   "t": 7.911,
+   "end": 8.171,
+   "text": "é",
+   "sw": true
+  },
+  {
+   "t": 8.171,
+   "end": 9.084,
+   "text": "Nico Paz",
+   "sw": true
+  },
+  {
+   "t": 9.084,
+   "end": 9.304,
+   "text": "Ele",
+   "sw": true
+  },
+  {
+   "t": 9.304,
+   "end": 9.544,
+   "text": "saiu",
+   "sw": true
+  },
+  {
+   "t": 9.544,
+   "end": 9.704,
+   "text": "do",
+   "sw": true
+  },
+  {
+   "t": 9.704,
+   "end": 9.984,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 9.984,
+   "end": 10.144,
+   "text": "em",
+   "sw": true
+  },
+  {
+   "t": 10.144,
+   "end": 11.144,
+   "text": "2024",
+   "sw": true
+  },
+  {
+   "t": 11.144,
+   "end": 11.464,
+   "text": "para",
+   "sw": true
+  },
+  {
+   "t": 11.464,
+   "end": 11.684,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 11.684,
+   "end": 12.004,
+   "text": "Como",
+   "sw": true
+  },
+  {
+   "t": 12.004,
+   "end": 12.204,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 12.204,
+   "end": 12.364,
+   "text": "tinha",
+   "sw": true
+  },
+  {
+   "t": 12.364,
+   "end": 12.884,
+   "text": "acabado",
+   "sw": true
+  },
+  {
+   "t": 12.884,
+   "end": 13.044,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 13.044,
+   "end": 13.264,
+   "text": "voltar",
+   "sw": true
+  },
+  {
+   "t": 13.264,
+   "end": 13.464,
+   "text": "para",
+   "sw": true
+  },
+  {
+   "t": 13.464,
+   "end": 13.564,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 13.564,
+   "end": 13.784,
+   "text": "Série",
+   "sw": true
+  },
+  {
+   "t": 13.784,
+   "end": 13.844,
+   "text": "A",
+   "sw": true
+  },
+  {
+   "t": 13.844,
+   "end": 14.164,
+   "text": "depois",
+   "sw": true
+  },
+  {
+   "t": 14.164,
+   "end": 14.444,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 14.444,
+   "end": 14.864,
+   "text": "21",
+   "sw": true
+  },
+  {
+   "t": 14.864,
+   "end": 15.361,
+   "text": "anos",
+   "sw": true
+  },
+  {
+   "t": 15.361,
+   "end": 15.481,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 15.481,
+   "end": 15.721,
+   "text": "com",
+   "sw": true
+  },
+  {
+   "t": 15.721,
+   "end": 15.861,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 15.861,
+   "end": 16.301,
+   "text": "Fàbregas",
+   "sw": true
+  },
+  {
+   "t": 16.301,
+   "end": 16.621,
+   "text": "virou",
+   "sw": true
+  },
+  {
+   "t": 16.621,
+   "end": 16.761,
+   "text": "uma",
+   "sw": true
+  },
+  {
+   "t": 16.761,
+   "end": 17.201,
+   "text": "das",
+   "sw": true
+  },
+  {
+   "t": 17.201,
+   "end": 17.521,
+   "text": "estrelas",
+   "sw": true
+  },
+  {
+   "t": 17.521,
+   "end": 17.701,
+   "text": "da",
+   "sw": true
+  },
+  {
+   "t": 17.701,
+   "end": 18.169,
+   "text": "Itália",
+   "sw": true
+  },
+  {
+   "t": 18.169,
+   "end": 18.369,
+   "text": "Nessa",
+   "sw": true
+  },
+  {
+   "t": 18.369,
+   "end": 19.049,
+   "text": "temporada",
+   "sw": true
+  },
+  {
+   "t": 19.049,
+   "end": 19.189,
+   "text": "já",
+   "sw": true
+  },
+  {
+   "t": 19.189,
+   "end": 19.449,
+   "text": "são",
+   "sw": true
+  },
+  {
+   "t": 19.449,
+   "end": 19.849,
+   "text": "6",
+   "sw": true
+  },
+  {
+   "t": 19.849,
+   "end": 20.169,
+   "text": "gols",
+   "sw": true
+  },
+  {
+   "t": 20.169,
+   "end": 20.369,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 20.369,
+   "end": 20.649,
+   "text": "8",
+   "sw": true
+  },
+  {
+   "t": 20.649,
+   "end": 21.209,
+   "text": "assistências",
+   "sw": true
+  },
+  {
+   "t": 21.209,
+   "end": 21.389,
+   "text": "em",
+   "sw": true
+  },
+  {
+   "t": 21.389,
+   "end": 21.929,
+   "text": "14",
+   "sw": true
+  },
+  {
+   "t": 21.929,
+   "end": 22.476,
+   "text": "jogos",
+   "sw": true
+  },
+  {
+   "t": 22.476,
+   "end": 22.676,
+   "text": "Por",
+   "sw": true
+  },
+  {
+   "t": 22.676,
+   "end": 22.996,
+   "text": "isso",
+   "sw": true
+  },
+  {
+   "t": 22.996,
+   "end": 23.176,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 23.176,
+   "end": 23.296,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 23.296,
+   "end": 23.456,
+   "text": "quer",
+   "sw": true
+  },
+  {
+   "t": 23.456,
+   "end": 23.696,
+   "text": "usar",
+   "sw": true
+  },
+  {
+   "t": 23.696,
+   "end": 23.856,
+   "text": "a",
+   "sw": true
+  },
+  {
+   "t": 23.856,
+   "end": 24.216,
+   "text": "recompra",
+   "sw": true
+  },
+  {
+   "t": 24.216,
+   "end": 24.356,
+   "text": "de",
+   "sw": true
+  },
+  {
+   "t": 24.356,
+   "end": 24.836,
+   "text": "$80$",
+   "sw": true
+  },
+  {
+   "t": 24.836,
+   "end": 25.276,
+   "text": "$milhões$",
+   "sw": true
+  },
+  {
+   "t": 25.276,
+   "end": 25.456,
+   "text": "no",
+   "sw": true
+  },
+  {
+   "t": 25.456,
+   "end": 25.596,
+   "text": "meio",
+   "sw": true
+  },
+  {
+   "t": 25.596,
+   "end": 25.796,
+   "text": "do",
+   "sw": true
+  },
+  {
+   "t": 25.796,
+   "end": 25.953,
+   "text": "ano",
+   "sw": true
+  },
+  {
+   "t": 25.953,
+   "end": 26.161,
+   "text": "Só",
+   "sw": true
+  },
+  {
+   "t": 26.161,
+   "end": 26.341,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 26.341,
+   "end": 26.541,
+   "text": "tem",
+   "sw": true
+  },
+  {
+   "t": 26.541,
+   "end": 26.801,
+   "text": "um",
+   "sw": true
+  },
+  {
+   "t": 26.801,
+   "end": 27.343,
+   "text": "detalhe",
+   "sw": true
+  },
+  {
+   "t": 27.343,
+   "end": 27.463,
+   "text": "Na",
+   "sw": true
+  },
+  {
+   "t": 27.463,
+   "end": 27.763,
+   "text": "última",
+   "sw": true
+  },
+  {
+   "t": 27.763,
+   "end": 28.503,
+   "text": "janela",
+   "sw": true
+  },
+  {
+   "t": 28.503,
+   "end": 28.643,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 28.643,
+   "end": 28.763,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 28.763,
+   "end": 29.163,
+   "text": "já",
+   "sw": true
+  },
+  {
+   "t": 29.163,
+   "end": 29.636,
+   "text": "tentou",
+   "sw": true
+  },
+  {
+   "t": 29.636,
+   "end": 29.736,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 29.736,
+   "end": 29.956,
+   "text": "ele",
+   "sw": true
+  },
+  {
+   "t": 29.956,
+   "end": 30.236,
+   "text": "preferiu",
+   "sw": true
+  },
+  {
+   "t": 30.236,
+   "end": 30.456,
+   "text": "ficar",
+   "sw": true
+  },
+  {
+   "t": 30.456,
+   "end": 30.676,
+   "text": "no",
+   "sw": true
+  },
+  {
+   "t": 30.676,
+   "end": 31.044,
+   "text": "Como",
+   "sw": true
+  },
+  {
+   "t": 31.044,
+   "end": 31.184,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 31.184,
+   "end": 31.304,
+   "text": "faz",
+   "sw": true
+  },
+  {
+   "t": 31.304,
+   "end": 31.907,
+   "text": "sentido",
+   "sw": true
+  },
+  {
+   "t": 31.907,
+   "end": 32.027,
+   "text": "No",
+   "sw": true
+  },
+  {
+   "t": 32.027,
+   "end": 32.167,
+   "text": "meio",
+   "sw": true
+  },
+  {
+   "t": 32.167,
+   "end": 32.367,
+   "text": "do",
+   "sw": true
+  },
+  {
+   "t": 32.367,
+   "end": 32.747,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 32.747,
+   "end": 32.907,
+   "text": "ele",
+   "sw": true
+  },
+  {
+   "t": 32.907,
+   "end": 33.107,
+   "text": "teria",
+   "sw": true
+  },
+  {
+   "t": 33.107,
+   "end": 33.287,
+   "text": "que",
+   "sw": true
+  },
+  {
+   "t": 33.287,
+   "end": 33.587,
+   "text": "brigar",
+   "sw": true
+  },
+  {
+   "t": 33.587,
+   "end": 33.867,
+   "text": "com",
+   "sw": true
+  },
+  {
+   "t": 33.867,
+   "end": 34.387,
+   "text": "Bellingham",
+   "sw": true
+  },
+  {
+   "t": 34.387,
+   "end": 34.627,
+   "text": "e",
+   "sw": true
+  },
+  {
+   "t": 34.627,
+   "end": 34.887,
+   "text": "Arda",
+   "sw": true
+  },
+  {
+   "t": 34.887,
+   "end": 35.332,
+   "text": "Güler",
+   "sw": true
+  },
+  {
+   "t": 35.332,
+   "end": 35.552,
+   "text": "No",
+   "sw": true
+  },
+  {
+   "t": 35.552,
+   "end": 35.986,
+   "text": "Como",
+   "sw": true
+  },
+  {
+   "t": 35.986,
+   "end": 36.166,
+   "text": "ele",
+   "sw": true
+  },
+  {
+   "t": 36.166,
+   "end": 36.286,
+   "text": "é",
+   "sw": true
+  },
+  {
+   "t": 36.286,
+   "end": 36.466,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 36.466,
+   "end": 36.686,
+   "text": "dono",
+   "sw": true
+  },
+  {
+   "t": 36.686,
+   "end": 36.866,
+   "text": "do",
+   "sw": true
+  },
+  {
+   "t": 36.866,
+   "end": 37.213,
+   "text": "time",
+   "sw": true
+  },
+  {
+   "t": 37.213,
+   "end": 37.353,
+   "text": "E",
+   "sw": true
+  },
+  {
+   "t": 37.353,
+   "end": 37.709,
+   "text": "aí",
+   "sw": true
+  },
+  {
+   "t": 37.709,
+   "end": 37.789,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 37.789,
+   "end": 38.229,
+   "text": "Nico Paz",
+   "sw": true
+  },
+  {
+   "t": 38.229,
+   "end": 38.629,
+   "text": "deveria",
+   "sw": true
+  },
+  {
+   "t": 38.629,
+   "end": 38.969,
+   "text": "voltar",
+   "sw": true
+  },
+  {
+   "t": 38.969,
+   "end": 39.129,
+   "text": "para",
+   "sw": true
+  },
+  {
+   "t": 39.129,
+   "end": 39.269,
+   "text": "o",
+   "sw": true
+  },
+  {
+   "t": 39.269,
+   "end": 39.449,
+   "text": "Real",
+   "sw": true
+  },
+  {
+   "t": 39.449,
+   "end": 39.949,
+   "text": "ou",
+   "sw": true
+  },
+  {
+   "t": 39.949,
+   "end": 40.349,
+   "text": "continuar",
+   "sw": true
+  },
+  {
+   "t": 40.349,
+   "end": 40.829,
+   "text": "brilhando",
+   "sw": true
+  },
+  {
+   "t": 40.829,
+   "end": 41.009,
+   "text": "no",
+   "sw": true
+  },
+  {
+   "t": 41.009,
+   "end": 41.639,
+   "text": "Como?",
+   "sw": true
+  }
+ ],
+ "duration": 41.89
+}
